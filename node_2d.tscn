@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://dgbd7nkaxl0jt"]
+
+[ext_resource type="PackedScene" uid="uid://ct78koc25diav" path="res://escenas/jugador_1.tscn" id="1_epypp"]
+[ext_resource type="SpriteFrames" uid="uid://bbiki45b8lx1a" path="res://personaje/new_sprite_frames.tres" id="1_wtcfe"]
+[ext_resource type="Script" uid="uid://cyjvl70ya7aus" path="res://scripts/jugador_2.gd" id="3_0hol4"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_epypp"]
+radius = 122.08
+height = 308.534
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_epypp"]
+size = Vector2(1354.2, 118.188)
+
+[node name="player1" type="Node2D"]
+
+[node name="jugador1" parent="." instance=ExtResource("1_epypp")]
+
+[node name="jugador2" type="CharacterBody2D" parent="."]
+script = ExtResource("3_0hol4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="jugador2"]
+position = Vector2(1140, 429)
+scale = Vector2(9.40625, 9.125)
+sprite_frames = ExtResource("1_wtcfe")
+animation = &"golpe"
+frame_progress = 0.447279
+speed_scale = 5.0
+flip_h = true
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="jugador2"]
+position = Vector2(1172, 562)
+scale = Vector2(0.677286, 1.03068)
+shape = SubResource("CapsuleShape2D_epypp")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(-197, 217)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(679.898, 782)
+shape = SubResource("RectangleShape2D_epypp")

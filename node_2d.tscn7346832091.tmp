@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://dgbd7nkaxl0jt"]
+
+[ext_resource type="Script" uid="uid://d120balfj8ejn" path="res://character_body_2d.gd" id="1_0e48y"]
+[ext_resource type="SpriteFrames" uid="uid://bbiki45b8lx1a" path="res://personaje/new_sprite_frames.tres" id="1_wtcfe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0e48y"]
+size = Vector2(242.813, 332.375)
+
+[node name="player1" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_0e48y")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+position = Vector2(165, 424)
+scale = Vector2(9.40625, 9.125)
+sprite_frames = ExtResource("1_wtcfe")
+autoplay = "default"
+frame_progress = 0.205832
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(151, 562)
+shape = SubResource("RectangleShape2D_0e48y")
+
+[node name="CharacterBody2D2" type="CharacterBody2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D2"]
+position = Vector2(1108, 417)
+scale = Vector2(9.40625, 9.125)
+sprite_frames = ExtResource("1_wtcfe")
+autoplay = "default"
+frame_progress = 0.280086
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D2"]
+position = Vector2(1135, 549)
+shape = SubResource("RectangleShape2D_0e48y")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(472, 582)
