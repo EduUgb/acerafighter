@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://ct78koc25diav"]
+[gd_scene load_steps=26 format=3 uid="uid://ct78koc25diav"]
 
 [ext_resource type="Script" uid="uid://iyagrrfjcgcw" path="res://scripts/player1.gd" id="1_hnwkt"]
 [ext_resource type="SpriteFrames" uid="uid://bbiki45b8lx1a" path="res://personaje/new_sprite_frames.tres" id="2_u30lm"]
@@ -10,9 +10,14 @@
 [ext_resource type="Script" uid="uid://dijumwf26wuvg" path="res://scripts/agacharse.gd" id="7_7kt3y"]
 [ext_resource type="Script" uid="uid://detjwevq8872a" path="res://scripts/golpe.gd" id="8_k75m6"]
 [ext_resource type="Script" uid="uid://08igpp0a4sg1" path="res://scripts/hitbox.gd" id="9_4tl84"]
+[ext_resource type="Script" uid="uid://c6kvsi5qkorhv" path="res://scripts/dolor.gd" id="10_5ksev"]
+[ext_resource type="Script" uid="uid://dm822grhe3ol5" path="res://scripts/hurtbox.gd" id="10_ox5i8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ox5i8"]
 size = Vector2(437.5, 118.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5ksev"]
+size = Vector2(176, 401)
 
 [sub_resource type="Animation" id="Animation_gbvj4"]
 length = 1.00003
@@ -65,6 +70,18 @@ tracks/3/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimationPlayer:speed_scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
 }
 
 [sub_resource type="Animation" id="Animation_k75m6"]
@@ -156,10 +173,51 @@ tracks/1/keys = {
 "values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 }
 
+[sub_resource type="Animation" id="Animation_5ksev"]
+resource_name = "danio"
+length = 0.333366
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"danio"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimationPlayer:speed_scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.332766),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [2.714, 1.0]
+}
+
 [sub_resource type="Animation" id="Animation_4tl84"]
 resource_name = "golpe"
 length = 0.437506
-step = 0.0625
+step = 0.125
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -203,10 +261,10 @@ tracks/3/path = NodePath("maquinaEstados/golpe/HitBox/CollisionShape2D:disabled"
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.125, 0.375),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0.125, 0.25),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [true, false, true]
+"values": [false, true]
 }
 
 [sub_resource type="Animation" id="Animation_u30lm"]
@@ -304,6 +362,7 @@ _data = {
 &"agacharse": SubResource("Animation_k75m6"),
 &"caida": SubResource("Animation_7kt3y"),
 &"caminar": SubResource("Animation_s8sdq"),
+&"danio": SubResource("Animation_5ksev"),
 &"golpes": SubResource("Animation_4tl84"),
 &"idle": SubResource("Animation_u30lm"),
 &"salto": SubResource("Animation_arupa"),
@@ -321,7 +380,7 @@ script = ExtResource("1_hnwkt")
 script = ExtResource("3_gbvj4")
 estadoInicial = NodePath("Idle")
 
-[node name="Idle" type="Node2D" parent="maquinaEstados" node_paths=PackedStringArray("idleEstado", "caminarEstado", "saltoEstado", "fallEstado", "agacharseEstado", "golpeEstado")]
+[node name="Idle" type="Node2D" parent="maquinaEstados" node_paths=PackedStringArray("idleEstado", "caminarEstado", "saltoEstado", "fallEstado", "agacharseEstado", "golpeEstado", "dolorEstado")]
 script = ExtResource("4_u30lm")
 idleEstado = NodePath(".")
 caminarEstado = NodePath("../Caminar")
@@ -329,8 +388,9 @@ saltoEstado = NodePath("../salto")
 fallEstado = NodePath("../fall")
 agacharseEstado = NodePath("../agacharse")
 golpeEstado = NodePath("../golpe")
+dolorEstado = NodePath("../dolor")
 
-[node name="Caminar" type="Node2D" parent="maquinaEstados" node_paths=PackedStringArray("idleEstado", "caminarEstado", "saltoEstado", "fallEstado", "agacharseEstado", "golpeEstado")]
+[node name="Caminar" type="Node2D" parent="maquinaEstados" node_paths=PackedStringArray("idleEstado", "caminarEstado", "saltoEstado", "fallEstado", "agacharseEstado", "golpeEstado", "dolorEstado")]
 script = ExtResource("5_gbvj4")
 idleEstado = NodePath("../Idle")
 caminarEstado = NodePath(".")
@@ -338,8 +398,9 @@ saltoEstado = NodePath("../salto")
 fallEstado = NodePath("../fall")
 agacharseEstado = NodePath("../agacharse")
 golpeEstado = NodePath("../golpe")
+dolorEstado = NodePath("../dolor")
 
-[node name="salto" type="Node2D" parent="maquinaEstados" node_paths=PackedStringArray("idleEstado", "caminarEstado", "saltoEstado", "fallEstado", "agacharseEstado", "golpeEstado")]
+[node name="salto" type="Node2D" parent="maquinaEstados" node_paths=PackedStringArray("idleEstado", "caminarEstado", "saltoEstado", "fallEstado", "agacharseEstado", "golpeEstado", "dolorEstado")]
 script = ExtResource("5_s8sdq")
 idleEstado = NodePath("../Idle")
 caminarEstado = NodePath("../Caminar")
@@ -347,8 +408,9 @@ saltoEstado = NodePath(".")
 fallEstado = NodePath("../fall")
 agacharseEstado = NodePath("../agacharse")
 golpeEstado = NodePath("../golpe")
+dolorEstado = NodePath("../dolor")
 
-[node name="fall" type="Node2D" parent="maquinaEstados" node_paths=PackedStringArray("idleEstado", "caminarEstado", "saltoEstado", "fallEstado", "agacharseEstado", "golpeEstado")]
+[node name="fall" type="Node2D" parent="maquinaEstados" node_paths=PackedStringArray("idleEstado", "caminarEstado", "saltoEstado", "fallEstado", "agacharseEstado", "golpeEstado", "dolorEstado")]
 script = ExtResource("6_arupa")
 idleEstado = NodePath("../Idle")
 caminarEstado = NodePath("../Caminar")
@@ -356,8 +418,9 @@ saltoEstado = NodePath("../salto")
 fallEstado = NodePath(".")
 agacharseEstado = NodePath("../agacharse")
 golpeEstado = NodePath("../golpe")
+dolorEstado = NodePath("../dolor")
 
-[node name="agacharse" type="Node2D" parent="maquinaEstados" node_paths=PackedStringArray("idleEstado", "caminarEstado", "saltoEstado", "fallEstado", "agacharseEstado", "golpeEstado")]
+[node name="agacharse" type="Node2D" parent="maquinaEstados" node_paths=PackedStringArray("idleEstado", "caminarEstado", "saltoEstado", "fallEstado", "agacharseEstado", "golpeEstado", "dolorEstado")]
 script = ExtResource("7_7kt3y")
 idleEstado = NodePath("../Idle")
 caminarEstado = NodePath("../Caminar")
@@ -365,8 +428,9 @@ saltoEstado = NodePath("../salto")
 fallEstado = NodePath("../fall")
 agacharseEstado = NodePath(".")
 golpeEstado = NodePath("../golpe")
+dolorEstado = NodePath("../dolor")
 
-[node name="golpe" type="Node2D" parent="maquinaEstados" node_paths=PackedStringArray("idleEstado", "caminarEstado", "saltoEstado", "fallEstado", "agacharseEstado", "golpeEstado")]
+[node name="golpe" type="Node2D" parent="maquinaEstados" node_paths=PackedStringArray("idleEstado", "caminarEstado", "saltoEstado", "fallEstado", "agacharseEstado", "golpeEstado", "dolorEstado")]
 script = ExtResource("8_k75m6")
 idleEstado = NodePath("../Idle")
 caminarEstado = NodePath("../Caminar")
@@ -374,8 +438,11 @@ saltoEstado = NodePath("../salto")
 fallEstado = NodePath("../fall")
 agacharseEstado = NodePath("../agacharse")
 golpeEstado = NodePath(".")
+dolorEstado = NodePath("../dolor")
 
 [node name="HitBox" type="Area2D" parent="maquinaEstados/golpe"]
+collision_layer = 2
+collision_mask = 0
 script = ExtResource("9_4tl84")
 metadata/_custom_type_script = "uid://08igpp0a4sg1"
 
@@ -384,6 +451,27 @@ position = Vector2(605, 512)
 shape = SubResource("RectangleShape2D_ox5i8")
 disabled = true
 debug_color = Color(0.989781, 0, 0.286363, 0.42)
+
+[node name="dolor" type="Node2D" parent="maquinaEstados" node_paths=PackedStringArray("idleEstado", "caminarEstado", "saltoEstado", "fallEstado", "agacharseEstado", "golpeEstado", "dolorEstado")]
+script = ExtResource("10_5ksev")
+idleEstado = NodePath("../Idle")
+caminarEstado = NodePath("../Caminar")
+saltoEstado = NodePath("../salto")
+fallEstado = NodePath("../fall")
+agacharseEstado = NodePath("../agacharse")
+golpeEstado = NodePath("../golpe")
+dolorEstado = NodePath(".")
+
+[node name="HurtBox" type="Area2D" parent="maquinaEstados/dolor"]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("10_ox5i8")
+metadata/_custom_type_script = "uid://dm822grhe3ol5"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="maquinaEstados/dolor/HurtBox"]
+position = Vector2(192, 517)
+shape = SubResource("RectangleShape2D_5ksev")
+debug_color = Color(0.967356, 1.63645e-06, 0.474771, 0.42)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -397,6 +485,7 @@ sprite_frames = ExtResource("2_u30lm")
 animation = &"agacharse"
 frame = 1
 speed_scale = 0.0
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(180, 564)

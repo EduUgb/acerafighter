@@ -4,7 +4,6 @@ extends estados
 @onready var player: Player = owner 
 
 
-
 var gravity: float = 2500
 
 #nombre de las animaciones
@@ -15,6 +14,7 @@ var caidaAnima: String = "caida"
 var agacharseAnima: String = "agacharse"
 var golpeAnima: String = "golpes"
 var walkagaAnima: String = "walkaga"
+var hitAnima: String = "danio"
 
 
 #establece estados
@@ -25,14 +25,20 @@ var walkagaAnima: String = "walkaga"
 @export var fallEstado: PlayerState
 @export var agacharseEstado: PlayerState
 @export var golpeEstado: PlayerState
-
+@export var dolorEstado: PlayerState
 #input keys
 
-@export var movimientoKey: String ="teclas"
+
 var izquierda: String="izquierda"
 var derecha: String="derecha"
 var arriba: String="arriba"
 var abajo: String= "abajo"
+
+var izquierda2: String="izquierda2"
+var derecha2: String="derecha2"
+var arriba2: String="arriba2"
+var abajo2: String= "abajo2"
+
 var golpe: String = "golpe"
 #base
 

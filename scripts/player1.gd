@@ -6,6 +6,7 @@ extends CharacterBody2D
 @onready var maquina_Estados = $maquinaEstados
 @onready var animacion = $AnimationPlayer
 
+
 func _ready():maquina_Estados.init()
 
 func _process(delta): maquina_Estados.process_frame(delta)

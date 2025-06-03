@@ -1,9 +1,112 @@
-[gd_scene load_steps=3 format=3 uid="uid://drjdja6gba1f4"]
+[gd_scene load_steps=13 format=3 uid="uid://drjdja6gba1f4"]
 
 [ext_resource type="PackedScene" uid="uid://ct78koc25diav" path="res://escenas/jugador_1.tscn" id="1_qdwd3"]
+[ext_resource type="Script" uid="uid://cv2v6e2ljhsdx" path="res://scripts/static.gd" id="2_3s825"]
+[ext_resource type="SpriteFrames" uid="uid://bbiki45b8lx1a" path="res://personaje/new_sprite_frames.tres" id="3_ej4v6"]
+[ext_resource type="Script" uid="uid://08igpp0a4sg1" path="res://scripts/hitbox.gd" id="3_sw6b4"]
+[ext_resource type="Script" uid="uid://cnh7udsifk1dj" path="res://scripts/hurt2.gd" id="5_gr85v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s4ipp"]
 size = Vector2(1281, 103)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_it6l2"]
+size = Vector2(125, 391.5)
+
+[sub_resource type="Animation" id="Animation_gr85v"]
+resource_name = "saco"
+length = 1.00003
+loop_mode = 1
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../StaticBody2D/AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"saco"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../StaticBody2D/AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_4dei2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../StaticBody2D/AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"saco"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../StaticBody2D/AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_3s825"]
+resource_name = "sacohit"
+length = 0.375012
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../StaticBody2D/AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"sacohit"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../StaticBody2D/AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bgf2f"]
+_data = {
+&"RESET": SubResource("Animation_4dei2"),
+&"saco": SubResource("Animation_gr85v"),
+&"sacohit": SubResource("Animation_3s825")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sw6b4"]
+size = Vector2(125, 391.5)
 
 [node name="Node2D" type="Node2D"]
 
@@ -19,3 +122,43 @@ shape = SubResource("RectangleShape2D_s4ipp")
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="CharacterBody2D"]
 position = Vector2(605, 785)
 shape = SubResource("RectangleShape2D_s4ipp")
+
+[node name="CharacterBody2D2" type="CharacterBody2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+script = ExtResource("2_3s825")
+
+[node name="HurtBox" type="Area2D" parent="StaticBody2D"]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("5_gr85v")
+metadata/_custom_type_script = "uid://dm822grhe3ol5"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/HurtBox"]
+position = Vector2(967.5, 534.25)
+shape = SubResource("RectangleShape2D_it6l2")
+debug_color = Color(5.10186e-06, 0.583672, 0.785477, 0.42)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="StaticBody2D"]
+root_node = NodePath("../../CharacterBody2D2")
+libraries = {
+&"": SubResource("AnimationLibrary_bgf2f")
+}
+
+[node name="HitBox" type="Area2D" parent="StaticBody2D"]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("3_sw6b4")
+metadata/_custom_type_script = "uid://08igpp0a4sg1"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/HitBox"]
+position = Vector2(967.5, 534.25)
+shape = SubResource("RectangleShape2D_sw6b4")
+debug_color = Color(0.685662, 0.500445, 0.0127849, 0.42)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="StaticBody2D"]
+position = Vector2(982, 400)
+scale = Vector2(9.60352, 10.3643)
+sprite_frames = ExtResource("3_ej4v6")
+animation = &"saco"
+metadata/_edit_lock_ = true

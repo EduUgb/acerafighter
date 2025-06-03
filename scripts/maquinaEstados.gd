@@ -4,6 +4,7 @@ extends Node
 var currentEstado: estados
 
 @export var estadoInicial: estados
+@onready var dolor = $dolor
 
 func init() -> void: cambiaEstado(estadoInicial)
 	
