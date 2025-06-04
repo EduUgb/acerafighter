@@ -30,7 +30,7 @@ func process_physics(delta: float) -> estados:
 	return null   
 
 func process_input(event: InputEvent) -> estados:
-	print(player.velocity.x)
+
 	if event.is_action_pressed(golpeArriba):
 		print("Golpe arriba recibido en caminar abajo")
 		return golpeArribaEstado
