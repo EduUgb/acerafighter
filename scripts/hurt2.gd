@@ -11,6 +11,6 @@ func _ready():
 
 func _on_area_entered(area: Area2D) -> void:
 	if area is HitBox:
-		if padre.has_method("recibir_golpe"):
+		if padre.has_method("recibir_golpe"):  
 			padre.recibir_golpe()
  

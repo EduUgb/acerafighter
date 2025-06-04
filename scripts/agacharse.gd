@@ -15,7 +15,8 @@ func process_physics(delta: float) -> estados:
 		return idleEstado
 	
 	if player.velocity.x != 0:
-		player.animacion.play(walkagaAnima)
+		return caminarAbajoEstado
+		
 	else:
 		player.animacion.play(agacharseAnima)
 			# Aplicar movimiento horizontald
@@ -37,11 +38,22 @@ func process_physics(delta: float) -> estados:
 	
 	
 func process_input(event: InputEvent) -> estados:
-	if event.is_action_pressed(arriba): return saltoEstado
-
+	if event.is_action_pressed(arriba):
+		return saltoEstado
 	
 	if event.is_action_pressed(golpe):
-		return golpeEstado	
+		return golpeAbajoEstado
+	
+	if event.is_action_pressed(golpeArriba):
+		return golpeArribaEstado  # Permitir el ataque hacia arriba desde el estado agachado
+
+	return null
+
+
+
+		
+
+		
 	return null
 func get_move_dir() -> float:
 	return Input.get_axis(izquierda, derecha)  

@@ -15,6 +15,8 @@ var agacharseAnima: String = "agacharse"
 var golpeAnima: String = "golpes"
 var walkagaAnima: String = "walkaga"
 var hitAnima: String = "danio"
+var golpeAbajoAnima: String = "golpeAbajo"
+var golpeArribaAnima: String = "golpeArriba"
 
 
 #establece estados
@@ -26,6 +28,10 @@ var hitAnima: String = "danio"
 @export var agacharseEstado: PlayerState
 @export var golpeEstado: PlayerState
 @export var dolorEstado: PlayerState
+@export var golpeAbajoEstado: PlayerState
+@export var golpeArribaEstado: PlayerState
+@export var caminarAbajoEstado: PlayerState
+
 #input keys
 
 
@@ -34,12 +40,14 @@ var derecha: String="derecha"
 var arriba: String="arriba"
 var abajo: String= "abajo"
 
+
 var izquierda2: String="izquierda2"
 var derecha2: String="derecha2"
 var arriba2: String="arriba2"
 var abajo2: String= "abajo2"
 
 var golpe: String = "golpe"
+var golpeArriba: String = "golpeArriba"
 #base
 
 func process_physics(delta: float) -> estados:
@@ -47,5 +55,4 @@ func process_physics(delta: float) -> estados:
 	player.velocity.y += gravity * delta
 	player.move_and_slide()
 	return null
-	
 	

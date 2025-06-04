@@ -40,6 +40,9 @@ func process_input(event: InputEvent) -> estados:
 	
 	elif event.is_action_pressed(golpe) and player.is_on_floor():
 		return golpeEstado
+
+	elif event.is_action_pressed(golpeArriba):
+		return golpeArribaEstado
 		
 	return null
 # Obtiene dirección de movimiento (-1: izquierda, 0: quieto, 1: derecha)

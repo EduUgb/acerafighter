@@ -1,10 +1,12 @@
-[gd_resource type="SpriteFrames" load_steps=72 format=3 uid="uid://bbiki45b8lx1a"]
+[gd_resource type="SpriteFrames" load_steps=82 format=3 uid="uid://bbiki45b8lx1a"]
 
 [ext_resource type="Texture2D" uid="uid://6y3g0p3j7oc5" path="res://personaje/agacharse Ninja.png" id="1_ciy0c"]
 [ext_resource type="Texture2D" uid="uid://clerwwuxjmjat" path="res://personaje/yellowNinja - hit.png" id="1_jktix"]
 [ext_resource type="Texture2D" uid="uid://coafs0mfwslx1" path="res://personaje/yellowNinja - walk.png" id="1_jm6n8"]
 [ext_resource type="Texture2D" uid="uid://illjacc32vt0" path="res://personaje/yellowNinja - attack.png" id="2_emh60"]
 [ext_resource type="Texture2D" uid="uid://5kfgo0tfudx8" path="res://personaje/yellowNinja - Death.png" id="2_vl77u"]
+[ext_resource type="Texture2D" uid="uid://swvxku4qpeu2" path="res://personaje/agacharsegolpe.png" id="2_y8nmi"]
+[ext_resource type="Texture2D" uid="uid://dody61vdibyyw" path="res://personaje/ataqueArriba.png" id="3_t8wqf"]
 [ext_resource type="Texture2D" uid="uid://ccc6wxldm1sfv" path="res://personaje/yellowNinja - Whitehit.png" id="4_uawaq"]
 [ext_resource type="Texture2D" uid="uid://betmavn8pke6o" path="res://personaje/walkaga.png" id="6_go00u"]
 [ext_resource type="Texture2D" uid="uid://1fmjkvcogwr5" path="res://personaje/saco.png" id="7_6brbe"]
@@ -21,6 +23,38 @@ region = Rect2(128, 0, 128, 128)
 [sub_resource type="AtlasTexture" id="AtlasTexture_0j06d"]
 atlas = ExtResource("1_ciy0c")
 region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5y8cg"]
+atlas = ExtResource("2_y8nmi")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_baect"]
+atlas = ExtResource("2_y8nmi")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jwuug"]
+atlas = ExtResource("2_y8nmi")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5q3w2"]
+atlas = ExtResource("2_y8nmi")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rhgg0"]
+atlas = ExtResource("3_t8wqf")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4qnki"]
+atlas = ExtResource("3_t8wqf")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tkx52"]
+atlas = ExtResource("3_t8wqf")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wx7v8"]
+atlas = ExtResource("3_t8wqf")
+region = Rect2(384, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ar767"]
 atlas = ExtResource("2_vl77u")
@@ -272,6 +306,40 @@ animations = [{
 }],
 "loop": true,
 "name": &"agacharse",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5y8cg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_baect")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jwuug")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5q3w2")
+}],
+"loop": true,
+"name": &"ataqueabajo",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rhgg0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4qnki")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tkx52")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wx7v8")
+}],
+"loop": true,
+"name": &"ataquearriba",
 "speed": 5.0
 }, {
 "frames": [{
