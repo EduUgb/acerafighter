@@ -127,8 +127,6 @@ shape = SubResource("RectangleShape2D_s4ipp")
 position = Vector2(605, 785)
 shape = SubResource("RectangleShape2D_s4ipp")
 
-[node name="CharacterBody2D2" type="CharacterBody2D" parent="."]
-
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 script = ExtResource("2_3s825")
 
@@ -144,7 +142,6 @@ shape = SubResource("RectangleShape2D_it6l2")
 debug_color = Color(5.10186e-06, 0.583672, 0.785477, 0.42)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="StaticBody2D"]
-root_node = NodePath("../../CharacterBody2D2")
 libraries = {
 &"": SubResource("AnimationLibrary_bgf2f")
 }
