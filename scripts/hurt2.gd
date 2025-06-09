@@ -9,8 +9,11 @@ func _ready():
 	area_entered.connect(_on_area_entered)
 
 
+#definido en el script padre del jugador estático
 func _on_area_entered(area: Area2D) -> void:
 	if area is HitBox:
 		if padre.has_method("recibir_golpe"):  
 			padre.recibir_golpe()
+
+
  
