@@ -20,6 +20,8 @@ func process_input(event: InputEvent) -> estados:
 	elif event.is_action_pressed(golpeArriba):
 		return golpeArribaEstado
 		
+	if event.is_action_pressed(block):
+		return bloqueoEstado
 	return null
 
 func process_physics(delta: float) -> estados:

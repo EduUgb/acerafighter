@@ -31,8 +31,20 @@ func process_physics(delta: float) -> estados:
 	if player.velocity.y > 0:
 		return fallEstado
 		
+	if player.is_on_floor():
+		if player.quiere_agacharse():
+			return agacharseEstado
+		return idleEstado
+		
+		
+	return null
+	
+func process_input(event: InputEvent) -> estados:
+	if event.is_action_pressed(golpe):
+		return golpeAireEstado
 	return null
 
+	
 func get_move_dir() -> float:
 	return Input.get_axis(izquierda, derecha)  
 	

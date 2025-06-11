@@ -1,4 +1,4 @@
-class_name PlayerGolpeArribaState
+class_name PlayerArribaState
 extends PlayerState
 
 # CONSTANTES

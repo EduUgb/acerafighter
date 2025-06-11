@@ -20,7 +20,7 @@ func enter() -> void:
 func exit() -> void:
 	super()
 	player.velocity.x = 0
-	print(player.velocity.x)
+
 
 func process_physics(delta: float) -> estados:
 	if golpeado:

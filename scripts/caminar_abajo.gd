@@ -38,6 +38,9 @@ func process_input(event: InputEvent) -> estados:
 	if event.is_action_pressed(golpe):
 		print("Golpe recibido en caminar abajo")
 		return golpeAbajoEstado
+		
+	if event.is_action_pressed(block):
+		return bloqueoEstado
 	return null
 
 func get_move_dir() -> float:

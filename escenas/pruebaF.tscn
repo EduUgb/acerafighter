@@ -1,10 +1,11 @@
-[gd_scene load_steps=14 format=3 uid="uid://drjdja6gba1f4"]
+[gd_scene load_steps=15 format=3 uid="uid://drjdja6gba1f4"]
 
 [ext_resource type="PackedScene" uid="uid://ct78koc25diav" path="res://escenas/jugador_1.tscn" id="1_qdwd3"]
 [ext_resource type="Script" uid="uid://cv2v6e2ljhsdx" path="res://scripts/static.gd" id="2_3s825"]
 [ext_resource type="SpriteFrames" uid="uid://bbiki45b8lx1a" path="res://personaje/new_sprite_frames.tres" id="3_ej4v6"]
 [ext_resource type="Script" uid="uid://08igpp0a4sg1" path="res://scripts/hitbox.gd" id="3_sw6b4"]
 [ext_resource type="Script" uid="uid://cnh7udsifk1dj" path="res://scripts/hurt2.gd" id="5_gr85v"]
+[ext_resource type="Texture2D" uid="uid://biatu51hp3fvi" path="res://escenarios/pared.jpeg" id="6_gr85v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s4ipp"]
 size = Vector2(1281, 103)
@@ -17,7 +18,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("../StaticBody2D/AnimatedSprite2D:animation")
+tracks/0/path = NodePath("../CharacterBody2D2/AnimatedSprite2D:animation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -29,7 +30,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("../StaticBody2D/AnimatedSprite2D:frame")
+tracks/1/path = NodePath("../CharacterBody2D2/AnimatedSprite2D:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -47,7 +48,7 @@ step = 0.25
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("../StaticBody2D/AnimatedSprite2D:animation")
+tracks/0/path = NodePath("../CharacterBody2D2/AnimatedSprite2D:animation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -59,7 +60,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("../StaticBody2D/AnimatedSprite2D:frame")
+tracks/1/path = NodePath("../CharacterBody2D2/AnimatedSprite2D:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -76,7 +77,7 @@ step = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("../StaticBody2D/AnimatedSprite2D:animation")
+tracks/0/path = NodePath("../CharacterBody2D2/AnimatedSprite2D:animation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -88,7 +89,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("../StaticBody2D/AnimatedSprite2D:frame")
+tracks/1/path = NodePath("../CharacterBody2D2/AnimatedSprite2D:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -128,42 +129,52 @@ position = Vector2(605, 785)
 shape = SubResource("RectangleShape2D_s4ipp")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+visible = false
+
+[node name="CharacterBody2D2" type="CharacterBody2D" parent="."]
 script = ExtResource("2_3s825")
 
-[node name="HurtBox" type="Area2D" parent="StaticBody2D"]
+[node name="HurtBox" type="Area2D" parent="CharacterBody2D2"]
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("5_gr85v")
 metadata/_custom_type_script = "uid://dm822grhe3ol5"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/HurtBox"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D2/HurtBox"]
 position = Vector2(967.5, 534.25)
 shape = SubResource("RectangleShape2D_it6l2")
 debug_color = Color(5.10186e-06, 0.583672, 0.785477, 0.42)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="StaticBody2D"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D2"]
+root_node = NodePath("../../StaticBody2D")
 libraries = {
 &"": SubResource("AnimationLibrary_bgf2f")
 }
 
-[node name="HitBox" type="Area2D" parent="StaticBody2D"]
+[node name="HitBox" type="Area2D" parent="CharacterBody2D2"]
 collision_layer = 2
 collision_mask = 0
 script = ExtResource("3_sw6b4")
 metadata/_custom_type_script = "uid://08igpp0a4sg1"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/HitBox"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D2/HitBox"]
 position = Vector2(967.5, 534.25)
 shape = SubResource("RectangleShape2D_sw6b4")
 debug_color = Color(0.685662, 0.500445, 0.0127849, 0.42)
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="StaticBody2D"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D2"]
 position = Vector2(982, 400)
 scale = Vector2(9.60352, 10.3643)
 sprite_frames = ExtResource("3_ej4v6")
 animation = &"saco"
 metadata/_edit_lock_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D2"]
 position = Vector2(973, 525)
 shape = SubResource("CapsuleShape2D_3s825")
+
+[node name="Pared" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(668, 494.5)
+scale = Vector2(0.902344, 0.973633)
+texture = ExtResource("6_gr85v")

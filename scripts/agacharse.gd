@@ -46,7 +46,8 @@ func process_input(event: InputEvent) -> estados:
 	
 	if event.is_action_pressed(golpeArriba):
 		return golpeArribaEstado  # Permitir el ataque hacia arriba desde el estado agachado
-
+	if event.is_action_pressed(block):
+		return bloqueoEstado
 	return null
 
 

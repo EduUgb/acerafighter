@@ -5,7 +5,7 @@ extends Area2D
 @onready var maquina_Estados =  $"../.." # jugador1
 @onready var player = $"../../.."  # por claridad
 @onready var shape = $CollisionShape2D
-@onready var timer = $Timer
+
 #var invencible = false  # ← NUEVO
 
 

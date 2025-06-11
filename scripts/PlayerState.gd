@@ -17,7 +17,8 @@ var walkagaAnima: String = "walkaga"
 var hitAnima: String = "danio"
 var golpeAbajoAnima: String = "golpeAbajo"
 var golpeArribaAnima: String = "golpeArriba"
-
+var goldo: String = "yoSaco"
+var blockAnima: String = "bloqueo22"
 
 #establece estados
 @export_group("States")
@@ -31,6 +32,8 @@ var golpeArribaAnima: String = "golpeArriba"
 @export var golpeAbajoEstado: PlayerState
 @export var golpeArribaEstado: PlayerState
 @export var caminarAbajoEstado: PlayerState
+@export var golpeAireEstado: PlayerState
+@export var bloqueoEstado: PlayerState
 
 #input keys
 
@@ -48,11 +51,17 @@ var abajo2: String= "abajo2"
 
 var golpe: String = "golpe"
 var golpeArriba: String = "golpeArriba"
+
+var block: String = "bloqueo2"
 #base
 
-func process_physics(delta: float) -> estados:
-	if(player.velocity.y < 0): return fallEstado
-	player.velocity.y += gravity * delta
+func process_physics(delta: float) -> estados: # Retorna PlayerState, no "estados"
+	# Solo aplica la gravedad si no está en el suelo.
+	# El movimiento horizontal (velocity.x) debe ser manejado por los estados individuales (Caminar, Salto, Caida).
+	if not player.is_on_floor():
+		player.velocity.y += gravity * delta
+	
 	player.move_and_slide()
-	return null
+	return null # El estado base NUNCA decide transiciones por sí mismo
+
 	
