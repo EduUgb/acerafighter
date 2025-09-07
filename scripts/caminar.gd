@@ -32,7 +32,7 @@ func process_physics(delta: float) -> estados:
 func process_input(event: InputEvent) -> estados:
 	super(event)
 
-	if event.is_action_pressed(arriba): return saltoEstado
+	if event.is_action_pressed(arriba) and player.is_on_floor(): return saltoEstado
 
 	
 	if event.is_action_pressed(abajo) and player.is_on_floor():

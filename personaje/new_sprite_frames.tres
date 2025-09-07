@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=106 format=3 uid="uid://bbiki45b8lx1a"]
+[gd_resource type="SpriteFrames" load_steps=121 format=3 uid="uid://bbiki45b8lx1a"]
 
 [ext_resource type="Texture2D" uid="uid://dhflobrcomd71" path="res://personaje/escudo2.png" id="1_88r3o"]
 [ext_resource type="Texture2D" uid="uid://6y3g0p3j7oc5" path="res://personaje/agacharse Ninja.png" id="1_ciy0c"]
@@ -14,6 +14,9 @@
 [ext_resource type="Texture2D" uid="uid://1fmjkvcogwr5" path="res://personaje/saco.png" id="7_6brbe"]
 [ext_resource type="Texture2D" uid="uid://deoyaa3ni57ta" path="res://personaje/sacohurt.png" id="8_ev51i"]
 [ext_resource type="Texture2D" uid="uid://c15ww47aog7m0" path="res://personaje/elgoldo.png" id="8_t8wqf"]
+[ext_resource type="Texture2D" uid="uid://bjkgyjxl7ng5q" path="res://personaje/especial1.png" id="10_l10fg"]
+[ext_resource type="Texture2D" uid="uid://dh8i8pi456q8l" path="res://personaje/especialb.png" id="11_b2jnb"]
+[ext_resource type="Texture2D" uid="uid://c18xssxcpxamg" path="res://personaje/eeee.png" id="12_f74hj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_di1um"]
 atlas = ExtResource("1_88r3o")
@@ -209,6 +212,54 @@ region = Rect2(256, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uawaq"]
 atlas = ExtResource("1_jktix")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s7xtf"]
+atlas = ExtResource("10_l10fg")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aotml"]
+atlas = ExtResource("10_l10fg")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7wnja"]
+atlas = ExtResource("10_l10fg")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lc6dg"]
+atlas = ExtResource("10_l10fg")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r4wuj"]
+atlas = ExtResource("11_b2jnb")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o5tu1"]
+atlas = ExtResource("11_b2jnb")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aymge"]
+atlas = ExtResource("11_b2jnb")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3drom"]
+atlas = ExtResource("11_b2jnb")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8fpny"]
+atlas = ExtResource("12_f74hj")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lmyin"]
+atlas = ExtResource("12_f74hj")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n33aw"]
+atlas = ExtResource("12_f74hj")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t8cxn"]
+atlas = ExtResource("12_f74hj")
 region = Rect2(384, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_plm4t"]
@@ -571,6 +622,57 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s7xtf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aotml")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7wnja")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lc6dg")
+}],
+"loop": true,
+"name": &"especial",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r4wuj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o5tu1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aymge")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3drom")
+}],
+"loop": true,
+"name": &"especial2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8fpny")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lmyin")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n33aw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t8cxn")
+}],
+"loop": true,
+"name": &"especial3",
 "speed": 5.0
 }, {
 "frames": [{

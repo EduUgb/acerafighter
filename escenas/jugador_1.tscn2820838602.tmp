@@ -12,6 +12,9 @@
 [ext_resource type="Script" uid="uid://detjwevq8872a" path="res://scripts/golpe.gd" id="8_k75m6"]
 [ext_resource type="Script" uid="uid://08igpp0a4sg1" path="res://scripts/hitbox.gd" id="9_4tl84"]
 [ext_resource type="Script" uid="uid://c6kvsi5qkorhv" path="res://scripts/dolor.gd" id="10_5ksev"]
+[ext_resource type="Script" uid="uid://cseoldkfyojky" path="res://scripts/golpeAbajo.gd" id="10_titcl"]
+[ext_resource type="Script" uid="uid://ve2yl6m1ce7k" path="res://scripts/golpeArriba.gd" id="10_vemi5"]
+[ext_resource type="Script" uid="uid://70eri403yb1m" path="res://scripts/aireataque.gd" id="12_6xeye"]
 [ext_resource type="Script" uid="uid://bqdpt5rqmiavo" path="res://scripts/hurtPlayer.gd" id="14_c7tmd"]
 [ext_resource type="Script" uid="uid://cr0jridoawjjc" path="res://scripts/block.gd" id="16_jriqx"]
 
@@ -94,7 +97,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("maquinaEstados/golpe/HitBox2/CollisionShape2D:disabled")
+tracks/5/path = NodePath("maquinaEstados/golpeAbajo/HitBox/CollisionShape2D:disabled")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -106,7 +109,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("maquinaEstados/golpe/HitBox3/CollisionShape2D:disabled")
+tracks/6/path = NodePath("maquinaEstados/golpeArriba/HitBox/CollisionShape2D:disabled")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -304,189 +307,6 @@ tracks/2/keys = {
 "values": [2.714, 1.0]
 }
 
-[sub_resource type="Animation" id="Animation_vemi5"]
-resource_name = "especial2"
-length = 0.500013
-step = 0.125
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"especial2"]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AnimatedSprite2D:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.125, 0.25, 0.375),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("maquinaEstados/golpe/HitBox/CollisionShape2D:disabled")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.125, 0.375),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [true, false, true]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("maquinaEstados/golpe/HitBox2/CollisionShape2D:disabled")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.125, 0.375),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [true, false, true]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("maquinaEstados/golpe/HitBox3/CollisionShape2D:disabled")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0, 0.125, 0.375),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [true, false, true]
-}
-
-[sub_resource type="Animation" id="Animation_07h1f"]
-resource_name = "especial3"
-length = 0.500013
-step = 0.125
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"especial3"]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AnimatedSprite2D:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.125, 0.25, 0.375),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("maquinaEstados/golpe/HitBox/CollisionShape2D:disabled")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.125, 0.25),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [true, false, true]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("maquinaEstados/golpe/HitBox2/CollisionShape2D:disabled")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.125, 0.25),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [true, false, true]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("maquinaEstados/golpe/HitBox3/CollisionShape2D:disabled")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0, 0.125, 0.25),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [true, false, true]
-}
-
-[sub_resource type="Animation" id="Animation_xowsa"]
-resource_name = "especialA"
-length = 0.500013
-step = 0.125
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"especial"]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AnimatedSprite2D:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.125, 0.25, 0.375),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("maquinaEstados/golpe/HitBox/CollisionShape2D:disabled")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.125, 0.25),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [true, false, true]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("maquinaEstados/golpe/HitBox3/CollisionShape2D:disabled")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.125, 0.25),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [true, false, true]
-}
-
 [sub_resource type="Animation" id="Animation_6xeye"]
 resource_name = "golpeAbajo"
 length = 0.500013
@@ -518,7 +338,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("maquinaEstados/golpe/HitBox3/CollisionShape2D:disabled")
+tracks/2/path = NodePath("maquinaEstados/golpeAbajo/HitBox/CollisionShape2D:disabled")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -559,7 +379,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("maquinaEstados/golpe/HitBox2/CollisionShape2D:disabled")
+tracks/2/path = NodePath("maquinaEstados/golpeArriba/HitBox/CollisionShape2D:disabled")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -749,9 +569,6 @@ _data = {
 &"caida": SubResource("Animation_7kt3y"),
 &"caminar": SubResource("Animation_s8sdq"),
 &"danio": SubResource("Animation_5ksev"),
-&"especial2": SubResource("Animation_vemi5"),
-&"especial3": SubResource("Animation_07h1f"),
-&"especialA": SubResource("Animation_xowsa"),
 &"golpeAbajo": SubResource("Animation_6xeye"),
 &"golpeArriba": SubResource("Animation_jriqx"),
 &"golpes": SubResource("Animation_4tl84"),
@@ -772,7 +589,7 @@ script = ExtResource("1_hnwkt")
 script = ExtResource("3_gbvj4")
 estadoInicial = NodePath("Idle")
 
-[node name="Idle" type="Node2D" parent="maquinaEstados" node_paths=PackedStringArray("idleEstado", "caminarEstado", "saltoEstado", "fallEstado", "agacharseEstado", "golpeEstado", "dolorEstado", "caminarAbajoEstado", "bloqueoEstado")]
+[node name="Idle" type="Node2D" parent="maquinaEstados" node_paths=PackedStringArray("idleEstado", "caminarEstado", "saltoEstado", "fallEstado", "agacharseEstado", "golpeEstado", "dolorEstado", "golpeAbajoEstado", "golpeArribaEstado", "caminarAbajoEstado", "golpeAireEstado", "bloqueoEstado")]
 script = ExtResource("4_u30lm")
 idleEstado = NodePath(".")
 caminarEstado = NodePath("../Caminar")
@@ -781,10 +598,13 @@ fallEstado = NodePath("../fall")
 agacharseEstado = NodePath("../agacharse")
 golpeEstado = NodePath("../golpe")
 dolorEstado = NodePath("../dolor")
+golpeAbajoEstado = NodePath("../golpeAbajo")
+golpeArribaEstado = NodePath("../golpeArriba")
 caminarAbajoEstado = NodePath("../CaminarAbajo")
+golpeAireEstado = NodePath("../golpeAire")
 bloqueoEstado = NodePath("../bloqueo")
 
-[node name="Caminar" type="Node2D" parent="maquinaEstados" node_paths=PackedStringArray("idleEstado", "caminarEstado", "saltoEstado", "fallEstado", "agacharseEstado", "golpeEstado", "dolorEstado", "caminarAbajoEstado", "bloqueoEstado")]
+[node name="Caminar" type="Node2D" parent="maquinaEstados" node_paths=PackedStringArray("idleEstado", "caminarEstado", "saltoEstado", "fallEstado", "agacharseEstado", "golpeEstado", "dolorEstado", "golpeAbajoEstado", "golpeArribaEstado", "caminarAbajoEstado", "golpeAireEstado", "bloqueoEstado")]
 script = ExtResource("5_gbvj4")
 idleEstado = NodePath("../Idle")
 caminarEstado = NodePath(".")
@@ -793,10 +613,13 @@ fallEstado = NodePath("../fall")
 agacharseEstado = NodePath("../agacharse")
 golpeEstado = NodePath("../golpe")
 dolorEstado = NodePath("../dolor")
+golpeAbajoEstado = NodePath("../golpeAbajo")
+golpeArribaEstado = NodePath("../golpeArriba")
 caminarAbajoEstado = NodePath("../CaminarAbajo")
+golpeAireEstado = NodePath("../golpeAire")
 bloqueoEstado = NodePath("../bloqueo")
 
-[node name="CaminarAbajo" type="Node2D" parent="maquinaEstados" node_paths=PackedStringArray("idleEstado", "caminarEstado", "saltoEstado", "fallEstado", "agacharseEstado", "golpeEstado", "dolorEstado", "caminarAbajoEstado", "bloqueoEstado")]
+[node name="CaminarAbajo" type="Node2D" parent="maquinaEstados" node_paths=PackedStringArray("idleEstado", "caminarEstado", "saltoEstado", "fallEstado", "agacharseEstado", "golpeEstado", "dolorEstado", "golpeAbajoEstado", "golpeArribaEstado", "caminarAbajoEstado", "golpeAireEstado", "bloqueoEstado")]
 script = ExtResource("5_c7tmd")
 idleEstado = NodePath("../Idle")
 caminarEstado = NodePath("../Caminar")
@@ -805,10 +628,13 @@ fallEstado = NodePath("../fall")
 agacharseEstado = NodePath("../agacharse")
 golpeEstado = NodePath("../golpe")
 dolorEstado = NodePath("../dolor")
+golpeAbajoEstado = NodePath("../golpeAbajo")
+golpeArribaEstado = NodePath("../golpeArriba")
 caminarAbajoEstado = NodePath(".")
+golpeAireEstado = NodePath("../golpeAire")
 bloqueoEstado = NodePath("../bloqueo")
 
-[node name="salto" type="Node2D" parent="maquinaEstados" node_paths=PackedStringArray("idleEstado", "caminarEstado", "saltoEstado", "fallEstado", "agacharseEstado", "golpeEstado", "dolorEstado", "caminarAbajoEstado", "bloqueoEstado")]
+[node name="salto" type="Node2D" parent="maquinaEstados" node_paths=PackedStringArray("idleEstado", "caminarEstado", "saltoEstado", "fallEstado", "agacharseEstado", "golpeEstado", "dolorEstado", "golpeAbajoEstado", "golpeArribaEstado", "caminarAbajoEstado", "golpeAireEstado", "bloqueoEstado")]
 script = ExtResource("5_s8sdq")
 idleEstado = NodePath("../Idle")
 caminarEstado = NodePath("../Caminar")
@@ -817,10 +643,13 @@ fallEstado = NodePath("../fall")
 agacharseEstado = NodePath("../agacharse")
 golpeEstado = NodePath("../golpe")
 dolorEstado = NodePath("../dolor")
+golpeAbajoEstado = NodePath("../golpeAbajo")
+golpeArribaEstado = NodePath("../golpeArriba")
 caminarAbajoEstado = NodePath("../CaminarAbajo")
+golpeAireEstado = NodePath("../golpeAire")
 bloqueoEstado = NodePath("../bloqueo")
 
-[node name="fall" type="Node2D" parent="maquinaEstados" node_paths=PackedStringArray("idleEstado", "caminarEstado", "saltoEstado", "fallEstado", "agacharseEstado", "golpeEstado", "dolorEstado", "caminarAbajoEstado", "bloqueoEstado")]
+[node name="fall" type="Node2D" parent="maquinaEstados" node_paths=PackedStringArray("idleEstado", "caminarEstado", "saltoEstado", "fallEstado", "agacharseEstado", "golpeEstado", "dolorEstado", "golpeAbajoEstado", "golpeArribaEstado", "caminarAbajoEstado", "golpeAireEstado", "bloqueoEstado")]
 script = ExtResource("6_arupa")
 idleEstado = NodePath("../Idle")
 caminarEstado = NodePath("../Caminar")
@@ -829,10 +658,13 @@ fallEstado = NodePath(".")
 agacharseEstado = NodePath("../agacharse")
 golpeEstado = NodePath("../golpe")
 dolorEstado = NodePath("../dolor")
+golpeAbajoEstado = NodePath("../golpeAbajo")
+golpeArribaEstado = NodePath("../golpeArriba")
 caminarAbajoEstado = NodePath("../CaminarAbajo")
+golpeAireEstado = NodePath("../golpeAire")
 bloqueoEstado = NodePath("../bloqueo")
 
-[node name="agacharse" type="Node2D" parent="maquinaEstados" node_paths=PackedStringArray("idleEstado", "caminarEstado", "saltoEstado", "fallEstado", "agacharseEstado", "golpeEstado", "dolorEstado", "caminarAbajoEstado", "bloqueoEstado")]
+[node name="agacharse" type="Node2D" parent="maquinaEstados" node_paths=PackedStringArray("idleEstado", "caminarEstado", "saltoEstado", "fallEstado", "agacharseEstado", "golpeEstado", "dolorEstado", "golpeAbajoEstado", "golpeArribaEstado", "caminarAbajoEstado", "golpeAireEstado", "bloqueoEstado")]
 script = ExtResource("7_7kt3y")
 idleEstado = NodePath("../Idle")
 caminarEstado = NodePath("../Caminar")
@@ -841,10 +673,13 @@ fallEstado = NodePath("../fall")
 agacharseEstado = NodePath(".")
 golpeEstado = NodePath("../golpe")
 dolorEstado = NodePath("../dolor")
+golpeAbajoEstado = NodePath("../golpeAbajo")
+golpeArribaEstado = NodePath("../golpeArriba")
 caminarAbajoEstado = NodePath("../CaminarAbajo")
+golpeAireEstado = NodePath("../golpeAire")
 bloqueoEstado = NodePath("../bloqueo")
 
-[node name="golpe" type="Node2D" parent="maquinaEstados" node_paths=PackedStringArray("idleEstado", "caminarEstado", "saltoEstado", "fallEstado", "agacharseEstado", "golpeEstado", "dolorEstado", "caminarAbajoEstado", "bloqueoEstado")]
+[node name="golpe" type="Node2D" parent="maquinaEstados" node_paths=PackedStringArray("idleEstado", "caminarEstado", "saltoEstado", "fallEstado", "agacharseEstado", "golpeEstado", "dolorEstado", "golpeAbajoEstado", "golpeArribaEstado", "caminarAbajoEstado", "golpeAireEstado", "bloqueoEstado")]
 script = ExtResource("8_k75m6")
 idleEstado = NodePath("../Idle")
 caminarEstado = NodePath("../Caminar")
@@ -853,7 +688,10 @@ fallEstado = NodePath("../fall")
 agacharseEstado = NodePath("../agacharse")
 golpeEstado = NodePath(".")
 dolorEstado = NodePath("../dolor")
+golpeAbajoEstado = NodePath("../golpeAbajo")
+golpeArribaEstado = NodePath("../golpeArriba")
 caminarAbajoEstado = NodePath("../CaminarAbajo")
+golpeAireEstado = NodePath("../golpeAire")
 bloqueoEstado = NodePath("../bloqueo")
 
 [node name="HitBox" type="Area2D" parent="maquinaEstados/golpe"]
@@ -868,32 +706,77 @@ shape = SubResource("RectangleShape2D_ox5i8")
 disabled = true
 debug_color = Color(0.989781, 0, 0.286363, 0.42)
 
-[node name="HitBox2" type="Area2D" parent="maquinaEstados/golpe"]
+[node name="golpeArriba" type="Node2D" parent="maquinaEstados" node_paths=PackedStringArray("idleEstado", "caminarEstado", "saltoEstado", "fallEstado", "agacharseEstado", "golpeEstado", "dolorEstado", "golpeAbajoEstado", "golpeArribaEstado", "caminarAbajoEstado", "golpeAireEstado", "bloqueoEstado")]
+script = ExtResource("10_vemi5")
+idleEstado = NodePath("../Idle")
+caminarEstado = NodePath("../Caminar")
+saltoEstado = NodePath("../salto")
+fallEstado = NodePath("../fall")
+agacharseEstado = NodePath("../agacharse")
+golpeEstado = NodePath("../golpe")
+dolorEstado = NodePath("../dolor")
+golpeAbajoEstado = NodePath("../golpeAbajo")
+golpeArribaEstado = NodePath(".")
+caminarAbajoEstado = NodePath("../CaminarAbajo")
+golpeAireEstado = NodePath("../golpeAire")
+bloqueoEstado = NodePath("../bloqueo")
+
+[node name="HitBox" type="Area2D" parent="maquinaEstados/golpeArriba"]
 collision_layer = 2
 collision_mask = 0
 script = ExtResource("9_4tl84")
 metadata/_custom_type_script = "uid://08igpp0a4sg1"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="maquinaEstados/golpe/HitBox2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="maquinaEstados/golpeArriba/HitBox"]
 position = Vector2(514, 285)
 rotation = 0.7263
 shape = SubResource("RectangleShape2D_vemi5")
 disabled = true
 debug_color = Color(0.989781, 0, 0.286363, 0.42)
 
-[node name="HitBox3" type="Area2D" parent="maquinaEstados/golpe"]
+[node name="golpeAire" type="Node2D" parent="maquinaEstados" node_paths=PackedStringArray("idleEstado", "caminarEstado", "saltoEstado", "fallEstado", "agacharseEstado", "golpeEstado", "dolorEstado", "golpeAbajoEstado", "golpeArribaEstado", "caminarAbajoEstado", "golpeAireEstado", "bloqueoEstado")]
+script = ExtResource("12_6xeye")
+idleEstado = NodePath("../Idle")
+caminarEstado = NodePath("../Caminar")
+saltoEstado = NodePath("../salto")
+fallEstado = NodePath("../fall")
+agacharseEstado = NodePath("../agacharse")
+golpeEstado = NodePath("../golpe")
+dolorEstado = NodePath("../dolor")
+golpeAbajoEstado = NodePath("../golpeAbajo")
+golpeArribaEstado = NodePath("../golpeArriba")
+caminarAbajoEstado = NodePath("../CaminarAbajo")
+golpeAireEstado = NodePath(".")
+bloqueoEstado = NodePath("../bloqueo")
+
+[node name="golpeAbajo" type="Node2D" parent="maquinaEstados" node_paths=PackedStringArray("idleEstado", "caminarEstado", "saltoEstado", "fallEstado", "agacharseEstado", "golpeEstado", "dolorEstado", "golpeAbajoEstado", "golpeArribaEstado", "caminarAbajoEstado", "golpeAireEstado", "bloqueoEstado")]
+script = ExtResource("10_titcl")
+idleEstado = NodePath("../Idle")
+caminarEstado = NodePath("../Caminar")
+saltoEstado = NodePath("../salto")
+fallEstado = NodePath("../fall")
+agacharseEstado = NodePath("../agacharse")
+golpeEstado = NodePath("../golpe")
+dolorEstado = NodePath("../dolor")
+golpeAbajoEstado = NodePath(".")
+golpeArribaEstado = NodePath("../golpeArriba")
+caminarAbajoEstado = NodePath("../CaminarAbajo")
+golpeAireEstado = NodePath("../golpeAire")
+bloqueoEstado = NodePath("../bloqueo")
+
+[node name="HitBox" type="Area2D" parent="maquinaEstados/golpeAbajo"]
 collision_layer = 2
 collision_mask = 0
 script = ExtResource("9_4tl84")
 metadata/_custom_type_script = "uid://08igpp0a4sg1"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="maquinaEstados/golpe/HitBox3"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="maquinaEstados/golpeAbajo/HitBox"]
 position = Vector2(557.063, 604.781)
 shape = SubResource("RectangleShape2D_c7tmd")
 disabled = true
 debug_color = Color(0.808066, 0.413852, 3.85046e-07, 0.42)
 
-[node name="dolor" type="Node2D" parent="maquinaEstados" node_paths=PackedStringArray("idleEstado", "caminarEstado", "saltoEstado", "fallEstado", "agacharseEstado", "golpeEstado", "dolorEstado", "caminarAbajoEstado", "bloqueoEstado")]
+[node name="dolor" type="Node2D" parent="maquinaEstados" node_paths=PackedStringArray("idleEstado", "caminarEstado", "saltoEstado", "fallEstado", "agacharseEstado", "golpeEstado", "dolorEstado", "golpeAbajoEstado", "golpeArribaEstado", "caminarAbajoEstado", "golpeAireEstado", "bloqueoEstado")]
 script = ExtResource("10_5ksev")
 idleEstado = NodePath("../Idle")
 caminarEstado = NodePath("../Caminar")
@@ -902,7 +785,10 @@ fallEstado = NodePath("../fall")
 agacharseEstado = NodePath("../agacharse")
 golpeEstado = NodePath("../golpe")
 dolorEstado = NodePath(".")
+golpeAbajoEstado = NodePath("../golpeAbajo")
+golpeArribaEstado = NodePath("../golpeArriba")
 caminarAbajoEstado = NodePath("../CaminarAbajo")
+golpeAireEstado = NodePath("../golpeAire")
 bloqueoEstado = NodePath("../bloqueo")
 
 [node name="HurtBox" type="Area2D" parent="maquinaEstados/dolor"]
@@ -916,7 +802,7 @@ position = Vector2(192, 552.25)
 shape = SubResource("RectangleShape2D_5ksev")
 debug_color = Color(0.967356, 1.63645e-06, 0.474771, 0.42)
 
-[node name="bloqueo" type="Node2D" parent="maquinaEstados" node_paths=PackedStringArray("idleEstado", "caminarEstado", "saltoEstado", "fallEstado", "agacharseEstado", "golpeEstado", "dolorEstado", "caminarAbajoEstado", "bloqueoEstado")]
+[node name="bloqueo" type="Node2D" parent="maquinaEstados" node_paths=PackedStringArray("idleEstado", "caminarEstado", "saltoEstado", "fallEstado", "agacharseEstado", "golpeEstado", "dolorEstado", "golpeAbajoEstado", "golpeArribaEstado", "caminarAbajoEstado", "golpeAireEstado", "bloqueoEstado")]
 script = ExtResource("16_jriqx")
 idleEstado = NodePath("../Idle")
 caminarEstado = NodePath("../Caminar")
@@ -925,7 +811,10 @@ fallEstado = NodePath("../fall")
 agacharseEstado = NodePath("../agacharse")
 golpeEstado = NodePath("../golpe")
 dolorEstado = NodePath("../dolor")
+golpeAbajoEstado = NodePath("../golpeAbajo")
+golpeArribaEstado = NodePath("../golpeArriba")
 caminarAbajoEstado = NodePath("../CaminarAbajo")
+golpeAireEstado = NodePath("../golpeAire")
 bloqueoEstado = NodePath(".")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -948,5 +837,3 @@ scale = Vector2(0.677286, 1.03068)
 shape = SubResource("CapsuleShape2D_epypp")
 debug_color = Color(0, 0.607935, 0.651747, 0.42)
 metadata/_edit_lock_ = true
-
-[node name="combo_timer" type="Timer" parent="."]

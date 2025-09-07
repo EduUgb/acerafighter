@@ -41,7 +41,8 @@ func process_physics(delta: float) -> estados:
 	
 func process_input(event: InputEvent) -> estados:
 	if event.is_action_pressed(golpe):
-		return golpeAireEstado
+		golpeEstado.set_tipo_golpe("abajo")
+		return golpeEstado
 	return null
 
 	

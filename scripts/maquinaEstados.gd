@@ -6,6 +6,7 @@ var currentEstado: estados
 @export var estadoInicial: estados
 @onready var dolor = $dolor
 
+
 func init() -> void: cambiaEstado(estadoInicial)
 	
 
@@ -19,10 +20,13 @@ func process_input(event: InputEvent) -> void:
 	if nuevoEstado: cambiaEstado(nuevoEstado)
 	
 func process_physics(delta: float) -> void:
-	var nuevoEstado: estados = currentEstado.process_physics(delta)
-	if nuevoEstado: cambiaEstado(nuevoEstado)
+	var nuevo_estado = currentEstado.process_physics(delta)
 	
-func cambiaEstado(nuevoEstado: estados ) -> void:
-	if currentEstado: currentEstado.exit()
-	currentEstado = nuevoEstado
+	if nuevo_estado != null and nuevo_estado != currentEstado:
+		cambiaEstado(nuevo_estado)
+	
+func cambiaEstado(nuevo_estado: estados) -> void:
+	if currentEstado != null:
+		currentEstado.exit()
+	currentEstado = nuevo_estado
 	currentEstado.enter()

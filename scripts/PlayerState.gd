@@ -4,6 +4,8 @@ extends estados
 @onready var player: Player = owner 
 
 
+
+
 var gravity: float = 2500
 
 #nombre de las animaciones
@@ -19,6 +21,9 @@ var golpeAbajoAnima: String = "golpeAbajo"
 var golpeArribaAnima: String = "golpeArriba"
 var goldo: String = "yoSaco"
 var blockAnima: String = "bloqueo22"
+var especialAnima: String = "especialA"
+var especialAnima2: String = "especial2"
+var especialAnima3: String = "especial3"
 
 #establece estados
 @export_group("States")
@@ -34,7 +39,7 @@ var blockAnima: String = "bloqueo22"
 @export var caminarAbajoEstado: PlayerState
 @export var golpeAireEstado: PlayerState
 @export var bloqueoEstado: PlayerState
-
+@export var muerteEstado: PlayerState
 #input keys
 
 
@@ -51,10 +56,13 @@ var abajo2: String= "abajo2"
 
 var golpe: String = "golpe"
 var golpeArriba: String = "golpeArriba"
+var golpeespecial: String = "especial"
 
 var block: String = "bloqueo2"
 #base
 
+	
+	
 func process_physics(delta: float) -> estados: # Retorna PlayerState, no "estados"
 	# Solo aplica la gravedad si no está en el suelo.
 	# El movimiento horizontal (velocity.x) debe ser manejado por los estados individuales (Caminar, Salto, Caida).

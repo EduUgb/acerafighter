@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://drjdja6gba1f4"]
+[gd_scene load_steps=27 format=3 uid="uid://drjdja6gba1f4"]
 
 [ext_resource type="PackedScene" uid="uid://ct78koc25diav" path="res://escenas/jugador_1.tscn" id="1_qdwd3"]
 [ext_resource type="Script" uid="uid://cv2v6e2ljhsdx" path="res://scripts/static.gd" id="2_3s825"]
@@ -6,6 +6,14 @@
 [ext_resource type="Script" uid="uid://08igpp0a4sg1" path="res://scripts/hitbox.gd" id="3_sw6b4"]
 [ext_resource type="Script" uid="uid://cnh7udsifk1dj" path="res://scripts/hurt2.gd" id="5_gr85v"]
 [ext_resource type="Texture2D" uid="uid://biatu51hp3fvi" path="res://escenarios/pared.jpeg" id="6_gr85v"]
+[ext_resource type="Script" uid="uid://1aqmck7fv57f" path="res://escenas/hud.gd" id="7_4dei2"]
+[ext_resource type="Texture2D" uid="uid://c7pw2q45ortac" path="res://personaje/pngtree-life-bar-games-pixel-art-vector-png-image_12690219.png" id="8_7wpai"]
+[ext_resource type="FontFile" uid="uid://qy6pxxwhk8yd" path="res://extras/BoldPixels1.4.ttf" id="8_8svfb"]
+[ext_resource type="Script" uid="uid://biumjr6d3bg5i" path="res://escenas/vida_bar.gd" id="8_bgf2f"]
+[ext_resource type="Script" uid="uid://r0hv1iv5fnuk" path="res://escenas/final.gd" id="9_it6l2"]
+[ext_resource type="Texture2D" uid="uid://dexbwpoyaoly1" path="res://extras/game over.png" id="12_2360e"]
+[ext_resource type="AudioStream" uid="uid://dxstiqkkbwoj" path="res://extras/NEGRO-‐-Hecho-con-Clipchamp-_1_.ogg" id="12_fhj5s"]
+[ext_resource type="Texture2D" uid="uid://d2yn18jlvppgx" path="res://extras/repetir.png" id="13_git66"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s4ipp"]
 size = Vector2(1281, 103)
@@ -113,9 +121,21 @@ size = Vector2(125, 391.5)
 radius = 66.0
 height = 412.0
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fhj5s"]
+texture = ExtResource("8_7wpai")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7seqx"]
+texture = ExtResource("12_2360e")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2360e"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dqp2c"]
+texture = ExtResource("13_git66")
+
 [node name="Node2D" type="Node2D"]
 
 [node name="jugador1" parent="." instance=ExtResource("1_qdwd3")]
+top_level = true
 position = Vector2(-103, -303)
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
@@ -173,8 +193,89 @@ metadata/_edit_lock_ = true
 position = Vector2(973, 525)
 shape = SubResource("CapsuleShape2D_3s825")
 
+[node name="CanvasLayer2" type="CanvasLayer" parent="CharacterBody2D2"]
+script = ExtResource("7_4dei2")
+
+[node name="infolbl2" type="Label" parent="CharacterBody2D2/CanvasLayer2"]
+visible = false
+offset_left = 15.0
+offset_top = 668.0
+offset_right = 322.0
+offset_bottom = 693.0
+theme_override_fonts/font = ExtResource("8_8svfb")
+theme_override_font_sizes/font_size = 30
+text = "var cooldown_golpe_especial: float = 10"
+
+[node name="vidaBar2" type="ProgressBar" parent="CharacterBody2D2/CanvasLayer2"]
+offset_left = 895.0
+offset_top = 6.0
+offset_right = 1225.0
+offset_bottom = 70.0
+theme_override_fonts/font = ExtResource("8_8svfb")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/fill = SubResource("StyleBoxTexture_fhj5s")
+value = 100.0
+script = ExtResource("8_bgf2f")
+
 [node name="Pared" type="Sprite2D" parent="."]
 show_behind_parent = true
-position = Vector2(668, 494.5)
+position = Vector2(671, 478)
 scale = Vector2(0.902344, 0.973633)
 texture = ExtResource("6_gr85v")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource("7_4dei2")
+
+[node name="infolbl" type="Label" parent="CanvasLayer"]
+offset_left = 15.0
+offset_top = 668.0
+offset_right = 322.0
+offset_bottom = 693.0
+theme_override_fonts/font = ExtResource("8_8svfb")
+theme_override_font_sizes/font_size = 30
+text = "var cooldown_golpe_especial: float = 10"
+
+[node name="vidaBar" type="ProgressBar" parent="CanvasLayer"]
+offset_left = 14.0
+offset_top = 1.0
+offset_right = 344.0
+offset_bottom = 65.0
+theme_override_fonts/font = ExtResource("8_8svfb")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/fill = SubResource("StyleBoxTexture_fhj5s")
+value = 100.0
+script = ExtResource("8_bgf2f")
+
+[node name="final" type="CanvasLayer" parent="."]
+script = ExtResource("9_it6l2")
+
+[node name="Panel" type="Panel" parent="final"]
+offset_top = -6.0
+offset_right = 1276.0
+offset_bottom = 722.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_7seqx")
+
+[node name="againbtn" type="Button" parent="final/Panel"]
+layout_mode = 0
+offset_left = 415.0
+offset_top = 465.0
+offset_right = 877.0
+offset_bottom = 562.0
+theme_override_font_sizes/font_size = 32
+theme_override_styles/hover = SubResource("StyleBoxFlat_2360e")
+theme_override_styles/normal = SubResource("StyleBoxTexture_dqp2c")
+
+[node name="Label" type="Label" parent="final/Panel"]
+visible = false
+layout_mode = 0
+offset_left = 126.0
+offset_top = 403.0
+offset_right = 607.0
+offset_bottom = 476.0
+theme_override_font_sizes/font_size = 50
+text = "intentar de nuevo?"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_fhj5s")
+autoplay = true
+metadata/_edit_group_ = true

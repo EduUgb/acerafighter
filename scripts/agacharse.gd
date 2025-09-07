@@ -12,6 +12,7 @@ func enter() -> void:
 
 func process_physics(delta: float) -> estados:
 	if not Input.is_action_pressed(abajo):
+
 		return idleEstado
 	
 	if player.velocity.x != 0:
@@ -42,10 +43,15 @@ func process_input(event: InputEvent) -> estados:
 		return saltoEstado
 	
 	if event.is_action_pressed(golpe):
-		return golpeAbajoEstado
+		# Configura el tipo de golpe antes de cambiar
+		golpeEstado.set_tipo_golpe("abajo")
+		
+		return golpeEstado
+		
+		
 	
 	if event.is_action_pressed(golpeArriba):
-		return golpeArribaEstado  # Permitir el ataque hacia arriba desde el estado agachado
+		return golpeEstado # Permitir el ataque hacia arriba desde el estado agachado
 	if event.is_action_pressed(block):
 		return bloqueoEstado
 	return null
