@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://drjdja6gba1f4"]
+[gd_scene load_steps=29 format=3 uid="uid://drjdja6gba1f4"]
 
 [ext_resource type="Script" uid="uid://cqdaxtsos8gji" path="res://escenas/main.gd" id="1_git66"]
 [ext_resource type="PackedScene" uid="uid://ct78koc25diav" path="res://escenas/jugador_1.tscn" id="1_qdwd3"]
@@ -132,6 +132,8 @@ texture = ExtResource("12_2360e")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dqp2c"]
 texture = ExtResource("13_git66")
+
+[sub_resource type="Theme" id="Theme_git66"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_git66")
@@ -285,5 +287,8 @@ theme_override_fonts/font = ExtResource("8_8svfb")
 theme_override_font_sizes/font_size = 100
 
 [node name="pausa" type="Button" parent="."]
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 1164.0
+offset_top = 110.0
+offset_right = 1244.0
+offset_bottom = 184.0
+theme = SubResource("Theme_git66")
