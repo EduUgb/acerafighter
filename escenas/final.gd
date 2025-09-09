@@ -2,7 +2,7 @@ extends CanvasLayer
 
 @onready var panel = $Panel
 @onready var againbtn = $Panel/againbtn  # asegúrate que el nodo exista exactamente con ese nombre
-
+@onready var numeros = $"../cvtime"
 
 func _ready():
 	process_mode = Node.PROCESS_MODE_WHEN_PAUSED
@@ -13,10 +13,12 @@ func _ready():
 
 func mostrar():
 	panel.visible = true
+	numeros.visible = false
 	get_tree().paused = true
 
 func ocultar():
 	panel.visible = false
+
 	get_tree().paused = false
 
 func _alpresionar():
