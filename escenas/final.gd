@@ -3,6 +3,8 @@ extends CanvasLayer
 @onready var panel = $Panel
 @onready var againbtn = $Panel/againbtn  # asegúrate que el nodo exista exactamente con ese nombre
 @onready var numeros = $"../cvtime"
+@onready var salirbtn2: Button = $Panel/salirbtn
+@onready var guiabtn2: Button = $Panel/guiabtn
 
 func _ready():
 	process_mode = Node.PROCESS_MODE_WHEN_PAUSED
