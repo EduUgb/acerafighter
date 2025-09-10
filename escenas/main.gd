@@ -7,9 +7,7 @@ extends Node2D
 @onready var pausa: CanvasLayer = $pausa2
 
 
-
-
-var tiempoTotal: int = 6 #segundos
+var tiempoTotal: int = 60 #segundos
 
 func _ready() -> void:
 	tiempo.wait_time = 1.0   # cada segundo
@@ -18,8 +16,9 @@ func _ready() -> void:
 	
 	pausabtn.pressed.connect(_pausabtn)
 
-	iniciar_contador(6) 
+	iniciar_contador(60) 
 	
+
 	
 	
 	
@@ -43,3 +42,4 @@ func _pausabtn():
 		if is_instance_valid(pausa):
 			pausa.mostrar()
 			await get_tree().process_frame
+			

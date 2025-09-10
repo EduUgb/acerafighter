@@ -5,13 +5,24 @@ extends CanvasLayer
 @onready var numeros = $"../cvtime"
 @onready var salirbtn2: Button = $Panel/salirbtn
 @onready var guiabtn2: Button = $Panel/guiabtn
+@onready var vida1: ProgressBar =$"../CanvasLayer/vidaBar"
+@onready var vida2: ProgressBar =$"../CharacterBody2D2/CanvasLayer2/vidaBar2"
+@onready var lbl_ganador: Label = $Panel/lbl_ganador
+@onready var p1: Panel =$Panel/Player1
+@onready var p2: Panel =$Panel/Player2
+@onready var draw: Panel = $Panel/draw
 
 func _ready():
 	process_mode = Node.PROCESS_MODE_WHEN_PAUSED
 	panel.visible = false
 	print(againbtn)  # debug: verificar que no sea null
 	againbtn.pressed.connect(Callable(self, "_alpresionar"))
-	
+	p1.visible = false
+	p2.visible = false
+	draw.visible = false
+
+func _process(delta):
+	comparar_vidas()
 
 func mostrar():
 	panel.visible = true
@@ -27,3 +38,17 @@ func _alpresionar():
 	ocultar()
 	await get_tree().process_frame
 	get_tree().reload_current_scene()
+
+func comparar_vidas():
+	var dato1 = vida1.value
+	var dato2 = vida2.value
+	
+	if dato1 > dato2:
+		lbl_ganador.text = "EL GANADOR ES:"
+		p1.visible = true
+	elif dato2 > dato1:
+		lbl_ganador.text = "EL GANADOR ES:"
+		p2.visible = true
+	else:
+		draw.visible = true
+		lbl_ganador.visible = false
