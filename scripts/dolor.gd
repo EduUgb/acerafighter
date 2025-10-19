@@ -27,7 +27,7 @@ func enter() -> void:
 	var knockDir: Vector2 = hurt_box.areaGolpeada.global_position - player.global_position
 	player.velocity.x = knockDir.normalized().x * 500  # ajustar la fuerza aquí si es necesario
 
-	recibirDanio(30)  # Por ejemplo, quita 10 de vida
+	recibirDanio(10)  # Por ejemplo, quita 10 de vida
 	
 func exit() -> void:
 	super()

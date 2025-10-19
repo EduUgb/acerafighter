@@ -1,12 +1,16 @@
 class_name PlayerIdleStates
 extends PlayerState
 
+
 func enter() -> void:
 	player.animacion.play(idleAnima)
 
 func process_input(event: InputEvent) -> estados:
 	# Golpe especial: 3 teclas simultáneas
-	if Input.is_action_pressed(golpe) and Input.is_action_pressed(golpeArriba) and Input.is_action_pressed(arriba):
+	if (Input.is_action_pressed(golpe)
+	and Input.is_action_pressed(golpeArriba)
+	and Input.is_action_pressed(arriba)
+	):
 		if player.puede_usar_golpe_especial():
 			player.registrar_golpe_especial()
 			golpeEstado.set_tipo_golpe("especial")

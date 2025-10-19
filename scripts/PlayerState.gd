@@ -65,7 +65,9 @@ var block: String = "bloqueo2"
 	
 func process_physics(delta: float) -> estados: # Retorna PlayerState, no "estados"
 	# Solo aplica la gravedad si no está en el suelo.
-	# El movimiento horizontal (velocity.x) debe ser manejado por los estados individuales (Caminar, Salto, Caida).
+	# El movimiento horizontal (velocity.x) debe ser
+	#manejado por los estados individuales (Caminar, Salto, Caida).
+	
 	if not player.is_on_floor():
 		player.velocity.y += gravity * delta
 	

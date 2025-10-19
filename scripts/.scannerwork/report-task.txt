@@ -1,0 +1,6 @@
+projectKey=acera
+serverUrl=http://localhost:9000
+serverVersion=25.9.0.112764
+dashboardUrl=http://localhost:9000/dashboard?id=acera
+ceTaskId=24df8fd4-ce18-45a8-995d-dc9ce9e89a6f
+ceTaskUrl=http://localhost:9000/api/ce/task?id=24df8fd4-ce18-45a8-995d-dc9ce9e89a6f

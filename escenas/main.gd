@@ -19,9 +19,6 @@ func _ready() -> void:
 	iniciar_contador(60) 
 	
 
-	
-	
-	
 func iniciar_contador(segundos: int):
 	tiempoTotal = segundos
 	lblt.text = str(tiempoTotal)

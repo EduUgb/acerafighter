@@ -11,7 +11,7 @@
 [ext_resource type="FontFile" uid="uid://qy6pxxwhk8yd" path="res://extras/BoldPixels1.4.ttf" id="8_8svfb"]
 [ext_resource type="Script" uid="uid://biumjr6d3bg5i" path="res://escenas/vida_bar.gd" id="8_bgf2f"]
 [ext_resource type="Script" uid="uid://r0hv1iv5fnuk" path="res://escenas/final.gd" id="9_it6l2"]
-[ext_resource type="Texture2D" uid="uid://bavg4r1f53l8q" path="res://escenarios/Maizal escenario.png" id="10_um2fu"]
+[ext_resource type="Texture2D" uid="uid://crgnykcdtq6md" path="res://escenarios/Cecot Escenario.png" id="10_um2fu"]
 [ext_resource type="AudioStream" uid="uid://dxstiqkkbwoj" path="res://extras/NEGRO-‐-Hecho-con-Clipchamp-_1_.ogg" id="12_fhj5s"]
 [ext_resource type="Texture2D" uid="uid://7116thby4mjx" path="res://extras/interfaz/Fondo.png" id="13_trgvt"]
 [ext_resource type="Texture2D" uid="uid://cs4coia40ix3e" path="res://extras/interfaz/TorogozPArt.png" id="14_bbny4"]
@@ -395,9 +395,9 @@ metadata/_edit_group_ = true
 [node name="Timer" type="Timer" parent="cvtime"]
 
 [node name="tiempo" type="Label" parent="cvtime"]
-offset_left = 664.0
+offset_left = 577.0
 offset_top = -2.0
-offset_right = 850.0
+offset_right = 763.0
 offset_bottom = 86.0
 theme_override_fonts/font = ExtResource("8_8svfb")
 theme_override_font_sizes/font_size = 100
