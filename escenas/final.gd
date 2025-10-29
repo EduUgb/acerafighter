@@ -17,6 +17,7 @@ func _ready():
 	panel.visible = false
 	print(againbtn)  # debug: verificar que no sea null
 	againbtn.pressed.connect(Callable(self, "_alpresionar"))
+	salirbtn2.pressed.connect(Callable(self, "_on_salirbtn"))
 	p1.visible = false
 	p2.visible = false
 	draw.visible = false
@@ -52,3 +53,7 @@ func comparar_vidas():
 	else:
 		draw.visible = true
 		lbl_ganador.visible = false
+		
+func _on_salirbtn() -> void:
+	ocultar()
+	get_tree().change_scene_to_file("res://escenas/menu.tscn")
