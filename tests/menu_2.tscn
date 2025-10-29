@@ -1,10 +1,10 @@
-[gd_scene load_steps=15 format=3 uid="uid://dgcdmcb3rd5x7"]
+[gd_scene load_steps=15 format=3 uid="uid://bnifistlkqt16"]
 
 [ext_resource type="Script" uid="uid://clc4ojotcw0fd" path="res://scripts/menu_2.gd" id="1_gs7e0"]
 [ext_resource type="Texture2D" uid="uid://cbfewchaapunf" path="res://escenarios/fondo.jpg" id="2_7xhqk"]
 [ext_resource type="StyleBox" uid="uid://hmbgjiffmsbd" path="res://escenas/select.tres" id="3_pjo2y"]
 [ext_resource type="Texture2D" uid="uid://u4yijmt7dhpu" path="res://escenarios/btnescoger.png" id="4_thw5g"]
-[ext_resource type="StyleBox" uid="uid://bsq8alpnfxntx" path="res://extras/confg1.tres" id="5_bjbeq"]
+[ext_resource type="StyleBox" uid="uid://btl47jbhq7whl" path="res://extras/confg1.tres" id="5_bjbeq"]
 [ext_resource type="Texture2D" uid="uid://ctmdd70y7kv4l" path="res://escenarios/conf.png" id="6_th6fv"]
 [ext_resource type="StyleBox" uid="uid://btega6m1gtrbs" path="res://extras/volver1.tres" id="7_outsc"]
 [ext_resource type="Texture2D" uid="uid://dp7ge6gydfry2" path="res://escenarios/back.png" id="8_ga6yf"]

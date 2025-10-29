@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://b8tffs3nqj21b"]
+[gd_scene load_steps=12 format=3 uid="uid://dhmhg3t3ufurf"]
 
 [ext_resource type="Script" uid="uid://otlb8b4viu2j" path="res://scripts/menu.gd" id="1_c8vnd"]
 [ext_resource type="Texture2D" uid="uid://cbfewchaapunf" path="res://escenarios/fondo.jpg" id="2_82u5j"]
@@ -64,6 +64,6 @@ offset_right = 815.0
 offset_bottom = 246.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_yb3qj")
 
-[connection signal="pressed" from="Panel/play" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Panel/play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Panel/play" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Panel/exit" to="." method="_on_exit_pressed"]

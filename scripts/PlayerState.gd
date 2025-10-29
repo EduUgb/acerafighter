@@ -61,8 +61,14 @@ var golpeespecial: String = "especial"
 var block: String = "bloqueo2"
 #base
 
-	
-	
+func _ready() -> void:
+
+	await get_tree().process_frame
+	for key in Global.player_data.keys():
+		if key in self:
+			set(key, Global.player_data[key])
+			
+	print("Valores cargados:", idleAnima)	
 func process_physics(delta: float) -> estados: # Retorna PlayerState, no "estados"
 	# Solo aplica la gravedad si no está en el suelo.
 	# El movimiento horizontal (velocity.x) debe ser

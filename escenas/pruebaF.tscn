@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=3 uid="uid://drjdja6gba1f4"]
+[gd_scene load_steps=56 format=3 uid="uid://drjdja6gba1f4"]
 
 [ext_resource type="Script" uid="uid://cqdaxtsos8gji" path="res://escenas/main.gd" id="1_git66"]
 [ext_resource type="PackedScene" uid="uid://ct78koc25diav" path="res://escenas/jugador_1.tscn" id="1_qdwd3"]
@@ -11,7 +11,7 @@
 [ext_resource type="FontFile" uid="uid://qy6pxxwhk8yd" path="res://extras/BoldPixels1.4.ttf" id="8_8svfb"]
 [ext_resource type="Script" uid="uid://biumjr6d3bg5i" path="res://escenas/vida_bar.gd" id="8_bgf2f"]
 [ext_resource type="Script" uid="uid://r0hv1iv5fnuk" path="res://escenas/final.gd" id="9_it6l2"]
-[ext_resource type="Texture2D" uid="uid://crgnykcdtq6md" path="res://escenarios/Cecot Escenario.png" id="10_um2fu"]
+[ext_resource type="Script" uid="uid://4dgsiek28u3v" path="res://scripts/pared.gd" id="10_um2fu"]
 [ext_resource type="AudioStream" uid="uid://dxstiqkkbwoj" path="res://extras/NEGRO-‐-Hecho-con-Clipchamp-_1_.ogg" id="12_fhj5s"]
 [ext_resource type="Texture2D" uid="uid://7116thby4mjx" path="res://extras/interfaz/Fondo.png" id="13_trgvt"]
 [ext_resource type="Texture2D" uid="uid://cs4coia40ix3e" path="res://extras/interfaz/TorogozPArt.png" id="14_bbny4"]
@@ -136,6 +136,8 @@ height = 412.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fhj5s"]
 texture = ExtResource("8_7wpai")
+
+[sub_resource type="ImageTexture" id="ImageTexture_vmwlx"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7seqx"]
 texture = ExtResource("13_trgvt")
@@ -267,7 +269,8 @@ script = ExtResource("8_bgf2f")
 show_behind_parent = true
 position = Vector2(671, 401.75)
 scale = Vector2(0.902344, 0.824707)
-texture = ExtResource("10_um2fu")
+texture = SubResource("ImageTexture_vmwlx")
+script = ExtResource("10_um2fu")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 script = ExtResource("7_4dei2")
