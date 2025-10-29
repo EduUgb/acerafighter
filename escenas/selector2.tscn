@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://8xmve5ptt066"]
+[gd_scene load_steps=36 format=3 uid="uid://8xmve5ptt066"]
 
 [ext_resource type="Script" uid="uid://djag6d2028p2f" path="res://scripts/selectorescenario.gd" id="1_35gwr"]
 [ext_resource type="Texture2D" uid="uid://d33e5f7xr5rl2" path="res://escenarios/Fondo azul.png" id="2_t1dwa"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://lh4aeso4537c" path="res://escenarios/disco.png" id="11_lr8lw"]
 [ext_resource type="Texture2D" uid="uid://bavg4r1f53l8q" path="res://escenarios/Maizal escenario.png" id="12_5jsyr"]
 [ext_resource type="Texture2D" uid="uid://d170slxy8qxrg" path="res://escenarios/Banda escenario.png" id="13_wg8th"]
+[ext_resource type="AudioStream" uid="uid://dnwagaau8qexm" path="res://extras/Negro 2.mp3" id="14_i4q62"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b5lv3"]
 texture = ExtResource("2_t1dwa")
@@ -221,6 +222,10 @@ offset_top = 25.0
 offset_right = 795.0
 offset_bottom = 141.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_w0kmq")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_i4q62")
+autoplay = true
 
 [connection signal="pressed" from="Panel/Button" to="Panel/Button" method="_on_pressed"]
 [connection signal="pressed" from="Panel/paredbtn" to="Panel/Button" method="_on_paredbtn_pressed"]

@@ -1,13 +1,12 @@
-[gd_scene load_steps=15 format=3 uid="uid://dgcdmcb3rd5x7"]
+[gd_scene load_steps=18 format=3 uid="uid://dgcdmcb3rd5x7"]
 
 [ext_resource type="Script" uid="uid://clc4ojotcw0fd" path="res://scripts/menu_2.gd" id="1_gs7e0"]
 [ext_resource type="Texture2D" uid="uid://cbfewchaapunf" path="res://escenarios/fondo.jpg" id="2_7xhqk"]
 [ext_resource type="StyleBox" uid="uid://hmbgjiffmsbd" path="res://escenas/select.tres" id="3_pjo2y"]
 [ext_resource type="Texture2D" uid="uid://u4yijmt7dhpu" path="res://escenarios/btnescoger.png" id="4_thw5g"]
-[ext_resource type="StyleBox" uid="uid://bsq8alpnfxntx" path="res://extras/confg1.tres" id="5_bjbeq"]
 [ext_resource type="Texture2D" uid="uid://ctmdd70y7kv4l" path="res://escenarios/conf.png" id="6_th6fv"]
-[ext_resource type="StyleBox" uid="uid://btega6m1gtrbs" path="res://extras/volver1.tres" id="7_outsc"]
 [ext_resource type="Texture2D" uid="uid://dp7ge6gydfry2" path="res://escenarios/back.png" id="8_ga6yf"]
+[ext_resource type="AudioStream" uid="uid://dnwagaau8qexm" path="res://extras/Negro 2.mp3" id="9_h77ao"]
 [ext_resource type="Texture2D" uid="uid://c1dvhkcvvmgv2" path="res://escenarios/titulo.png" id="9_xkvja"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7828r"]
@@ -16,12 +15,21 @@ texture = ExtResource("2_7xhqk")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_72kx7"]
 texture = ExtResource("4_thw5g")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oowib"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h77ao"]
+texture = ExtResource("6_th6fv")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d16cg"]
 texture = ExtResource("6_th6fv")
 texture_margin_left = 10.0
 texture_margin_top = 10.0
 texture_margin_right = 10.0
 texture_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f213n"]
+texture = ExtResource("6_th6fv")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p578v"]
+texture = ExtResource("8_ga6yf")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lien3"]
 texture = ExtResource("8_ga6yf")
@@ -29,6 +37,9 @@ texture_margin_left = 10.0
 texture_margin_top = 10.0
 texture_margin_right = 10.0
 texture_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hnuex"]
+texture = ExtResource("8_ga6yf")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_prj13"]
 texture = ExtResource("9_xkvja")
@@ -56,13 +67,13 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_72kx7")
 
 [node name="confg" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 509.0
-offset_top = 419.0
-offset_right = 784.0
-offset_bottom = 538.0
-theme_override_styles/focus = ExtResource("5_bjbeq")
-theme_override_styles/hover = SubResource("StyleBoxTexture_oowib")
-theme_override_styles/normal = ExtResource("5_bjbeq")
+offset_left = 510.0
+offset_top = 432.0
+offset_right = 785.0
+offset_bottom = 529.0
+theme_override_styles/focus = SubResource("StyleBoxTexture_h77ao")
+theme_override_styles/hover = SubResource("StyleBoxTexture_d16cg")
+theme_override_styles/normal = SubResource("StyleBoxTexture_f213n")
 
 [node name="exit" type="Button" parent="Panel"]
 layout_mode = 0
@@ -70,9 +81,9 @@ offset_left = 530.0
 offset_top = 535.0
 offset_right = 768.0
 offset_bottom = 640.0
-theme_override_styles/focus = ExtResource("7_outsc")
+theme_override_styles/focus = SubResource("StyleBoxTexture_p578v")
 theme_override_styles/hover = SubResource("StyleBoxTexture_lien3")
-theme_override_styles/normal = ExtResource("7_outsc")
+theme_override_styles/normal = SubResource("StyleBoxTexture_hnuex")
 
 [node name="Panel2" type="Panel" parent="."]
 offset_left = 471.0
@@ -80,6 +91,10 @@ offset_top = 96.0
 offset_right = 815.0
 offset_bottom = 246.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_prj13")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_h77ao")
+autoplay = true
 
 [connection signal="pressed" from="Panel/escoger" to="." method="_on_escoger_pressed"]
 [connection signal="pressed" from="Panel/confg" to="." method="_on_confg_pressed"]

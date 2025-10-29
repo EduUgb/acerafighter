@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dnwagaau8qexm"
+path="res://.godot/imported/Negro 2.mp3-c548160b30cbab4e978f8251db10fff6.mp3str"
+
+[deps]
+
+source_file="res://extras/Negro 2.mp3"
+dest_files=["res://.godot/imported/Negro 2.mp3-c548160b30cbab4e978f8251db10fff6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

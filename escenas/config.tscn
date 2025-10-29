@@ -1,0 +1,79 @@
+[gd_scene load_steps=13 format=3 uid="uid://44ag4xr5u30q"]
+
+[ext_resource type="Texture2D" uid="uid://cbfewchaapunf" path="res://escenarios/fondo.jpg" id="1_gkhfo"]
+[ext_resource type="StyleBox" uid="uid://bsq8alpnfxntx" path="res://extras/confg1.tres" id="2_mw2e8"]
+[ext_resource type="Texture2D" uid="uid://bsa4qn7pa16cq" path="res://escenarios/Volumen.png" id="3_maa8x"]
+[ext_resource type="StyleBox" uid="uid://btega6m1gtrbs" path="res://extras/volver1.tres" id="4_f6pai"]
+[ext_resource type="Texture2D" uid="uid://dr63y8olp5jw2" path="res://escenarios/Volver1.png" id="5_gkhfo"]
+[ext_resource type="Script" uid="uid://cdec2vsvpig2c" path="res://scripts/vol.gd" id="6_kdeus"]
+[ext_resource type="Texture2D" uid="uid://c1dvhkcvvmgv2" path="res://escenarios/titulo.png" id="7_jkomu"]
+[ext_resource type="AudioStream" uid="uid://dnwagaau8qexm" path="res://extras/Negro 2.mp3" id="8_mw2e8"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vk4ed"]
+texture = ExtResource("1_gkhfo")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eh2jb"]
+texture = ExtResource("3_maa8x")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mw2e8"]
+texture = ExtResource("5_gkhfo")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w0iws"]
+texture = ExtResource("7_jkomu")
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 2.0
+offset_top = -1.0
+offset_right = 1288.0
+offset_bottom = 718.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_vk4ed")
+
+[node name="vol" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 508.0
+offset_top = 255.0
+offset_right = 773.0
+offset_bottom = 368.0
+theme_override_styles/focus = ExtResource("2_mw2e8")
+theme_override_styles/hover = SubResource("StyleBoxTexture_eh2jb")
+theme_override_styles/normal = ExtResource("2_mw2e8")
+
+[node name="exit" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 530.0
+offset_top = 552.0
+offset_right = 768.0
+offset_bottom = 640.0
+theme_override_styles/focus = ExtResource("4_f6pai")
+theme_override_styles/hover = SubResource("StyleBoxTexture_mw2e8")
+theme_override_styles/normal = ExtResource("4_f6pai")
+
+[node name="HSlider" type="HSlider" parent="Panel"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 512.0
+offset_top = 385.0
+offset_right = 777.0
+offset_bottom = 406.0
+max_value = 1.0
+step = 0.01
+script = ExtResource("6_kdeus")
+
+[node name="Panel2" type="Panel" parent="."]
+offset_left = 471.0
+offset_top = 96.0
+offset_right = 815.0
+offset_bottom = 246.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_w0iws")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_mw2e8")
+autoplay = true
+
+[connection signal="pressed" from="Panel/exit" to="Panel/HSlider" method="_on_exit_pressed"]

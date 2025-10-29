@@ -10,6 +10,8 @@ extends Node2D
 var tiempoTotal: int = 60 #segundos
 
 func _ready() -> void:
+	# Cargar el último volumen guardado en Global al Bus Master.
+	Global.apply_volume()
 	tiempo.wait_time = 1.0   # cada segundo
 	tiempo.one_shot = false
 	tiempo.timeout.connect(_timeout)
@@ -39,4 +41,5 @@ func _pausabtn():
 		if is_instance_valid(pausa):
 			pausa.mostrar()
 			await get_tree().process_frame
+			
 			
