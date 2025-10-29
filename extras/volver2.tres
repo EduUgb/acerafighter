@@ -1,0 +1,10 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://crdoql0nb8g18"]
+
+[ext_resource type="Texture2D" uid="uid://dr63y8olp5jw2" path="res://escenarios/Volver1.png" id="1_xli16"]
+
+[resource]
+texture = ExtResource("1_xli16")
+texture_margin_left = 5.0
+texture_margin_top = 5.0
+texture_margin_right = 5.0
+texture_margin_bottom = 5.0

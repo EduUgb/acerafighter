@@ -1,0 +1,69 @@
+[gd_scene load_steps=12 format=3 uid="uid://b8tffs3nqj21b"]
+
+[ext_resource type="Script" path="res://scripts/menu.gd" id="1_c8vnd"]
+[ext_resource type="Texture2D" uid="uid://cbfewchaapunf" path="res://escenarios/fondo.jpg" id="2_82u5j"]
+[ext_resource type="StyleBox" path="res://extras/play.tres" id="3_lberl"]
+[ext_resource type="Texture2D" uid="uid://bqx5npmh4mfoj" path="res://escenarios/boton.png" id="4_w28l2"]
+[ext_resource type="StyleBox" path="res://extras/salir1.tres" id="5_spm53"]
+[ext_resource type="Texture2D" uid="uid://dtoka1itpnwfj" path="res://escenarios/salir.png" id="6_7q8vy"]
+[ext_resource type="Texture2D" uid="uid://c1dvhkcvvmgv2" path="res://escenarios/titulo.png" id="7_rmq8h"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2owot"]
+texture = ExtResource("2_82u5j")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xqndx"]
+texture = ExtResource("4_w28l2")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_56ah5"]
+texture = ExtResource("6_7q8vy")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yb3qj"]
+texture = ExtResource("7_rmq8h")
+
+[node name="menu" type="Node2D"]
+process_mode = 3
+script = ExtResource("1_c8vnd")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1286.0
+offset_bottom = 719.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_2owot")
+
+[node name="play" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 511.0
+offset_top = 367.0
+offset_right = 796.0
+offset_bottom = 487.0
+theme_override_styles/focus = ExtResource("3_lberl")
+theme_override_styles/hover = SubResource("StyleBoxTexture_xqndx")
+theme_override_styles/normal = ExtResource("3_lberl")
+
+[node name="exit" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 517.0
+offset_top = 509.0
+offset_right = 792.0
+offset_bottom = 633.0
+theme_override_styles/focus = ExtResource("5_spm53")
+theme_override_styles/hover = SubResource("StyleBoxTexture_56ah5")
+theme_override_styles/normal = ExtResource("5_spm53")
+
+[node name="Panel2" type="Panel" parent="."]
+offset_left = 471.0
+offset_top = 96.0
+offset_right = 815.0
+offset_bottom = 246.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_yb3qj")
+
+[connection signal="pressed" from="Panel/play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Panel/play" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Panel/exit" to="." method="_on_exit_pressed"]

@@ -1,0 +1,288 @@
+[gd_scene load_steps=40 format=3 uid="uid://bb7cyoj542i1q"]
+
+[ext_resource type="Script" path="res://scripts/selector2.gd" id="1_3dwmn"]
+[ext_resource type="Texture2D" uid="uid://u40wwjaff2yf" path="res://escenarios/Fondo sin.png" id="2_u07bo"]
+[ext_resource type="StyleBox" uid="uid://xqy351qfsq8n" path="res://extras/select2.tres" id="3_a0cmh"]
+[ext_resource type="Texture2D" uid="uid://ba4hk46gt7j3w" path="res://escenarios/SELECCIONAR.png" id="4_3yveq"]
+[ext_resource type="Script" path="res://scripts/selector.gd" id="5_4wqgw"]
+[ext_resource type="Texture2D" uid="uid://bys542ns0jngs" path="res://escenarios/personaje1.png" id="6_fcjp5"]
+[ext_resource type="Texture2D" uid="uid://ck18i6x6ir6gp" path="res://escenarios/Cuadro.png" id="7_yung2"]
+[ext_resource type="Texture2D" uid="uid://cd74b46itr557" path="res://escenarios/personaje2.png" id="8_r4knn"]
+[ext_resource type="StyleBox" uid="uid://crdoql0nb8g18" path="res://extras/volver2.tres" id="9_wk205"]
+[ext_resource type="Texture2D" uid="uid://dr63y8olp5jw2" path="res://escenarios/Volver1.png" id="10_20moc"]
+[ext_resource type="Texture2D" uid="uid://dcufqay8lp26h" path="res://escenarios/bloqueado.png" id="11_a0k8n"]
+[ext_resource type="Texture2D" uid="uid://3i1fmp1gg6js" path="res://escenarios/Boton ninja.png" id="12_pbc5h"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b5lv3"]
+texture = ExtResource("2_u07bo")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gqyfb"]
+texture = ExtResource("4_3yveq")
+texture_margin_left = 5.0
+texture_margin_top = 5.0
+texture_margin_right = 5.0
+texture_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_msp78"]
+texture = ExtResource("6_fcjp5")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wdak6"]
+texture = ExtResource("6_fcjp5")
+texture_margin_left = 5.0
+texture_margin_top = 5.0
+texture_margin_right = 5.0
+texture_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l6yw3"]
+texture = ExtResource("6_fcjp5")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y5bsp"]
+texture = ExtResource("7_yung2")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_l6yw3"]
+load_path = "res://.godot/imported/personaje1.png-5eb625f2b5760116315c600568d42046.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yg184"]
+texture = SubResource("CompressedTexture2D_l6yw3")
+texture_margin_left = 31.0
+texture_margin_right = 31.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_70oy3"]
+texture = ExtResource("8_r4knn")
+texture_margin_left = 31.0
+texture_margin_right = 31.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_24m1a"]
+texture = ExtResource("10_20moc")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_odp8w"]
+texture = ExtResource("8_r4knn")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yf2r2"]
+texture = ExtResource("8_r4knn")
+texture_margin_left = 5.0
+texture_margin_top = 5.0
+texture_margin_right = 5.0
+texture_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1fkia"]
+texture = ExtResource("8_r4knn")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jgaw6"]
+texture = ExtResource("11_a0k8n")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_15l6g"]
+texture = ExtResource("11_a0k8n")
+texture_margin_left = 5.0
+texture_margin_top = 5.0
+texture_margin_right = 5.0
+texture_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7drtu"]
+texture = ExtResource("11_a0k8n")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_48gwk"]
+texture = ExtResource("11_a0k8n")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_51k4k"]
+texture = ExtResource("11_a0k8n")
+texture_margin_left = 5.0
+texture_margin_top = 5.0
+texture_margin_right = 5.0
+texture_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0koh7"]
+texture = ExtResource("11_a0k8n")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_87grv"]
+texture = ExtResource("12_pbc5h")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oc42n"]
+texture = ExtResource("12_pbc5h")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8uvbs"]
+texture = ExtResource("12_pbc5h")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kj2ej"]
+texture = ExtResource("11_a0k8n")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j1cqc"]
+texture = ExtResource("11_a0k8n")
+texture_margin_left = 5.0
+texture_margin_top = 5.0
+texture_margin_right = 5.0
+texture_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lmpm5"]
+texture = ExtResource("11_a0k8n")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q53a3"]
+texture = ExtResource("11_a0k8n")
+texture_margin_left = 24.0
+texture_margin_right = 24.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d26rn"]
+texture = ExtResource("12_pbc5h")
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_3dwmn")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = -10.0
+offset_top = -6.0
+offset_right = 1273.0
+offset_bottom = 714.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_b5lv3")
+
+[node name="Button" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 434.0
+offset_top = 522.0
+offset_right = 618.0
+offset_bottom = 593.0
+theme_override_styles/focus = ExtResource("3_a0cmh")
+theme_override_styles/hover = SubResource("StyleBoxTexture_gqyfb")
+theme_override_styles/normal = ExtResource("3_a0cmh")
+script = ExtResource("5_4wqgw")
+
+[node name="Button2" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 718.0
+offset_top = 145.0
+offset_right = 802.0
+offset_bottom = 223.0
+theme_override_styles/focus = SubResource("StyleBoxTexture_msp78")
+theme_override_styles/hover = SubResource("StyleBoxTexture_wdak6")
+theme_override_styles/normal = SubResource("StyleBoxTexture_l6yw3")
+
+[node name="Panel" type="Panel" parent="Panel"]
+layout_mode = 0
+offset_left = 356.0
+offset_top = 355.0
+offset_right = 601.0
+offset_bottom = 512.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_y5bsp")
+
+[node name="Panel2" type="Panel" parent="Panel"]
+layout_mode = 0
+offset_left = 358.0
+offset_top = 352.0
+offset_right = 600.0
+offset_bottom = 514.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_yg184")
+
+[node name="Panel3" type="Panel" parent="Panel"]
+layout_mode = 0
+offset_left = 352.0
+offset_top = 350.0
+offset_right = 600.0
+offset_bottom = 514.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_70oy3")
+
+[node name="Button3" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 660.0
+offset_top = 521.0
+offset_right = 843.0
+offset_bottom = 592.0
+theme_override_styles/focus = ExtResource("9_wk205")
+theme_override_styles/hover = ExtResource("9_wk205")
+theme_override_styles/normal = SubResource("StyleBoxTexture_24m1a")
+
+[node name="Button4" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 812.0
+offset_top = 146.0
+offset_right = 897.0
+offset_bottom = 224.0
+theme_override_styles/focus = SubResource("StyleBoxTexture_odp8w")
+theme_override_styles/hover = SubResource("StyleBoxTexture_yf2r2")
+theme_override_styles/normal = SubResource("StyleBoxTexture_1fkia")
+
+[node name="Button5" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 716.0
+offset_top = 231.0
+offset_right = 805.0
+offset_bottom = 299.0
+theme_override_styles/focus = SubResource("StyleBoxTexture_jgaw6")
+theme_override_styles/hover = SubResource("StyleBoxTexture_15l6g")
+theme_override_styles/normal = SubResource("StyleBoxTexture_7drtu")
+
+[node name="Button6" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = 0.023
+offset_left = 812.0
+offset_top = 231.0
+offset_right = 900.0
+offset_bottom = 282.44
+theme_override_styles/focus = SubResource("StyleBoxTexture_48gwk")
+theme_override_styles/hover = SubResource("StyleBoxTexture_51k4k")
+theme_override_styles/normal = SubResource("StyleBoxTexture_0koh7")
+
+[node name="Button7" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 913.0
+offset_top = 146.0
+offset_right = 997.0
+offset_bottom = 221.0
+theme_override_styles/focus = SubResource("StyleBoxTexture_87grv")
+theme_override_styles/hover = SubResource("StyleBoxTexture_oc42n")
+theme_override_styles/normal = SubResource("StyleBoxTexture_8uvbs")
+
+[node name="Button8" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 913.0
+offset_top = 231.0
+offset_right = 999.0
+offset_bottom = 299.0
+theme_override_styles/focus = SubResource("StyleBoxTexture_kj2ej")
+theme_override_styles/hover = SubResource("StyleBoxTexture_j1cqc")
+theme_override_styles/normal = SubResource("StyleBoxTexture_lmpm5")
+
+[node name="Panel4" type="Panel" parent="Panel"]
+layout_mode = 0
+offset_left = 663.0
+offset_top = 357.0
+offset_right = 902.0
+offset_bottom = 514.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_q53a3")
+
+[node name="Panel5" type="Panel" parent="Panel"]
+layout_mode = 0
+offset_left = 354.0
+offset_top = 351.0
+offset_right = 601.0
+offset_bottom = 516.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_d26rn")
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 709.0
+offset_top = 120.0
+offset_right = 802.0
+offset_bottom = 143.0
+theme_override_colors/font_color = Color(1, 0.8, 0.0196078, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "CUSCATLÁN"
+
+[node name="Label2" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 816.0
+offset_top = 120.0
+offset_right = 909.0
+offset_bottom = 144.0
+theme_override_colors/font_color = Color(1, 0.8, 0.0196078, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "LA UNIÓN"
+
+[connection signal="pressed" from="Panel/Button" to="Panel/Button" method="_on_pressed"]
+[connection signal="pressed" from="Panel/Button2" to="Panel/Button" method="_on_button_2_pressed"]
+[connection signal="pressed" from="Panel/Button3" to="Panel/Button" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Panel/Button4" to="Panel/Button" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Panel/Button7" to="Panel/Button" method="_on_button_7_pressed"]

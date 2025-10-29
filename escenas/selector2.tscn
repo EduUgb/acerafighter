@@ -1,0 +1,230 @@
+[gd_scene load_steps=35 format=3 uid="uid://8xmve5ptt066"]
+
+[ext_resource type="Script" path="res://scripts/selectorescenario.gd" id="1_35gwr"]
+[ext_resource type="Texture2D" uid="uid://d33e5f7xr5rl2" path="res://escenarios/Fondo azul.png" id="2_t1dwa"]
+[ext_resource type="Texture2D" uid="uid://ck18i6x6ir6gp" path="res://escenarios/Cuadro.png" id="3_domwu"]
+[ext_resource type="Texture2D" uid="uid://biatu51hp3fvi" path="res://escenarios/pared.jpeg" id="4_s8uc7"]
+[ext_resource type="Texture2D" uid="uid://crgnykcdtq6md" path="res://escenarios/Cecot Escenario.png" id="5_6r2l3"]
+[ext_resource type="StyleBox" uid="uid://xqy351qfsq8n" path="res://extras/select2.tres" id="6_8diyh"]
+[ext_resource type="Texture2D" uid="uid://ba4hk46gt7j3w" path="res://escenarios/SELECCIONAR.png" id="7_jxjne"]
+[ext_resource type="Script" path="res://scripts/selectorbtn.gd" id="8_4weow"]
+[ext_resource type="StyleBox" uid="uid://crdoql0nb8g18" path="res://extras/volver2.tres" id="9_l0jpx"]
+[ext_resource type="Texture2D" uid="uid://dr63y8olp5jw2" path="res://escenarios/Volver1.png" id="10_kajgm"]
+[ext_resource type="Texture2D" uid="uid://lh4aeso4537c" path="res://escenarios/disco.png" id="11_lr8lw"]
+[ext_resource type="Texture2D" uid="uid://bavg4r1f53l8q" path="res://escenarios/Maizal escenario.png" id="12_5jsyr"]
+[ext_resource type="Texture2D" uid="uid://d170slxy8qxrg" path="res://escenarios/Banda escenario.png" id="13_wg8th"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b5lv3"]
+texture = ExtResource("2_t1dwa")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y5bsp"]
+texture = ExtResource("3_domwu")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yg184"]
+texture = ExtResource("4_s8uc7")
+texture_margin_left = 31.0
+texture_margin_right = 31.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_70oy3"]
+texture = ExtResource("5_6r2l3")
+texture_margin_left = 31.0
+texture_margin_right = 31.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gqyfb"]
+texture = ExtResource("7_jxjne")
+texture_margin_left = 5.0
+texture_margin_top = 5.0
+texture_margin_right = 5.0
+texture_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_msp78"]
+texture = ExtResource("4_s8uc7")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wdak6"]
+texture = ExtResource("4_s8uc7")
+texture_margin_left = 5.0
+texture_margin_top = 5.0
+texture_margin_right = 5.0
+texture_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l6yw3"]
+texture = ExtResource("4_s8uc7")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_24m1a"]
+texture = ExtResource("10_kajgm")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0gqqq"]
+texture = ExtResource("11_lr8lw")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_odp8w"]
+texture = ExtResource("5_6r2l3")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yf2r2"]
+texture = ExtResource("5_6r2l3")
+texture_margin_left = 5.0
+texture_margin_top = 5.0
+texture_margin_right = 5.0
+texture_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1fkia"]
+texture = ExtResource("5_6r2l3")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jgaw6"]
+texture = ExtResource("11_lr8lw")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_15l6g"]
+texture = ExtResource("11_lr8lw")
+texture_margin_left = 5.0
+texture_margin_top = 5.0
+texture_margin_right = 5.0
+texture_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7drtu"]
+texture = ExtResource("11_lr8lw")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_35qp5"]
+texture = ExtResource("12_5jsyr")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q5otr"]
+texture = ExtResource("12_5jsyr")
+texture_margin_left = 5.0
+texture_margin_top = 5.0
+texture_margin_right = 5.0
+texture_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v42b2"]
+texture = ExtResource("12_5jsyr")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q53a3"]
+texture = ExtResource("12_5jsyr")
+texture_margin_left = 24.0
+texture_margin_right = 24.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w0kmq"]
+texture = ExtResource("13_wg8th")
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_35gwr")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = -10.0
+offset_top = -6.0
+offset_right = 1273.0
+offset_bottom = 714.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_b5lv3")
+
+[node name="Panel" type="Panel" parent="Panel"]
+layout_mode = 0
+offset_left = 535.0
+offset_top = 388.0
+offset_right = 776.0
+offset_bottom = 549.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_y5bsp")
+
+[node name="Panel2" type="Panel" parent="Panel"]
+layout_mode = 0
+offset_left = 534.0
+offset_top = 386.0
+offset_right = 776.0
+offset_bottom = 552.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_yg184")
+
+[node name="Panel3" type="Panel" parent="Panel"]
+layout_mode = 0
+offset_left = 537.0
+offset_top = 389.0
+offset_right = 785.0
+offset_bottom = 553.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_70oy3")
+
+[node name="Button" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 425.0
+offset_top = 583.0
+offset_right = 609.0
+offset_bottom = 654.0
+theme_override_styles/focus = ExtResource("6_8diyh")
+theme_override_styles/hover = SubResource("StyleBoxTexture_gqyfb")
+theme_override_styles/normal = ExtResource("6_8diyh")
+script = ExtResource("8_4weow")
+
+[node name="paredbtn" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 189.0
+offset_top = 208.0
+offset_right = 390.0
+offset_bottom = 341.0
+theme_override_styles/focus = SubResource("StyleBoxTexture_msp78")
+theme_override_styles/hover = SubResource("StyleBoxTexture_wdak6")
+theme_override_styles/normal = SubResource("StyleBoxTexture_l6yw3")
+
+[node name="Button3" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 746.0
+offset_top = 585.0
+offset_right = 929.0
+offset_bottom = 656.0
+theme_override_styles/focus = ExtResource("9_l0jpx")
+theme_override_styles/hover = ExtResource("9_l0jpx")
+theme_override_styles/normal = SubResource("StyleBoxTexture_24m1a")
+
+[node name="Panel5" type="Panel" parent="Panel"]
+layout_mode = 0
+offset_left = 538.0
+offset_top = 388.0
+offset_right = 787.0
+offset_bottom = 551.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_0gqqq")
+
+[node name="cecotbtn" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 417.0
+offset_top = 207.0
+offset_right = 645.0
+offset_bottom = 343.0
+theme_override_styles/focus = SubResource("StyleBoxTexture_odp8w")
+theme_override_styles/hover = SubResource("StyleBoxTexture_yf2r2")
+theme_override_styles/normal = SubResource("StyleBoxTexture_1fkia")
+
+[node name="discobtn" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 904.0
+offset_top = 209.0
+offset_right = 1144.0
+offset_bottom = 344.0
+theme_override_styles/focus = SubResource("StyleBoxTexture_jgaw6")
+theme_override_styles/hover = SubResource("StyleBoxTexture_15l6g")
+theme_override_styles/normal = SubResource("StyleBoxTexture_7drtu")
+
+[node name="maizalbtn" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 673.0
+offset_top = 209.0
+offset_right = 890.0
+offset_bottom = 341.0
+theme_override_styles/focus = SubResource("StyleBoxTexture_35qp5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_q5otr")
+theme_override_styles/normal = SubResource("StyleBoxTexture_v42b2")
+
+[node name="Panel4" type="Panel" parent="Panel"]
+layout_mode = 0
+offset_left = 535.0
+offset_top = 388.0
+offset_right = 783.0
+offset_bottom = 554.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_q53a3")
+
+[node name="Panel6" type="Panel" parent="Panel"]
+layout_mode = 0
+offset_left = 498.0
+offset_top = 25.0
+offset_right = 795.0
+offset_bottom = 141.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_w0kmq")
+
+[connection signal="pressed" from="Panel/Button" to="Panel/Button" method="_on_pressed"]
+[connection signal="pressed" from="Panel/paredbtn" to="Panel/Button" method="_on_paredbtn_pressed"]
+[connection signal="pressed" from="Panel/Button3" to="Panel/Button" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Panel/cecotbtn" to="Panel/Button" method="_on_cecotbtn_pressed"]
+[connection signal="pressed" from="Panel/discobtn" to="Panel/Button" method="_on_discobtn_pressed"]
+[connection signal="pressed" from="Panel/maizalbtn" to="Panel/Button" method="_on_maizalbtn_pressed"]
