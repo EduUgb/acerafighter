@@ -323,7 +323,6 @@ offset_bottom = 414.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_08elu")
 
 [node name="final" type="AudioStreamPlayer2D" parent="final"]
-visible = false
 stream = ExtResource("18_2i4ra")
 autoplay = true
 parameters/looping = true
