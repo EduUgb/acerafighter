@@ -26,6 +26,10 @@ var especialAnima: String = "especialA"
 var especialAnima2: String = "especial2"
 var especialAnima3: String = "especial3"
 
+
+
+
+
 #establece estados
 @export_group("States")
 @export var idleEstado: PlayerState

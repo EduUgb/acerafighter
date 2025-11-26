@@ -322,18 +322,18 @@ offset_right = 830.0
 offset_bottom = 414.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_08elu")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="final"]
+[node name="final" type="AudioStreamPlayer2D" parent="final"]
+visible = false
 stream = ExtResource("18_2i4ra")
 autoplay = true
 parameters/looping = true
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="partida" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("12_fhj5s")
 autoplay = true
 metadata/_edit_group_ = true
 
 [node name="cvtime" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="Timer" type="Timer" parent="cvtime"]
 

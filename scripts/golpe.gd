@@ -8,7 +8,7 @@ var atacando: bool
 var cooldown := 10 
 var ruta: String
 	
-@onready var audio = get_node("/root/Node2D/final/AudioStreamPlayer2D")
+@onready var audio = get_node("/root/Node2D/final/final")
 
 	
 @onready var efecto: AnimatedSprite2D = $"../../CanvasLayer/videos"

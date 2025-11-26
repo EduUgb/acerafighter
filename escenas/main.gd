@@ -5,7 +5,7 @@ extends Node2D
 @onready var tiempo: Timer = $cvtime/Timer
 @onready var pausabtn: Button = $pausabtn
 @onready var pausa: CanvasLayer = $pausa2
-@onready var audio = $final/AudioStreamPlayer2D
+@onready var audio = $final/final
 
 var tiempoTotal: int = 60 #segundos
 

@@ -104,7 +104,7 @@ texture_margin_right = 24.0
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w0kmq"]
 texture = ExtResource("13_wg8th")
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D3" type="Node2D"]
 script = ExtResource("1_35gwr")
 
 [node name="Panel" type="Panel" parent="."]

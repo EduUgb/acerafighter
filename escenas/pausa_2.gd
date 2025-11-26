@@ -7,6 +7,7 @@ extends CanvasLayer
 @onready var pausa: CanvasLayer = $"../pausa2"
 @onready var salirbtn2: Button = $Panel/salirbtn2
 @onready var guiabtn2: Button = $Panel/guiabtn2
+@onready var audio2 = $"../final/final"
 
 var escena_actual = null
 
@@ -24,13 +25,14 @@ func mostrar():
 	panel2.visible = true
 	numeros.visible = false
 	get_tree().paused = true
-
+	audio2.play()
 
 func ocultar():
 	panel2.visible = false   # ocultamos solo el panel
 	numeros.visible = true
 	get_tree().paused = false
-
+	audio2.stop()
+	
 func _alpresionar():
 	ocultar()
 	await get_tree().process_frame

@@ -11,7 +11,7 @@ extends CanvasLayer
 @onready var p1: Panel = $Panel/Player1
 @onready var p2: Panel = $Panel/Player2
 @onready var draw: Panel = $Panel/draw
-@onready var audio = $AudioStreamPlayer2D
+@onready var audio = $final
 
 var fin_mostrado: bool = false
 
