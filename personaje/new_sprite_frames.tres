@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=178 format=3 uid="uid://bbiki45b8lx1a"]
+[gd_resource type="SpriteFrames" load_steps=183 format=3 uid="uid://bbiki45b8lx1a"]
 
 [ext_resource type="Texture2D" uid="uid://dhflobrcomd71" path="res://personaje/escudo2.png" id="1_88r3o"]
 [ext_resource type="Texture2D" uid="uid://6y3g0p3j7oc5" path="res://personaje/agacharse Ninja.png" id="1_ciy0c"]
@@ -26,8 +26,9 @@
 [ext_resource type="Texture2D" uid="uid://dn2d54kyrxhxs" path="res://personaje/laUnion/La Union - golpe_gachado.png" id="17_asbfv"]
 [ext_resource type="Texture2D" uid="uid://c7rn6ahriastr" path="res://personaje/laUnion/La Union - Salto y caida.png" id="17_sl15f"]
 [ext_resource type="Texture2D" uid="uid://dhi4t0gvdfswj" path="res://personaje/laUnion/La Union - walk.png" id="17_up0ki"]
-[ext_resource type="Texture2D" uid="uid://c0mb5isplccqh" path="res://personaje/especialsanmi.png" id="19_agsdo"]
+[ext_resource type="Texture2D" uid="uid://peu8jiav143v" path="res://personaje/laUnion/La Union - Special ATK.png" id="19_o3q5x"]
 [ext_resource type="Texture2D" uid="uid://wy7v7hchf5fy" path="res://personaje/laUnion/La Union - Agachado+walk.png" id="22_3bj0b"]
+[ext_resource type="Texture2D" uid="uid://glto2vp2lk0p" path="res://personaje/sanmi/idlesanmi.png" id="23_qabyj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_di1um"]
 atlas = ExtResource("1_88r3o")
@@ -350,20 +351,20 @@ atlas = ExtResource("12_f74hj")
 region = Rect2(384, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0y1oj"]
-atlas = ExtResource("19_agsdo")
-region = Rect2(0, 0, 120, 64)
+atlas = ExtResource("19_o3q5x")
+region = Rect2(0, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2lynm"]
-atlas = ExtResource("19_agsdo")
-region = Rect2(120, 0, 120, 64)
+atlas = ExtResource("19_o3q5x")
+region = Rect2(128, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_icovs"]
-atlas = ExtResource("19_agsdo")
-region = Rect2(240, 0, 120, 64)
+atlas = ExtResource("19_o3q5x")
+region = Rect2(256, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dg2mn"]
-atlas = ExtResource("19_agsdo")
-region = Rect2(360, 0, 120, 64)
+atlas = ExtResource("19_o3q5x")
+region = Rect2(384, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uvaga"]
 atlas = ExtResource("17_asbfv")
@@ -476,6 +477,22 @@ region = Rect2(2304, 0, 128, 128)
 [sub_resource type="AtlasTexture" id="AtlasTexture_4narv"]
 atlas = ExtResource("2_emh60")
 region = Rect2(2432, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hrna7"]
+atlas = ExtResource("23_qabyj")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0xcxb"]
+atlas = ExtResource("23_qabyj")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g5ac6"]
+atlas = ExtResource("23_qabyj")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oggjw"]
+atlas = ExtResource("23_qabyj")
+region = Rect2(384, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_plm4t"]
 atlas = ExtResource("14_f74hj")
@@ -1072,6 +1089,23 @@ animations = [{
 "loop": true,
 "name": &"golpes",
 "speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hrna7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0xcxb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g5ac6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oggjw")
+}],
+"loop": true,
+"name": &"idleSanmi",
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,

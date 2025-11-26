@@ -69,6 +69,6 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_yb3qj")
 stream = ExtResource("8_yb3qj")
 autoplay = true
 
-[connection signal="pressed" from="Panel/play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Panel/play" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Panel/play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Panel/exit" to="." method="_on_exit_pressed"]
