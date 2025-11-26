@@ -65,7 +65,7 @@ theme_override_styles/focus = ExtResource("3_pjo2y")
 theme_override_styles/hover = ExtResource("3_pjo2y")
 theme_override_styles/normal = SubResource("StyleBoxTexture_72kx7")
 
-[node name="confg" type="Button" parent="Panel"]
+[node name="guia" type="Button" parent="Panel"]
 layout_mode = 0
 offset_left = 510.0
 offset_top = 432.0
@@ -97,5 +97,5 @@ stream = ExtResource("9_h77ao")
 autoplay = true
 
 [connection signal="pressed" from="Panel/escoger" to="." method="_on_escoger_pressed"]
-[connection signal="pressed" from="Panel/confg" to="." method="_on_confg_pressed"]
+[connection signal="pressed" from="Panel/guia" to="." method="_on_guia_pressed"]
 [connection signal="pressed" from="Panel/exit" to="." method="_on_exit_pressed"]

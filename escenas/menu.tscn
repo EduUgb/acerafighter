@@ -40,10 +40,10 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_2owot")
 
 [node name="play" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 511.0
-offset_top = 367.0
-offset_right = 796.0
-offset_bottom = 487.0
+offset_left = 510.0
+offset_top = 295.0
+offset_right = 795.0
+offset_bottom = 415.0
 theme_override_styles/focus = ExtResource("3_lberl")
 theme_override_styles/hover = SubResource("StyleBoxTexture_xqndx")
 theme_override_styles/normal = ExtResource("3_lberl")
@@ -57,6 +57,13 @@ offset_bottom = 633.0
 theme_override_styles/focus = ExtResource("5_spm53")
 theme_override_styles/hover = SubResource("StyleBoxTexture_56ah5")
 theme_override_styles/normal = ExtResource("5_spm53")
+
+[node name="confg" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 534.0
+offset_top = 419.0
+offset_right = 767.0
+offset_bottom = 500.0
 
 [node name="Panel2" type="Panel" parent="."]
 offset_left = 471.0
@@ -72,3 +79,4 @@ autoplay = true
 [connection signal="pressed" from="Panel/play" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Panel/play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Panel/exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Panel/confg" to="." method="_on_confg_pressed"]
