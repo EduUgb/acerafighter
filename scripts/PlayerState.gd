@@ -8,6 +8,7 @@ extends estados
 
 var gravity: float = 2500
 
+
 #nombre de las animaciones
 var idleAnima: String = "idle"
 var caminarAnima: String = "caminar"
@@ -49,6 +50,8 @@ var arriba: String="arriba"
 var abajo: String= "abajo"
 
 
+
+var bloqueo2: String="bloqueo2"
 var izquierda2: String="izquierda2"
 var derecha2: String="derecha2"
 var arriba2: String="arriba2"
@@ -58,17 +61,18 @@ var golpe: String = "golpe"
 var golpeArriba: String = "golpeArriba"
 var golpeespecial: String = "especial"
 
-var block: String = "bloqueo2"
+var block: String = "bloqueo"
 #base
 
 func _ready() -> void:
 
-	await get_tree().process_frame
+
 	for key in Global.player_data.keys():
 		if key in self:
 			set(key, Global.player_data[key])
-			
+
 	print("Valores cargados:", idleAnima)	
+	
 func process_physics(delta: float) -> estados: # Retorna PlayerState, no "estados"
 	# Solo aplica la gravedad si no está en el suelo.
 	# El movimiento horizontal (velocity.x) debe ser

@@ -71,6 +71,7 @@ func _on_pressed():
 		for key in animaciones_por_panel[panel_activo].keys():
 			Global.player_data[key] = animaciones_por_panel[panel_activo][key]
 		print("Animaciones aplicadas desde:", panel_activo)
+		
 		get_tree().change_scene_to_file("res://escenas/selector2.tscn")
 	
 

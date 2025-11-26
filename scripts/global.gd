@@ -1,5 +1,9 @@
 extends Node
 
+var escenaEspecial1 := ""
+
+
+
 var player_data = {
 	"gravity": 2500,
 	"idleAnima": "",

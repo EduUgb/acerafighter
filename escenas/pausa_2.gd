@@ -17,7 +17,7 @@ func _ready():
 	print(againbtn2)  # debug: verificar que no sea null
 	againbtn2.pressed.connect(Callable(self, "_alpresionar"))
 	salirbtn2.pressed.connect(Callable(self, "_on_pausabtn"))
-	escena_actual = get_tree().current_scene.scene_file_path
+
 
 	
 func mostrar():

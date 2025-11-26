@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=3 uid="uid://ct78koc25diav"]
+[gd_scene load_steps=52 format=3 uid="uid://ct78koc25diav"]
 
 [ext_resource type="Script" uid="uid://iyagrrfjcgcw" path="res://scripts/player1.gd" id="1_hnwkt"]
 [ext_resource type="SpriteFrames" uid="uid://bbiki45b8lx1a" path="res://personaje/new_sprite_frames.tres" id="2_u30lm"]
@@ -25,6 +25,7 @@
 [ext_resource type="Animation" uid="uid://c0aqygd002f8l" path="res://tests/saltoUnion.res" id="22_j604n"]
 [ext_resource type="Animation" uid="uid://8fp3uwshmd4x" path="res://tests/walkagaUnion.res" id="23_b0hp4"]
 [ext_resource type="Animation" uid="uid://c11whaeem1ulo" path="res://tests/walkUnion.res" id="24_g66vx"]
+[ext_resource type="SpriteFrames" uid="uid://da0not6oftcij" path="res://escenas/videos.tres" id="26_dhqrl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ox5i8"]
 size = Vector2(348.75, 118.25)
@@ -40,7 +41,7 @@ size = Vector2(180.5, 353)
 
 [sub_resource type="Animation" id="Animation_gbvj4"]
 length = 1.00003
-loop_mode = 1
+loop_mode = 2
 step = 0.25
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -93,19 +94,19 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("AnimationPlayer:speed_scale")
+tracks/4/path = NodePath("maquinaEstados/golpe/HitBox2/CollisionShape2D:disabled")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [1.0]
+"update": 1,
+"values": [true]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("maquinaEstados/golpe/HitBox2/CollisionShape2D:disabled")
+tracks/5/path = NodePath("maquinaEstados/golpe/HitBox3/CollisionShape2D:disabled")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -117,14 +118,50 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("maquinaEstados/golpe/HitBox3/CollisionShape2D:disabled")
+tracks/6/path = NodePath("maquinaEstados/golpe/HitBox/CollisionShape2D:scale")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("maquinaEstados/golpe/HitBox3/CollisionShape2D:scale")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("maquinaEstados/golpe/HitBox2/CollisionShape2D:scale")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("maquinaEstados/golpe/HitBox2/CollisionShape2D:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(514, 285)]
 }
 
 [sub_resource type="Animation" id="Animation_k75m6"]
@@ -155,6 +192,35 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_dhqrl"]
+resource_name = "agacharseUnion"
+length = 0.400007
+step = 0.0666667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"agacharseUnion"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.133333, 0.333333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
 }
 
 [sub_resource type="Animation" id="Animation_72y6u"]
@@ -246,7 +312,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_s8sdq"]
 resource_name = "caminar"
-length = 1.16668
+length = 1.16669
 loop_mode = 1
 step = 0.166667
 tracks/0/type = "value"
@@ -268,10 +334,10 @@ tracks/1/path = NodePath("AnimatedSprite2D:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.111111, 0.222222, 0.333333, 0.444444, 0.555555, 0.666666, 0.777777, 0.888888, 0.999999),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.111111, 0.222222, 0.333333, 0.555555, 0.666666, 0.777777),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+"values": [0, 1, 2, 3, 5, 6, 7]
 }
 
 [sub_resource type="Animation" id="Animation_5ksev"]
@@ -301,18 +367,6 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [0]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("AnimationPlayer:speed_scale")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.332766),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [2.714, 1.0]
 }
 
 [sub_resource type="Animation" id="Animation_vemi5"]
@@ -751,35 +805,6 @@ tracks/1/keys = {
 "values": [0, 1, 2]
 }
 
-[sub_resource type="Animation" id="Animation_dhqrl"]
-resource_name = "agacharseUnion"
-length = 0.400007
-step = 0.0666667
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"agacharseUnion"]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AnimatedSprite2D:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.133333, 0.333333),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [0, 1, 2]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_s8sdq"]
 _data = {
 &"RESET": SubResource("Animation_gbvj4"),
@@ -816,6 +841,8 @@ _data = {
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_epypp"]
 radius = 122.08
 height = 308.534
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n8dae"]
 
 [node name="jugador1" type="CharacterBody2D" groups=["Player"]]
 script = ExtResource("1_hnwkt")
@@ -915,7 +942,7 @@ script = ExtResource("9_4tl84")
 metadata/_custom_type_script = "uid://08igpp0a4sg1"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="maquinaEstados/golpe/HitBox"]
-position = Vector2(560.625, 512)
+position = Vector2(535.903, 512)
 shape = SubResource("RectangleShape2D_ox5i8")
 disabled = true
 debug_color = Color(0.989781, 0, 0.286363, 0.42)
@@ -964,7 +991,7 @@ script = ExtResource("14_c7tmd")
 metadata/_custom_type_script = "uid://dm822grhe3ol5"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="maquinaEstados/dolor/HurtBox"]
-position = Vector2(195, 587)
+position = Vector2(195, 577)
 scale = Vector2(0.8, 0.8)
 shape = SubResource("RectangleShape2D_oxw8f")
 debug_color = Color(0.967356, 1.63645e-06, 0.474771, 0.42)
@@ -987,7 +1014,7 @@ libraries = {
 }
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(192, 429)
+position = Vector2(193, 427)
 scale = Vector2(9.40625, 9.125)
 sprite_frames = ExtResource("2_u30lm")
 animation = &"agacharse"
@@ -1000,6 +1027,20 @@ position = Vector2(180, 564)
 scale = Vector2(0.677286, 1.03068)
 shape = SubResource("CapsuleShape2D_epypp")
 debug_color = Color(0, 0.607935, 0.651747, 0.42)
-metadata/_edit_lock_ = true
 
 [node name="combo_timer" type="Timer" parent="."]
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_n8dae")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="videos" type="AnimatedSprite2D" parent="CanvasLayer"]
+process_mode = 3
+position = Vector2(663, 207)
+scale = Vector2(2.9221, 3.12385)
+sprite_frames = ExtResource("26_dhqrl")
+animation = &"4"
+speed_scale = 1.6

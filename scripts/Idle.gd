@@ -3,13 +3,19 @@ extends PlayerState
 
 
 func enter() -> void:
-	player.animacion.play(idleAnima)
+	
+
+	if player.animacion:
+		player.animacion.stop()
+		player.animacion.play(idleAnima)
+		player.animacion.seek(0.0, false)
+		player.animacion.advance(4)
 
 func process_input(event: InputEvent) -> estados:
 	# Golpe especial: 3 teclas simultáneas
 	if (Input.is_action_pressed(golpe)
 	and Input.is_action_pressed(golpeArriba)
-	and Input.is_action_pressed(arriba)
+	#and Input.is_action_pressed(arriba)
 	):
 		if player.puede_usar_golpe_especial():
 			player.registrar_golpe_especial()
@@ -32,7 +38,7 @@ func process_input(event: InputEvent) -> estados:
 		golpeEstado.set_tipo_golpe("normal")
 		return saltoEstado
 		
-	elif event.is_action_pressed(abajo) and player.is_on_floor():
+	if event.is_action_pressed(abajo) and player.is_on_floor():
 		golpeEstado.set_tipo_golpe("normal")
 		return agacharseEstado
 	if event.is_action_pressed(block):

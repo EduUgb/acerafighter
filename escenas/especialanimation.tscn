@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bl8usccaog475"]
+
+[ext_resource type="Texture2D" uid="uid://byorp8dqvbkuk" path="res://escenarios/Gemini_Generated_Image_lms4i3lms4i3lms4.png" id="1_yckjp"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mhgd1"]
+texture = ExtResource("1_yckjp")
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 177.0
+offset_top = 96.0
+offset_right = 217.0
+offset_bottom = 136.0
+scale = Vector2(24.2684, 12.291)
+theme_override_styles/panel = SubResource("StyleBoxTexture_mhgd1")

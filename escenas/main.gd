@@ -18,7 +18,7 @@ func _ready() -> void:
 	
 	pausabtn.pressed.connect(_pausabtn)
 
-	iniciar_contador(60) 
+	iniciar_contador(99) 
 	
 
 func iniciar_contador(segundos: int):
@@ -38,8 +38,10 @@ func _timeout():
 
 			
 func _pausabtn():
-		if is_instance_valid(pausa):
-			pausa.mostrar()
-			await get_tree().process_frame
+
+
+	if is_instance_valid(pausa):
+		pausa.mostrar()
+		await get_tree().process_frame
 			
 			

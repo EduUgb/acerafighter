@@ -28,6 +28,7 @@ func _on_area_entered(area: Area2D):
 	#timer.start(1.0)
 	
 func danio():
+
 		maquina_Estados.cambiaEstado(maquina_Estados.dolor)
 		#activarInvencibilidad()
 		

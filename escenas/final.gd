@@ -6,12 +6,12 @@ extends CanvasLayer
 @onready var salirbtn2: Button = $Panel/salirbtn
 @onready var guiabtn2: Button = $Panel/guiabtn
 @onready var vida1: ProgressBar =$"../CanvasLayer/vidaBar"
-@onready var vida2: ProgressBar =$"../CharacterBody2D2/CanvasLayer2/vidaBar2"
+@onready var vida2: ProgressBar =$"../CanvasLayer2/vidaBar2"
 @onready var lbl_ganador: Label = $Panel/lbl_ganador
 @onready var p1: Panel =$Panel/Player1
 @onready var p2: Panel =$Panel/Player2
 @onready var draw: Panel = $Panel/draw
-
+@onready var audio = $"../AudioStreamPlayer2D"
 func _ready():
 	process_mode = Node.PROCESS_MODE_WHEN_PAUSED
 	panel.visible = false
@@ -26,6 +26,7 @@ func _process(delta):
 	comparar_vidas()
 
 func mostrar():
+	audio.playing = true
 	panel.visible = true
 	numeros.visible = false
 	get_tree().paused = true
@@ -47,10 +48,13 @@ func comparar_vidas():
 	if dato1 > dato2:
 		lbl_ganador.text = "EL GANADOR ES:"
 		p1.visible = true
-	elif dato2 > dato1:
+		audio.playing = true
+		draw.visible = false
+	if dato2 > dato1:
 		lbl_ganador.text = "EL GANADOR ES:"
 		p2.visible = true
-	else:
+		draw.visible = false
+	if dato1 == dato2:
 		draw.visible = true
 		lbl_ganador.visible = false
 		

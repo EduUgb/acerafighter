@@ -12,9 +12,9 @@ func enter() -> void:
 	if hurt_box:
 		hurt_box.set_deferred("monitoring", false)
 		hurt_box.set_deferred("monitorable", false)
-		print("HurtBox desactivada")  # Confirmación en consola
-	else:
-		printerr("Error: No se encontró HurtBox")
+	#	print("HurtBox desactivada")  # Confirmación en consola
+#	else:
+		#print("Error: No se encontró HurtBox")
 	
 	player.animacion.play(blockAnima)
 
@@ -22,7 +22,7 @@ func exit() -> void:
 	if hurt_box:
 		hurt_box.set_deferred("monitoring", true)
 		hurt_box.set_deferred("monitorable", true)
-		print("HurtBox reactivada")  # Confirmación en consola
+		#print("HurtBox reactivada")  # Confirmación en consola
 
 func process_physics(delta: float) -> estados:
 	# Si el botón de bloqueo ya no está presionado
