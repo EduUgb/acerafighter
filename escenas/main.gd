@@ -5,7 +5,7 @@ extends Node2D
 @onready var tiempo: Timer = $cvtime/Timer
 @onready var pausabtn: Button = $pausabtn
 @onready var pausa: CanvasLayer = $pausa2
-
+@onready var audio = $final/AudioStreamPlayer2D
 
 var tiempoTotal: int = 60 #segundos
 
@@ -15,7 +15,7 @@ func _ready() -> void:
 	tiempo.wait_time = 1.0   # cada segundo
 	tiempo.one_shot = false
 	tiempo.timeout.connect(_timeout)
-	
+	audio.stop()
 	pausabtn.pressed.connect(_pausabtn)
 
 	iniciar_contador(99) 
@@ -38,7 +38,6 @@ func _timeout():
 
 			
 func _pausabtn():
-
 
 	if is_instance_valid(pausa):
 		pausa.mostrar()

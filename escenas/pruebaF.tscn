@@ -1,12 +1,10 @@
-[gd_scene load_steps=59 format=3 uid="uid://drjdja6gba1f4"]
+[gd_scene load_steps=57 format=3 uid="uid://drjdja6gba1f4"]
 
 [ext_resource type="Script" uid="uid://cqdaxtsos8gji" path="res://escenas/main.gd" id="1_git66"]
 [ext_resource type="PackedScene" uid="uid://ct78koc25diav" path="res://escenas/jugador_1.tscn" id="1_qdwd3"]
 [ext_resource type="PackedScene" uid="uid://b5sbggplt1je7" path="res://escenas/jugador_2.tscn" id="3_6517q"]
-[ext_resource type="Script" uid="uid://1aqmck7fv57f" path="res://escenas/hud.gd" id="7_4dei2"]
 [ext_resource type="Texture2D" uid="uid://c7pw2q45ortac" path="res://personaje/pngtree-life-bar-games-pixel-art-vector-png-image_12690219.png" id="8_7wpai"]
 [ext_resource type="FontFile" uid="uid://qy6pxxwhk8yd" path="res://extras/BoldPixels1.4.ttf" id="8_8svfb"]
-[ext_resource type="Script" uid="uid://biumjr6d3bg5i" path="res://escenas/vida_bar.gd" id="8_bgf2f"]
 [ext_resource type="Script" uid="uid://r0hv1iv5fnuk" path="res://escenas/final.gd" id="9_it6l2"]
 [ext_resource type="Script" uid="uid://4dgsiek28u3v" path="res://scripts/pared.gd" id="10_um2fu"]
 [ext_resource type="AudioStream" uid="uid://dxstiqkkbwoj" path="res://extras/NEGRO-‐-Hecho-con-Clipchamp-_1_.ogg" id="12_fhj5s"]
@@ -34,6 +32,9 @@ size = Vector2(585.232, 64.6364)
 [sub_resource type="ImageTexture" id="ImageTexture_vmwlx"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fhj5s"]
+texture = ExtResource("8_7wpai")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u74ss"]
 texture = ExtResource("8_7wpai")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7seqx"]
@@ -147,9 +148,6 @@ texture_margin_bottom = 5.0
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6517q"]
 texture = ExtResource("16_mtc0p")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u74ss"]
-texture = ExtResource("8_7wpai")
-
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_git66")
 
@@ -162,7 +160,7 @@ barra_vida = NodePath("../CanvasLayer/vidaBar")
 position = Vector2(1296, -6)
 scale = Vector2(-1, 1)
 playerId = 2
-barra_vida = NodePath("../CanvasLayer2/vidaBar2")
+barra_vida = NodePath("../CanvasLayer/vidaBar2")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 
@@ -196,7 +194,6 @@ texture = SubResource("ImageTexture_vmwlx")
 script = ExtResource("10_um2fu")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-script = ExtResource("7_4dei2")
 
 [node name="infolbl" type="Label" parent="CanvasLayer"]
 offset_left = 15.0
@@ -215,17 +212,26 @@ theme_override_fonts/font = ExtResource("8_8svfb")
 theme_override_font_sizes/font_size = 36
 theme_override_styles/fill = SubResource("StyleBoxTexture_fhj5s")
 value = 100.0
-script = ExtResource("8_bgf2f")
 
 [node name="infolbl2" type="Label" parent="CanvasLayer"]
-offset_left = 644.0
+offset_left = 955.0
 offset_top = 660.0
-offset_right = 900.0
+offset_right = 1211.0
 offset_bottom = 699.0
 theme_override_fonts/font = ExtResource("8_8svfb")
+theme_override_font_sizes/font_size = 30
+
+[node name="vidaBar2" type="ProgressBar" parent="CanvasLayer"]
+offset_left = 895.0
+offset_top = 6.0
+offset_right = 1225.0
+offset_bottom = 70.0
+theme_override_fonts/font = ExtResource("8_8svfb")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/fill = SubResource("StyleBoxTexture_u74ss")
+value = 100.0
 
 [node name="final" type="CanvasLayer" parent="."]
-visible = false
 script = ExtResource("9_it6l2")
 
 [node name="Panel" type="Panel" parent="final"]
@@ -350,7 +356,6 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_gjqjp")
 theme_override_styles/normal = SubResource("StyleBoxTexture_otbbj")
 
 [node name="pausa2" type="CanvasLayer" parent="."]
-visible = false
 script = ExtResource("16_bbny4")
 
 [node name="Panel" type="Panel" parent="pausa2"]
@@ -405,16 +410,3 @@ offset_bottom = 455.0
 theme_override_styles/focus = SubResource("StyleBoxTexture_t4mti")
 theme_override_styles/hover = SubResource("StyleBoxTexture_fjhbu")
 theme_override_styles/normal = SubResource("StyleBoxTexture_6517q")
-
-[node name="CanvasLayer2" type="CanvasLayer" parent="."]
-
-[node name="vidaBar2" type="ProgressBar" parent="CanvasLayer2"]
-offset_left = 895.0
-offset_top = 6.0
-offset_right = 1225.0
-offset_bottom = 70.0
-theme_override_fonts/font = ExtResource("8_8svfb")
-theme_override_font_sizes/font_size = 36
-theme_override_styles/fill = SubResource("StyleBoxTexture_u74ss")
-value = 100.0
-script = ExtResource("8_bgf2f")

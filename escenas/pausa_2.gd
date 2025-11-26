@@ -14,9 +14,9 @@ var escena_actual = null
 func _ready():
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	panel2.visible = false
-	print(againbtn2)  # debug: verificar que no sea null
-	againbtn2.pressed.connect(Callable(self, "_alpresionar"))
-	salirbtn2.pressed.connect(Callable(self, "_on_pausabtn"))
+	#print(againbtn2)  # debug: verificar que no sea null
+	againbtn2.pressed.connect(_alpresionar)
+	salirbtn2.pressed.connect(_on_pausabtn)
 
 
 	
@@ -35,8 +35,6 @@ func _alpresionar():
 	ocultar()
 	await get_tree().process_frame
 
-
-	
 
 
 func _on_pausabtn() -> void:
