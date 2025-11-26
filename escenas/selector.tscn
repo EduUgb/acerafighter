@@ -10,8 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://ck18i6x6ir6gp" path="res://escenarios/Cuadro.png" id="7_yung2"]
 [ext_resource type="Texture2D" uid="uid://cd74b46itr557" path="res://escenarios/personaje2.png" id="8_r4knn"]
 [ext_resource type="StyleBox" uid="uid://crdoql0nb8g18" path="res://extras/volver2.tres" id="9_wk205"]
-[ext_resource type="Texture2D" uid="uid://dr63y8olp5jw2" path="res://escenarios/Volver1.png" id="10_20moc"]
 [ext_resource type="Texture2D" uid="uid://dcufqay8lp26h" path="res://escenarios/bloqueado.png" id="11_a0k8n"]
+[ext_resource type="Texture2D" uid="uid://cwaoob7ewd7a1" path="res://escenarios/BTN's/volver_boton.png" id="11_yf2r2"]
 [ext_resource type="Texture2D" uid="uid://3i1fmp1gg6js" path="res://escenarios/Boton ninja.png" id="12_pbc5h"]
 [ext_resource type="AudioStream" uid="uid://dnwagaau8qexm" path="res://extras/Negro 2.mp3" id="13_odp8w"]
 
@@ -55,7 +55,7 @@ texture_margin_left = 31.0
 texture_margin_right = 31.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_24m1a"]
-texture = ExtResource("10_20moc")
+texture = ExtResource("11_yf2r2")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_odp8w"]
 texture = ExtResource("8_r4knn")

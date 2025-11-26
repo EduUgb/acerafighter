@@ -6,10 +6,10 @@
 [ext_resource type="Texture2D" uid="uid://biatu51hp3fvi" path="res://escenarios/pared.jpeg" id="4_s8uc7"]
 [ext_resource type="Texture2D" uid="uid://crgnykcdtq6md" path="res://escenarios/Cecot Escenario.png" id="5_6r2l3"]
 [ext_resource type="StyleBox" uid="uid://xqy351qfsq8n" path="res://extras/select2.tres" id="6_8diyh"]
-[ext_resource type="Texture2D" uid="uid://ba4hk46gt7j3w" path="res://escenarios/SELECCIONAR.png" id="7_jxjne"]
+[ext_resource type="Texture2D" uid="uid://bcgydquqdb050" path="res://escenarios/BTN's/SELECCIONAR_boton.png" id="7_i4q62"]
 [ext_resource type="Script" uid="uid://c24j634st34pv" path="res://scripts/selectorbtn.gd" id="8_4weow"]
 [ext_resource type="StyleBox" uid="uid://crdoql0nb8g18" path="res://extras/volver2.tres" id="9_l0jpx"]
-[ext_resource type="Texture2D" uid="uid://dr63y8olp5jw2" path="res://escenarios/Volver1.png" id="10_kajgm"]
+[ext_resource type="Texture2D" uid="uid://cwaoob7ewd7a1" path="res://escenarios/BTN's/volver_boton.png" id="10_gsqve"]
 [ext_resource type="Texture2D" uid="uid://lh4aeso4537c" path="res://escenarios/disco.png" id="11_lr8lw"]
 [ext_resource type="Texture2D" uid="uid://bavg4r1f53l8q" path="res://escenarios/Maizal escenario.png" id="12_5jsyr"]
 [ext_resource type="Texture2D" uid="uid://d170slxy8qxrg" path="res://escenarios/Banda escenario.png" id="13_wg8th"]
@@ -32,7 +32,7 @@ texture_margin_left = 31.0
 texture_margin_right = 31.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gqyfb"]
-texture = ExtResource("7_jxjne")
+texture = ExtResource("7_i4q62")
 texture_margin_left = 5.0
 texture_margin_top = 5.0
 texture_margin_right = 5.0
@@ -52,7 +52,7 @@ texture_margin_bottom = 5.0
 texture = ExtResource("4_s8uc7")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_24m1a"]
-texture = ExtResource("10_kajgm")
+texture = ExtResource("10_gsqve")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0gqqq"]
 texture = ExtResource("11_lr8lw")

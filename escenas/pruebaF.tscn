@@ -1,16 +1,18 @@
-[gd_scene load_steps=57 format=3 uid="uid://drjdja6gba1f4"]
+[gd_scene load_steps=59 format=3 uid="uid://drjdja6gba1f4"]
 
 [ext_resource type="Script" uid="uid://cqdaxtsos8gji" path="res://escenas/main.gd" id="1_git66"]
 [ext_resource type="PackedScene" uid="uid://ct78koc25diav" path="res://escenas/jugador_1.tscn" id="1_qdwd3"]
 [ext_resource type="PackedScene" uid="uid://b5sbggplt1je7" path="res://escenas/jugador_2.tscn" id="3_6517q"]
 [ext_resource type="Texture2D" uid="uid://c7pw2q45ortac" path="res://personaje/pngtree-life-bar-games-pixel-art-vector-png-image_12690219.png" id="8_7wpai"]
 [ext_resource type="FontFile" uid="uid://qy6pxxwhk8yd" path="res://extras/BoldPixels1.4.ttf" id="8_8svfb"]
+[ext_resource type="Texture2D" uid="uid://75naiqeg56ry" path="res://escenarios/BTN's/volver_a_jugar_boton.png" id="9_15rbu"]
 [ext_resource type="Script" uid="uid://r0hv1iv5fnuk" path="res://escenas/final.gd" id="9_it6l2"]
 [ext_resource type="Script" uid="uid://4dgsiek28u3v" path="res://scripts/pared.gd" id="10_um2fu"]
 [ext_resource type="AudioStream" uid="uid://dxstiqkkbwoj" path="res://extras/NEGRO-‐-Hecho-con-Clipchamp-_1_.ogg" id="12_fhj5s"]
+[ext_resource type="Texture2D" uid="uid://dam28ejgjq3o2" path="res://escenarios/BTN's/salir_boton.png" id="12_vfdok"]
 [ext_resource type="Texture2D" uid="uid://7116thby4mjx" path="res://extras/interfaz/Fondo.png" id="13_trgvt"]
+[ext_resource type="Texture2D" uid="uid://bjod168f8dqqx" path="res://escenarios/BTN's/guia_boton.png" id="13_vmwlx"]
 [ext_resource type="Texture2D" uid="uid://cs4coia40ix3e" path="res://extras/interfaz/TorogozPArt.png" id="14_bbny4"]
-[ext_resource type="Texture2D" uid="uid://b6uki4fdsd26e" path="res://extras/interfaz/TRY_boton.png" id="14_um2fu"]
 [ext_resource type="Texture2D" uid="uid://c2wxriu71jld3" path="res://extras/interfaz/victoria_title.png" id="14_w73p2"]
 [ext_resource type="Texture2D" uid="uid://dir2e68fhwlir" path="res://extras/interfaz/Pausa_title.png" id="15_w73p2"]
 [ext_resource type="Script" uid="uid://75sv8pjb3igc" path="res://escenas/pausa_2.gd" id="16_bbny4"]
@@ -41,17 +43,13 @@ texture = ExtResource("8_7wpai")
 texture = ExtResource("13_trgvt")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4gd7w"]
-texture = ExtResource("14_um2fu")
+texture = ExtResource("9_15rbu")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5w817"]
-texture = ExtResource("14_um2fu")
-texture_margin_left = 5.0
-texture_margin_top = 5.0
-texture_margin_right = 5.0
-texture_margin_bottom = 5.0
+texture = ExtResource("9_15rbu")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vfdok"]
-texture = ExtResource("14_um2fu")
+texture = ExtResource("9_15rbu")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mtc0p"]
 texture = ExtResource("14_w73p2")
@@ -60,26 +58,26 @@ texture = ExtResource("14_w73p2")
 texture = ExtResource("14_bbny4")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1xvox"]
-texture = ExtResource("17_2i4ra")
+texture = ExtResource("12_vfdok")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2wkuf"]
-texture = ExtResource("17_2i4ra")
+texture = ExtResource("12_vfdok")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w73p2"]
-texture = ExtResource("17_2i4ra")
+texture = ExtResource("12_vfdok")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_51ntx"]
-texture = ExtResource("18_15rbu")
+texture = ExtResource("13_vmwlx")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hsnx2"]
-texture = ExtResource("18_15rbu")
+texture = ExtResource("13_vmwlx")
 texture_margin_left = 5.0
 texture_margin_top = 5.0
 texture_margin_right = 5.0
 texture_margin_bottom = 5.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_15rbu"]
-texture = ExtResource("18_15rbu")
+texture = ExtResource("13_vmwlx")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g8t7q"]
 texture = ExtResource("25_vfdok")
@@ -242,9 +240,9 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_7seqx")
 
 [node name="againbtn" type="Button" parent="final/Panel"]
 layout_mode = 0
-offset_left = 538.0
+offset_left = 536.0
 offset_top = 444.0
-offset_right = 772.0
+offset_right = 774.0
 offset_bottom = 517.0
 theme_override_font_sizes/font_size = 32
 theme_override_styles/focus = SubResource("StyleBoxTexture_4gd7w")
@@ -269,20 +267,20 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_2i4ra")
 
 [node name="salirbtn" type="Button" parent="final/Panel"]
 layout_mode = 0
-offset_left = 568.0
-offset_top = 519.0
-offset_right = 732.0
-offset_bottom = 584.0
+offset_left = 537.0
+offset_top = 525.0
+offset_right = 773.0
+offset_bottom = 585.0
 theme_override_styles/focus = SubResource("StyleBoxTexture_1xvox")
 theme_override_styles/hover = SubResource("StyleBoxTexture_2wkuf")
 theme_override_styles/normal = SubResource("StyleBoxTexture_w73p2")
 
 [node name="guiabtn" type="Button" parent="final/Panel"]
 layout_mode = 0
-offset_left = 582.0
-offset_top = 586.0
-offset_right = 715.0
-offset_bottom = 658.0
+offset_left = 537.0
+offset_top = 593.0
+offset_right = 773.0
+offset_bottom = 650.0
 theme_override_styles/focus = SubResource("StyleBoxTexture_51ntx")
 theme_override_styles/hover = SubResource("StyleBoxTexture_hsnx2")
 theme_override_styles/normal = SubResource("StyleBoxTexture_15rbu")
