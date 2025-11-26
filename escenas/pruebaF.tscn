@@ -335,6 +335,7 @@ autoplay = true
 metadata/_edit_group_ = true
 
 [node name="cvtime" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="Timer" type="Timer" parent="cvtime"]
 
@@ -356,6 +357,7 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_gjqjp")
 theme_override_styles/normal = SubResource("StyleBoxTexture_otbbj")
 
 [node name="pausa2" type="CanvasLayer" parent="."]
+visible = false
 script = ExtResource("16_bbny4")
 
 [node name="Panel" type="Panel" parent="pausa2"]
