@@ -1,41 +1,45 @@
-[gd_scene load_steps=54 format=3 uid="uid://bb7cyoj542i1q"]
+[gd_scene load_steps=61 format=3 uid="uid://bb7cyoj542i1q"]
 
-[ext_resource type="Texture2D" uid="uid://boiswbqtxgdps" path="res://escenarios/BTN's/Selector de personajes.png" id="2_1fkia"]
+[ext_resource type="Texture2D" uid="uid://db4rkykwy8mqe" path="res://escenarios/BTN's/Selector de personajes.png" id="2_1fkia"]
 [ext_resource type="StyleBox" uid="uid://xqy351qfsq8n" path="res://extras/select2.tres" id="3_a0cmh"]
-[ext_resource type="Texture2D" uid="uid://bcgydquqdb050" path="res://escenarios/BTN's/SELECCIONAR_boton.png" id="4_70oy3"]
+[ext_resource type="Texture2D" uid="uid://ddetjwnilvrfo" path="res://escenarios/BTN's/SELECCIONAR_boton.png" id="4_70oy3"]
 [ext_resource type="Script" uid="uid://chj34oe5v2sof" path="res://scripts/selector.gd" id="5_4wqgw"]
-[ext_resource type="Texture2D" uid="uid://d2xpxk7ancxp4" path="res://escenarios/BTN's/BTN - Plantilla.png" id="6_y5bsp"]
+[ext_resource type="Texture2D" uid="uid://mllfwsjtamio" path="res://escenarios/BTN's/BTN - Cuscatlan.png" id="5_y5bsp"]
+[ext_resource type="Texture2D" uid="uid://csag40nfy6sl0" path="res://escenarios/BTN's/BTN - Plantilla.png" id="6_y5bsp"]
+[ext_resource type="Texture2D" uid="uid://bjm2sql1ea2w1" path="res://escenarios/BTN's/volver.png" id="9_jgaw6"]
 [ext_resource type="StyleBox" uid="uid://crdoql0nb8g18" path="res://extras/volver2.tres" id="9_wk205"]
-[ext_resource type="Texture2D" uid="uid://bxt710jav2tnv" path="res://escenarios/BTN's/BTN - La Union.png" id="10_jgaw6"]
-[ext_resource type="Texture2D" uid="uid://ul4ng586k73k" path="res://escenarios/BTN's/BTN - Bloqueado.png" id="11_15l6g"]
-[ext_resource type="Texture2D" uid="uid://cwaoob7ewd7a1" path="res://escenarios/BTN's/volver_boton.png" id="11_yf2r2"]
-[ext_resource type="Texture2D" uid="uid://c3v71j3xj7dc" path="res://escenarios/BTN's/BTN - Ninja.png" id="12_7drtu"]
-[ext_resource type="Texture2D" uid="uid://dh5kgykcn0bsf" path="res://escenarios/BTN's/BTN - La Union P2.png" id="13_48gwk"]
+[ext_resource type="Texture2D" uid="uid://dnokg1psk0s0j" path="res://escenarios/BTN's/BTN - San Miguel.png" id="10_15l6g"]
+[ext_resource type="Texture2D" uid="uid://dpvpjrb3ig6ll" path="res://escenarios/BTN's/BTN - La Union.png" id="10_jgaw6"]
+[ext_resource type="Texture2D" uid="uid://bs58sds10nejn" path="res://escenarios/BTN's/BTN - Bloqueado.png" id="11_15l6g"]
+[ext_resource type="Texture2D" uid="uid://dd0dbw16yresk" path="res://escenarios/BTN's/BTN - Ninja.png" id="12_7drtu"]
+[ext_resource type="Texture2D" uid="uid://c157h6detmbt1" path="res://escenarios/BTN's/BTN - San Miguel P2.png" id="13_7drtu"]
+[ext_resource type="Texture2D" uid="uid://b0qehgvn8i81a" path="res://escenarios/BTN's/BTN - La Union P2.png" id="13_48gwk"]
 [ext_resource type="AudioStream" uid="uid://dnwagaau8qexm" path="res://extras/Negro 2.mp3" id="13_odp8w"]
-[ext_resource type="Texture2D" uid="uid://cjfc27o2slklc" path="res://escenarios/BTN's/BTN - Ninja P2.png" id="14_51k4k"]
+[ext_resource type="Texture2D" uid="uid://8r7yhi68i4vf" path="res://escenarios/BTN's/BTN - Cuscatlan P2.png" id="14_48gwk"]
+[ext_resource type="Texture2D" uid="uid://d2nhgyoskuvp" path="res://escenarios/BTN's/BTN - Ninja P2.png" id="14_51k4k"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b5lv3"]
 texture = ExtResource("2_1fkia")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gqyfb"]
 texture = ExtResource("4_70oy3")
-texture_margin_left = 5.0
-texture_margin_top = 5.0
-texture_margin_right = 5.0
-texture_margin_bottom = 5.0
+expand_margin_left = 15.0
+expand_margin_top = 15.0
+expand_margin_right = 15.0
+expand_margin_bottom = 15.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yx235"]
-texture = ExtResource("6_y5bsp")
+texture = ExtResource("5_y5bsp")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wdak6"]
-texture = ExtResource("6_y5bsp")
-texture_margin_left = 5.0
-texture_margin_top = 5.0
-texture_margin_right = 5.0
-texture_margin_bottom = 5.0
+texture = ExtResource("5_y5bsp")
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l6yw3"]
-texture = ExtResource("6_y5bsp")
+texture = ExtResource("5_y5bsp")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hlf4a"]
 texture = ExtResource("6_y5bsp")
@@ -43,55 +47,54 @@ texture = ExtResource("6_y5bsp")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2gdvb"]
 texture = ExtResource("6_y5bsp")
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_l6yw3"]
-load_path = "res://.godot/imported/personaje1.png-5eb625f2b5760116315c600568d42046.ctex"
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yg184"]
-texture = SubResource("CompressedTexture2D_l6yw3")
-texture_margin_left = 31.0
-texture_margin_right = 31.0
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_unsvt"]
+texture = ExtResource("5_y5bsp")
+texture_margin_left = 5.0
+texture_margin_top = 5.0
+texture_margin_right = 5.0
+texture_margin_bottom = 5.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_70oy3"]
 texture = ExtResource("10_jgaw6")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_24m1a"]
-texture = ExtResource("11_yf2r2")
+texture = ExtResource("9_jgaw6")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_odp8w"]
 texture = ExtResource("10_jgaw6")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yf2r2"]
 texture = ExtResource("10_jgaw6")
-texture_margin_left = 5.0
-texture_margin_top = 5.0
-texture_margin_right = 5.0
-texture_margin_bottom = 5.0
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1fkia"]
 texture = ExtResource("10_jgaw6")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jgaw6"]
-texture = ExtResource("6_y5bsp")
+texture = ExtResource("10_15l6g")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_15l6g"]
-texture = ExtResource("6_y5bsp")
-texture_margin_left = 5.0
-texture_margin_top = 5.0
-texture_margin_right = 5.0
-texture_margin_bottom = 5.0
+texture = ExtResource("10_15l6g")
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7drtu"]
-texture = ExtResource("6_y5bsp")
+texture = ExtResource("10_15l6g")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_48gwk"]
 texture = ExtResource("11_15l6g")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_51k4k"]
 texture = ExtResource("11_15l6g")
-texture_margin_left = 5.0
-texture_margin_top = 5.0
-texture_margin_right = 5.0
-texture_margin_bottom = 5.0
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0koh7"]
 texture = ExtResource("11_15l6g")
@@ -101,10 +104,10 @@ texture = ExtResource("12_7drtu")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oc42n"]
 texture = ExtResource("12_7drtu")
-texture_margin_left = 10.0
-texture_margin_top = 10.0
-texture_margin_right = 10.0
-texture_margin_bottom = 10.0
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8uvbs"]
 texture = ExtResource("12_7drtu")
@@ -114,57 +117,87 @@ texture = ExtResource("11_15l6g")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j1cqc"]
 texture = ExtResource("11_15l6g")
-texture_margin_left = 5.0
-texture_margin_top = 5.0
-texture_margin_right = 5.0
-texture_margin_bottom = 5.0
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lmpm5"]
 texture = ExtResource("11_15l6g")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q53a3"]
-texture = ExtResource("6_y5bsp")
-texture_margin_left = 24.0
-texture_margin_right = 24.0
+texture = ExtResource("13_7drtu")
+texture_margin_left = 5.0
+texture_margin_right = 5.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d26rn"]
 texture = ExtResource("12_7drtu")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7tkw6"]
-texture = ExtResource("13_48gwk")
+texture = ExtResource("14_48gwk")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c5ig1"]
-texture = ExtResource("13_48gwk")
+texture = ExtResource("14_48gwk")
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_at1mc"]
-texture = ExtResource("13_48gwk")
+texture = ExtResource("14_48gwk")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gjkt2"]
-texture = ExtResource("6_y5bsp")
+texture = ExtResource("13_48gwk")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h2dxe"]
-texture = ExtResource("6_y5bsp")
+texture = ExtResource("13_48gwk")
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mimxb"]
-texture = ExtResource("6_y5bsp")
+texture = ExtResource("13_48gwk")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jvg2r"]
-texture = ExtResource("6_y5bsp")
+texture = ExtResource("14_51k4k")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4s3d1"]
-texture = ExtResource("6_y5bsp")
+texture = ExtResource("14_51k4k")
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nheci"]
-texture = ExtResource("6_y5bsp")
+texture = ExtResource("14_51k4k")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8wn1i"]
-texture = ExtResource("14_51k4k")
+texture = ExtResource("13_7drtu")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b34ua"]
-texture = ExtResource("14_51k4k")
+texture = ExtResource("13_7drtu")
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8vh4d"]
+texture = ExtResource("13_7drtu")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yod17"]
+texture = ExtResource("14_48gwk")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c37rw"]
+texture = ExtResource("13_48gwk")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ponmr"]
 texture = ExtResource("14_51k4k")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ccc0g"]
+texture = ExtResource("10_15l6g")
+texture_margin_left = 5.0
+texture_margin_right = 5.0
 
 [node name="Node2D" type="Node2D"]
 
@@ -177,10 +210,10 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_b5lv3")
 
 [node name="Button" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 434.0
-offset_top = 536.0
-offset_right = 618.0
-offset_bottom = 607.0
+offset_left = 402.0
+offset_top = 504.0
+offset_right = 586.0
+offset_bottom = 575.0
 theme_override_styles/focus = ExtResource("3_a0cmh")
 theme_override_styles/hover = SubResource("StyleBoxTexture_gqyfb")
 theme_override_styles/normal = ExtResource("3_a0cmh")
@@ -188,72 +221,75 @@ script = ExtResource("5_4wqgw")
 
 [node name="btnP1Cusca" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 225.0
-offset_top = 153.0
-offset_right = 309.0
-offset_bottom = 231.0
+offset_left = 391.0
+offset_top = 278.0
+offset_right = 475.0
+offset_bottom = 356.0
+scale = Vector2(1.17857, 1.16391)
 theme_override_styles/focus = SubResource("StyleBoxTexture_yx235")
 theme_override_styles/hover = SubResource("StyleBoxTexture_wdak6")
 theme_override_styles/normal = SubResource("StyleBoxTexture_l6yw3")
 
 [node name="selector" type="Panel" parent="Panel"]
 layout_mode = 0
-offset_left = 433.0
-offset_top = 399.0
-offset_right = 613.0
-offset_bottom = 517.0
+offset_left = 74.0
+offset_top = 242.0
+offset_right = 346.0
+offset_bottom = 504.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_hlf4a")
 
 [node name="selector2" type="Panel" parent="Panel"]
 layout_mode = 0
-offset_left = 667.0
-offset_top = 401.0
-offset_right = 847.0
-offset_bottom = 519.0
+offset_left = 955.0
+offset_top = 244.0
+offset_right = 1227.0
+offset_bottom = 507.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_2gdvb")
 
 [node name="p1Cusca" type="Panel" parent="Panel"]
 layout_mode = 0
-offset_left = 438.0
-offset_top = 399.0
-offset_right = 620.0
-offset_bottom = 519.0
-theme_override_styles/panel = SubResource("StyleBoxTexture_yg184")
+offset_left = 75.0
+offset_top = 243.0
+offset_right = 346.0
+offset_bottom = 504.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_unsvt")
 
 [node name="p1Union" type="Panel" parent="Panel"]
 layout_mode = 0
-offset_left = 441.0
-offset_top = 395.0
-offset_right = 623.0
-offset_bottom = 518.0
+offset_left = 75.0
+offset_top = 242.0
+offset_right = 346.0
+offset_bottom = 504.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_70oy3")
 
 [node name="Button3" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 661.0
-offset_top = 533.0
-offset_right = 844.0
-offset_bottom = 604.0
+offset_left = 730.0
+offset_top = 504.0
+offset_right = 913.0
+offset_bottom = 575.0
 theme_override_styles/focus = ExtResource("9_wk205")
 theme_override_styles/hover = ExtResource("9_wk205")
 theme_override_styles/normal = SubResource("StyleBoxTexture_24m1a")
 
 [node name="btnP1Union" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 323.0
-offset_top = 152.0
-offset_right = 408.0
-offset_bottom = 230.0
+offset_left = 498.0
+offset_top = 180.0
+offset_right = 581.0
+offset_bottom = 258.0
+scale = Vector2(1.17857, 1.16391)
 theme_override_styles/focus = SubResource("StyleBoxTexture_odp8w")
 theme_override_styles/hover = SubResource("StyleBoxTexture_yf2r2")
 theme_override_styles/normal = SubResource("StyleBoxTexture_1fkia")
 
 [node name="btnP1Sanmi" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 323.0
-offset_top = 256.0
-offset_right = 412.0
-offset_bottom = 324.0
+offset_left = 497.0
+offset_top = 278.0
+offset_right = 581.0
+offset_bottom = 356.0
+scale = Vector2(1.17857, 1.16391)
 theme_override_styles/focus = SubResource("StyleBoxTexture_jgaw6")
 theme_override_styles/hover = SubResource("StyleBoxTexture_15l6g")
 theme_override_styles/normal = SubResource("StyleBoxTexture_7drtu")
@@ -262,10 +298,11 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_7drtu")
 layout_mode = 1
 anchors_preset = -1
 anchor_bottom = 0.023
-offset_left = 224.0
-offset_top = 337.0
-offset_right = 312.0
-offset_bottom = 388.44
+offset_left = 392.0
+offset_top = 376.0
+offset_right = 476.0
+offset_bottom = 436.44
+scale = Vector2(1.17857, 1.16391)
 theme_override_styles/focus = SubResource("StyleBoxTexture_48gwk")
 theme_override_styles/hover = SubResource("StyleBoxTexture_51k4k")
 theme_override_styles/normal = SubResource("StyleBoxTexture_0koh7")
@@ -274,10 +311,10 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_0koh7")
 layout_mode = 1
 anchors_preset = -1
 anchor_bottom = 0.023
-offset_left = 736.0
-offset_top = 313.0
-offset_right = 840.0
-offset_bottom = 376.44
+offset_left = 712.0
+offset_top = 378.0
+offset_right = 810.0
+offset_bottom = 452.44
 theme_override_styles/focus = SubResource("StyleBoxTexture_48gwk")
 theme_override_styles/hover = SubResource("StyleBoxTexture_51k4k")
 theme_override_styles/normal = SubResource("StyleBoxTexture_0koh7")
@@ -286,48 +323,50 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_0koh7")
 layout_mode = 1
 anchors_preset = -1
 anchor_bottom = 0.023
-offset_left = 866.0
-offset_top = 309.0
-offset_right = 970.0
-offset_bottom = 372.44
+offset_left = 819.0
+offset_top = 378.0
+offset_right = 917.0
+offset_bottom = 452.44
 theme_override_styles/focus = SubResource("StyleBoxTexture_48gwk")
 theme_override_styles/hover = SubResource("StyleBoxTexture_51k4k")
 theme_override_styles/normal = SubResource("StyleBoxTexture_0koh7")
 
 [node name="btnP1Ninja" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 223.0
-offset_top = 250.0
-offset_right = 307.0
-offset_bottom = 325.0
+offset_left = 390.0
+offset_top = 180.0
+offset_right = 474.0
+offset_bottom = 258.0
+scale = Vector2(1.17857, 1.16391)
 theme_override_styles/focus = SubResource("StyleBoxTexture_87grv")
 theme_override_styles/hover = SubResource("StyleBoxTexture_oc42n")
 theme_override_styles/normal = SubResource("StyleBoxTexture_8uvbs")
 
 [node name="Button8" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 323.0
-offset_top = 337.0
-offset_right = 409.0
-offset_bottom = 405.0
+offset_left = 497.0
+offset_top = 376.0
+offset_right = 581.0
+offset_bottom = 453.0
+scale = Vector2(1.17857, 1.16391)
 theme_override_styles/focus = SubResource("StyleBoxTexture_kj2ej")
 theme_override_styles/hover = SubResource("StyleBoxTexture_j1cqc")
 theme_override_styles/normal = SubResource("StyleBoxTexture_lmpm5")
 
 [node name="p2Sanmi" type="Panel" parent="Panel"]
 layout_mode = 0
-offset_left = 669.0
-offset_top = 395.0
-offset_right = 842.0
-offset_bottom = 514.0
+offset_left = 955.0
+offset_top = 244.0
+offset_right = 1227.0
+offset_bottom = 507.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_q53a3")
 
 [node name="p1Ninja" type="Panel" parent="Panel"]
 layout_mode = 0
-offset_left = 441.0
-offset_top = 398.0
-offset_right = 623.0
-offset_bottom = 520.0
+offset_left = 74.0
+offset_top = 242.0
+offset_right = 346.0
+offset_bottom = 504.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_d26rn")
 
 [node name="Label" type="Label" parent="Panel"]
@@ -354,71 +393,75 @@ text = "LA UNIÓN"
 
 [node name="btnP2Cusca" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 735.0
-offset_top = 150.0
-offset_right = 840.0
-offset_bottom = 228.0
+offset_left = 819.0
+offset_top = 280.0
+offset_right = 917.0
+offset_bottom = 371.0
 theme_override_styles/focus = SubResource("StyleBoxTexture_7tkw6")
 theme_override_styles/hover = SubResource("StyleBoxTexture_c5ig1")
 theme_override_styles/normal = SubResource("StyleBoxTexture_at1mc")
 
 [node name="btnP2Union" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 861.0
-offset_top = 151.0
-offset_right = 975.0
-offset_bottom = 227.0
+offset_left = 712.0
+offset_top = 182.0
+offset_right = 810.0
+offset_bottom = 273.0
 theme_override_styles/focus = SubResource("StyleBoxTexture_gjkt2")
 theme_override_styles/hover = SubResource("StyleBoxTexture_h2dxe")
 theme_override_styles/normal = SubResource("StyleBoxTexture_mimxb")
 
 [node name="btnP2Ninja2" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 735.0
-offset_top = 233.0
-offset_right = 841.0
-offset_bottom = 307.0
+offset_left = 819.0
+offset_top = 182.0
+offset_right = 917.0
+offset_bottom = 273.0
 theme_override_styles/focus = SubResource("StyleBoxTexture_jvg2r")
 theme_override_styles/hover = SubResource("StyleBoxTexture_4s3d1")
 theme_override_styles/normal = SubResource("StyleBoxTexture_nheci")
 
 [node name="btnP2Sanmi" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 864.0
-offset_top = 229.0
-offset_right = 975.0
-offset_bottom = 306.0
+offset_left = 712.0
+offset_top = 280.0
+offset_right = 810.0
+offset_bottom = 371.0
 theme_override_styles/focus = SubResource("StyleBoxTexture_8wn1i")
 theme_override_styles/hover = SubResource("StyleBoxTexture_b34ua")
 theme_override_styles/normal = SubResource("StyleBoxTexture_8vh4d")
 
 [node name="p2Cusca" type="Panel" parent="Panel"]
 layout_mode = 0
-offset_left = 671.0
-offset_top = 396.0
-offset_right = 841.0
-offset_bottom = 517.0
+offset_left = 955.0
+offset_top = 244.0
+offset_right = 1227.0
+offset_bottom = 507.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_yod17")
 
 [node name="p2Union" type="Panel" parent="Panel"]
 layout_mode = 0
-offset_left = 672.0
-offset_top = 398.0
-offset_right = 844.0
-offset_bottom = 520.0
+offset_left = 955.0
+offset_top = 245.0
+offset_right = 1227.0
+offset_bottom = 506.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_c37rw")
 
 [node name="p2Ninja" type="Panel" parent="Panel"]
 layout_mode = 0
-offset_left = 667.0
-offset_top = 394.0
-offset_right = 845.0
-offset_bottom = 523.0
+offset_left = 955.0
+offset_top = 244.0
+offset_right = 1227.0
+offset_bottom = 508.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_ponmr")
 
 [node name="p1Sanmi" type="Panel" parent="Panel"]
 layout_mode = 0
-offset_left = 472.0
-offset_top = 248.0
-offset_right = 630.0
-offset_bottom = 357.0
+offset_left = 74.0
+offset_top = 242.0
+offset_right = 346.0
+offset_bottom = 504.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_ccc0g")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("13_odp8w")

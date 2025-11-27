@@ -4,7 +4,7 @@
 [ext_resource type="StyleBox" uid="uid://bsq8alpnfxntx" path="res://extras/confg1.tres" id="2_mw2e8"]
 [ext_resource type="Texture2D" uid="uid://bsa4qn7pa16cq" path="res://escenarios/Volumen.png" id="3_maa8x"]
 [ext_resource type="StyleBox" uid="uid://btega6m1gtrbs" path="res://extras/volver1.tres" id="4_f6pai"]
-[ext_resource type="Texture2D" uid="uid://cwaoob7ewd7a1" path="res://escenarios/BTN's/volver_boton.png" id="5_mw2e8"]
+[ext_resource type="Texture2D" uid="uid://bjm2sql1ea2w1" path="res://escenarios/BTN's/volver.png" id="5_mw2e8"]
 [ext_resource type="Script" uid="uid://cdec2vsvpig2c" path="res://scripts/vol.gd" id="6_kdeus"]
 [ext_resource type="Texture2D" uid="uid://c1dvhkcvvmgv2" path="res://escenarios/titulo.png" id="7_jkomu"]
 [ext_resource type="AudioStream" uid="uid://dnwagaau8qexm" path="res://extras/Negro 2.mp3" id="8_mw2e8"]
@@ -17,10 +17,10 @@ texture = ExtResource("3_maa8x")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mw2e8"]
 texture = ExtResource("5_mw2e8")
-texture_margin_left = 10.0
-texture_margin_top = 10.0
-texture_margin_right = 10.0
-texture_margin_bottom = 10.0
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w0iws"]
 texture = ExtResource("7_jkomu")

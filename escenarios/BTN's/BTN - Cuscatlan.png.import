@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ucyb2plj2kt7"
-path="res://.godot/imported/escoger_personjae_boton.png-db371055c5eca377ab0e0b41babfe186.ctex"
+uid="uid://mllfwsjtamio"
+path="res://.godot/imported/BTN - Cuscatlan.png-17cdf4066f8c6f011ea69aa52cea3ce4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://escenarios/BTN's/escoger_personjae_boton.png"
-dest_files=["res://.godot/imported/escoger_personjae_boton.png-db371055c5eca377ab0e0b41babfe186.ctex"]
+source_file="res://escenarios/BTN's/BTN - Cuscatlan.png"
+dest_files=["res://.godot/imported/BTN - Cuscatlan.png-17cdf4066f8c6f011ea69aa52cea3ce4.ctex"]
 
 [params]
 

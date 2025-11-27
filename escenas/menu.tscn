@@ -1,11 +1,12 @@
-[gd_scene load_steps=13 format=3 uid="uid://b8tffs3nqj21b"]
+[gd_scene load_steps=17 format=3 uid="uid://b8tffs3nqj21b"]
 
 [ext_resource type="Script" uid="uid://otlb8b4viu2j" path="res://scripts/menu.gd" id="1_c8vnd"]
 [ext_resource type="Texture2D" uid="uid://cbfewchaapunf" path="res://escenarios/fondo.jpg" id="2_82u5j"]
 [ext_resource type="StyleBox" uid="uid://jgmge75ic257" path="res://extras/play.tres" id="3_lberl"]
-[ext_resource type="Texture2D" uid="uid://bqx5npmh4mfoj" path="res://escenarios/boton.png" id="4_w28l2"]
+[ext_resource type="Texture2D" uid="uid://e82xcn4dkdp0" path="res://escenarios/BTN's/jugar.png" id="4_4gv4q"]
 [ext_resource type="StyleBox" uid="uid://b0mpf8vn0avri" path="res://extras/salir1.tres" id="5_spm53"]
-[ext_resource type="Texture2D" uid="uid://dtoka1itpnwfj" path="res://escenarios/salir.png" id="6_7q8vy"]
+[ext_resource type="Texture2D" uid="uid://4lhusbjsedb6" path="res://escenarios/BTN's/salir.png" id="6_8jdmi"]
+[ext_resource type="Texture2D" uid="uid://1jxkmfsi3e7c" path="res://escenarios/BTN's/config_boton.png" id="7_i5l0x"]
 [ext_resource type="Texture2D" uid="uid://c1dvhkcvvmgv2" path="res://escenarios/titulo.png" id="7_rmq8h"]
 [ext_resource type="AudioStream" uid="uid://dnwagaau8qexm" path="res://extras/Negro 2.mp3" id="8_yb3qj"]
 
@@ -13,18 +14,31 @@
 texture = ExtResource("2_82u5j")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xqndx"]
-texture = ExtResource("4_w28l2")
-texture_margin_left = 10.0
-texture_margin_top = 10.0
-texture_margin_right = 10.0
-texture_margin_bottom = 10.0
+texture = ExtResource("4_4gv4q")
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_56ah5"]
-texture = ExtResource("6_7q8vy")
-texture_margin_left = 10.0
-texture_margin_top = 10.0
-texture_margin_right = 10.0
-texture_margin_bottom = 10.0
+texture = ExtResource("6_8jdmi")
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6m0pt"]
+texture = ExtResource("7_i5l0x")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_builu"]
+texture = ExtResource("7_i5l0x")
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_20bhr"]
+texture = ExtResource("7_i5l0x")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yb3qj"]
 texture = ExtResource("7_rmq8h")
@@ -40,30 +54,36 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_2owot")
 
 [node name="play" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 510.0
-offset_top = 295.0
-offset_right = 795.0
-offset_bottom = 415.0
+offset_left = 501.0
+offset_top = 292.0
+offset_right = 736.0
+offset_bottom = 375.0
+scale = Vector2(1.26716, 1.37407)
 theme_override_styles/focus = ExtResource("3_lberl")
 theme_override_styles/hover = SubResource("StyleBoxTexture_xqndx")
 theme_override_styles/normal = ExtResource("3_lberl")
 
 [node name="exit" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 517.0
-offset_top = 509.0
-offset_right = 792.0
+offset_left = 501.0
+offset_top = 553.0
+offset_right = 736.0
 offset_bottom = 633.0
+scale = Vector2(1.26716, 1.37407)
 theme_override_styles/focus = ExtResource("5_spm53")
 theme_override_styles/hover = SubResource("StyleBoxTexture_56ah5")
 theme_override_styles/normal = ExtResource("5_spm53")
 
 [node name="confg" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 534.0
-offset_top = 419.0
-offset_right = 767.0
-offset_bottom = 500.0
+offset_left = 501.0
+offset_top = 423.0
+offset_right = 734.0
+offset_bottom = 504.0
+scale = Vector2(1.26716, 1.37408)
+theme_override_styles/focus = SubResource("StyleBoxTexture_6m0pt")
+theme_override_styles/hover = SubResource("StyleBoxTexture_builu")
+theme_override_styles/normal = SubResource("StyleBoxTexture_20bhr")
 
 [node name="Panel2" type="Panel" parent="."]
 offset_left = 471.0

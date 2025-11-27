@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cwaoob7ewd7a1"
-path="res://.godot/imported/volver_boton.png-3fd2983197934308c14d25d05a44711e.ctex"
+uid="uid://e82xcn4dkdp0"
+path="res://.godot/imported/jugar.png-45728c1d0f91075f8e31386b1c5c676f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://escenarios/BTN's/volver_boton.png"
-dest_files=["res://.godot/imported/volver_boton.png-3fd2983197934308c14d25d05a44711e.ctex"]
+source_file="res://escenarios/BTN's/jugar.png"
+dest_files=["res://.godot/imported/jugar.png-45728c1d0f91075f8e31386b1c5c676f.ctex"]
 
 [params]
 

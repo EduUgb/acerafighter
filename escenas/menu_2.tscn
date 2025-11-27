@@ -3,9 +3,9 @@
 [ext_resource type="Script" uid="uid://clc4ojotcw0fd" path="res://scripts/menu_2.gd" id="1_gs7e0"]
 [ext_resource type="Texture2D" uid="uid://cbfewchaapunf" path="res://escenarios/fondo.jpg" id="2_7xhqk"]
 [ext_resource type="StyleBox" uid="uid://hmbgjiffmsbd" path="res://escenas/select.tres" id="3_pjo2y"]
-[ext_resource type="Texture2D" uid="uid://u4yijmt7dhpu" path="res://escenarios/btnescoger.png" id="4_thw5g"]
-[ext_resource type="Texture2D" uid="uid://ctmdd70y7kv4l" path="res://escenarios/conf.png" id="6_th6fv"]
-[ext_resource type="Texture2D" uid="uid://dp7ge6gydfry2" path="res://escenarios/back.png" id="8_ga6yf"]
+[ext_resource type="Texture2D" uid="uid://d01lupelvt7vw" path="res://escenarios/BTN's/seleccionar_pers_boton.png" id="4_f213n"]
+[ext_resource type="Texture2D" uid="uid://cah8n3ngtqx62" path="res://escenarios/BTN's/guia_boton.png" id="5_f213n"]
+[ext_resource type="Texture2D" uid="uid://bjm2sql1ea2w1" path="res://escenarios/BTN's/volver.png" id="6_7828r"]
 [ext_resource type="AudioStream" uid="uid://dnwagaau8qexm" path="res://extras/Negro 2.mp3" id="9_h77ao"]
 [ext_resource type="Texture2D" uid="uid://c1dvhkcvvmgv2" path="res://escenarios/titulo.png" id="9_xkvja"]
 
@@ -13,33 +13,33 @@
 texture = ExtResource("2_7xhqk")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_72kx7"]
-texture = ExtResource("4_thw5g")
+texture = ExtResource("4_f213n")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h77ao"]
-texture = ExtResource("6_th6fv")
+texture = ExtResource("5_f213n")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d16cg"]
-texture = ExtResource("6_th6fv")
-texture_margin_left = 10.0
-texture_margin_top = 10.0
-texture_margin_right = 10.0
-texture_margin_bottom = 10.0
+texture = ExtResource("5_f213n")
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f213n"]
-texture = ExtResource("6_th6fv")
+texture = ExtResource("5_f213n")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p578v"]
-texture = ExtResource("8_ga6yf")
+texture = ExtResource("6_7828r")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lien3"]
-texture = ExtResource("8_ga6yf")
-texture_margin_left = 10.0
-texture_margin_top = 10.0
-texture_margin_right = 10.0
-texture_margin_bottom = 10.0
+texture = ExtResource("6_7828r")
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hnuex"]
-texture = ExtResource("8_ga6yf")
+texture = ExtResource("6_7828r")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_prj13"]
 texture = ExtResource("9_xkvja")
@@ -57,10 +57,10 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_7828r")
 
 [node name="escoger" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 509.0
-offset_top = 314.0
-offset_right = 788.0
-offset_bottom = 433.0
+offset_left = 508.0
+offset_top = 313.0
+offset_right = 785.0
+offset_bottom = 419.0
 theme_override_styles/focus = ExtResource("3_pjo2y")
 theme_override_styles/hover = ExtResource("3_pjo2y")
 theme_override_styles/normal = SubResource("StyleBoxTexture_72kx7")
@@ -68,19 +68,19 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_72kx7")
 [node name="guia" type="Button" parent="Panel"]
 layout_mode = 0
 offset_left = 510.0
-offset_top = 432.0
+offset_top = 430.0
 offset_right = 785.0
-offset_bottom = 529.0
+offset_bottom = 527.0
 theme_override_styles/focus = SubResource("StyleBoxTexture_h77ao")
 theme_override_styles/hover = SubResource("StyleBoxTexture_d16cg")
 theme_override_styles/normal = SubResource("StyleBoxTexture_f213n")
 
 [node name="exit" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 530.0
-offset_top = 535.0
-offset_right = 768.0
-offset_bottom = 640.0
+offset_left = 511.0
+offset_top = 539.0
+offset_right = 785.0
+offset_bottom = 644.0
 theme_override_styles/focus = SubResource("StyleBoxTexture_p578v")
 theme_override_styles/hover = SubResource("StyleBoxTexture_lien3")
 theme_override_styles/normal = SubResource("StyleBoxTexture_hnuex")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b7sytregl4y2g"
-path="res://.godot/imported/reanudar_boton.png-cee09cb7eef0d5ddfdc2a9f1f9ee7803.ctex"
+uid="uid://c157h6detmbt1"
+path="res://.godot/imported/BTN - San Miguel P2.png-59eb0d570c617d627e89bcc3596bb997.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://escenarios/BTN's/reanudar_boton.png"
-dest_files=["res://.godot/imported/reanudar_boton.png-cee09cb7eef0d5ddfdc2a9f1f9ee7803.ctex"]
+source_file="res://escenarios/BTN's/BTN - San Miguel P2.png"
+dest_files=["res://.godot/imported/BTN - San Miguel P2.png-59eb0d570c617d627e89bcc3596bb997.ctex"]
 
 [params]
 

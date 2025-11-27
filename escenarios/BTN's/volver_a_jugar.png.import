@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d2nhgyoskuvp"
-path="res://.godot/imported/BTN - Ninja P2.png-6ddf1e4a9b4f1da435613830ffeac472.ctex"
+uid="uid://buy7xhgmjdptd"
+path="res://.godot/imported/volver_a_jugar.png-ad5b1778ca05cfac65a393d658d352c3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://escenarios/BTN's/BTN - Ninja P2.png"
-dest_files=["res://.godot/imported/BTN - Ninja P2.png-6ddf1e4a9b4f1da435613830ffeac472.ctex"]
+source_file="res://escenarios/BTN's/volver_a_jugar.png"
+dest_files=["res://.godot/imported/volver_a_jugar.png-ad5b1778ca05cfac65a393d658d352c3.ctex"]
 
 [params]
 

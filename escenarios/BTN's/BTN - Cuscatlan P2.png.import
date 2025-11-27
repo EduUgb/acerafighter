@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://xp7qlv1du44j"
-path="res://.godot/imported/jugar_boton.png-03adf823822270abac01cb6955b84646.ctex"
+uid="uid://8r7yhi68i4vf"
+path="res://.godot/imported/BTN - Cuscatlan P2.png-2e6736aa4993d34cb703c3c8a6754fc6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://escenarios/BTN's/jugar_boton.png"
-dest_files=["res://.godot/imported/jugar_boton.png-03adf823822270abac01cb6955b84646.ctex"]
+source_file="res://escenarios/BTN's/BTN - Cuscatlan P2.png"
+dest_files=["res://.godot/imported/BTN - Cuscatlan P2.png-2e6736aa4993d34cb703c3c8a6754fc6.ctex"]
 
 [params]
 

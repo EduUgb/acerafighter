@@ -6,10 +6,10 @@
 [ext_resource type="Texture2D" uid="uid://biatu51hp3fvi" path="res://escenarios/pared.jpeg" id="4_s8uc7"]
 [ext_resource type="Texture2D" uid="uid://crgnykcdtq6md" path="res://escenarios/Cecot Escenario.png" id="5_6r2l3"]
 [ext_resource type="StyleBox" uid="uid://xqy351qfsq8n" path="res://extras/select2.tres" id="6_8diyh"]
-[ext_resource type="Texture2D" uid="uid://bcgydquqdb050" path="res://escenarios/BTN's/SELECCIONAR_boton.png" id="7_i4q62"]
+[ext_resource type="Texture2D" uid="uid://ddetjwnilvrfo" path="res://escenarios/BTN's/SELECCIONAR_boton.png" id="7_i4q62"]
 [ext_resource type="Script" uid="uid://c24j634st34pv" path="res://scripts/selectorbtn.gd" id="8_4weow"]
 [ext_resource type="StyleBox" uid="uid://crdoql0nb8g18" path="res://extras/volver2.tres" id="9_l0jpx"]
-[ext_resource type="Texture2D" uid="uid://cwaoob7ewd7a1" path="res://escenarios/BTN's/volver_boton.png" id="10_gsqve"]
+[ext_resource type="Texture2D" uid="uid://bjm2sql1ea2w1" path="res://escenarios/BTN's/volver.png" id="10_i4q62"]
 [ext_resource type="Texture2D" uid="uid://lh4aeso4537c" path="res://escenarios/disco.png" id="11_lr8lw"]
 [ext_resource type="Texture2D" uid="uid://bavg4r1f53l8q" path="res://escenarios/Maizal escenario.png" id="12_5jsyr"]
 [ext_resource type="Texture2D" uid="uid://d170slxy8qxrg" path="res://escenarios/Banda escenario.png" id="13_wg8th"]
@@ -33,10 +33,10 @@ texture_margin_right = 31.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gqyfb"]
 texture = ExtResource("7_i4q62")
-texture_margin_left = 5.0
-texture_margin_top = 5.0
-texture_margin_right = 5.0
-texture_margin_bottom = 5.0
+expand_margin_left = 15.0
+expand_margin_top = 15.0
+expand_margin_right = 15.0
+expand_margin_bottom = 15.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_msp78"]
 texture = ExtResource("4_s8uc7")
@@ -52,7 +52,7 @@ texture_margin_bottom = 5.0
 texture = ExtResource("4_s8uc7")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_24m1a"]
-texture = ExtResource("10_gsqve")
+texture = ExtResource("10_i4q62")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0gqqq"]
 texture = ExtResource("11_lr8lw")
@@ -98,8 +98,6 @@ texture = ExtResource("12_5jsyr")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q53a3"]
 texture = ExtResource("12_5jsyr")
-texture_margin_left = 24.0
-texture_margin_right = 24.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w0kmq"]
 texture = ExtResource("13_wg8th")
@@ -116,34 +114,37 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_b5lv3")
 
 [node name="Panel" type="Panel" parent="Panel"]
 layout_mode = 0
-offset_left = 535.0
-offset_top = 388.0
-offset_right = 776.0
-offset_bottom = 549.0
+offset_left = 428.0
+offset_top = 323.0
+offset_right = 669.0
+offset_bottom = 484.0
+scale = Vector2(1.79093, 1.4453)
 theme_override_styles/panel = SubResource("StyleBoxTexture_y5bsp")
 
 [node name="Panel2" type="Panel" parent="Panel"]
 layout_mode = 0
-offset_left = 534.0
-offset_top = 386.0
-offset_right = 776.0
-offset_bottom = 552.0
+offset_left = 427.0
+offset_top = 321.0
+offset_right = 669.0
+offset_bottom = 487.0
+scale = Vector2(1.79093, 1.4453)
 theme_override_styles/panel = SubResource("StyleBoxTexture_yg184")
 
 [node name="Panel3" type="Panel" parent="Panel"]
 layout_mode = 0
-offset_left = 537.0
-offset_top = 389.0
-offset_right = 785.0
-offset_bottom = 553.0
+offset_left = 427.0
+offset_top = 321.0
+offset_right = 669.0
+offset_bottom = 487.0
+scale = Vector2(1.79093, 1.4453)
 theme_override_styles/panel = SubResource("StyleBoxTexture_70oy3")
 
 [node name="Button" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 425.0
-offset_top = 583.0
-offset_right = 609.0
-offset_bottom = 654.0
+offset_left = 412.0
+offset_top = 573.0
+offset_right = 638.0
+offset_bottom = 661.0
 theme_override_styles/focus = ExtResource("6_8diyh")
 theme_override_styles/hover = SubResource("StyleBoxTexture_gqyfb")
 theme_override_styles/normal = ExtResource("6_8diyh")
@@ -151,68 +152,70 @@ script = ExtResource("8_4weow")
 
 [node name="paredbtn" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 189.0
-offset_top = 208.0
-offset_right = 390.0
-offset_bottom = 341.0
+offset_left = 176.0
+offset_top = 174.0
+offset_right = 377.0
+offset_bottom = 307.0
 theme_override_styles/focus = SubResource("StyleBoxTexture_msp78")
 theme_override_styles/hover = SubResource("StyleBoxTexture_wdak6")
 theme_override_styles/normal = SubResource("StyleBoxTexture_l6yw3")
 
 [node name="Button3" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 746.0
-offset_top = 585.0
-offset_right = 929.0
-offset_bottom = 656.0
+offset_left = 646.0
+offset_top = 575.0
+offset_right = 860.0
+offset_bottom = 661.0
 theme_override_styles/focus = ExtResource("9_l0jpx")
 theme_override_styles/hover = ExtResource("9_l0jpx")
 theme_override_styles/normal = SubResource("StyleBoxTexture_24m1a")
 
 [node name="Panel5" type="Panel" parent="Panel"]
 layout_mode = 0
-offset_left = 538.0
-offset_top = 388.0
-offset_right = 787.0
-offset_bottom = 551.0
+offset_left = 427.0
+offset_top = 321.0
+offset_right = 669.0
+offset_bottom = 487.0
+scale = Vector2(1.79093, 1.4453)
 theme_override_styles/panel = SubResource("StyleBoxTexture_0gqqq")
 
 [node name="cecotbtn" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 417.0
-offset_top = 207.0
-offset_right = 645.0
-offset_bottom = 343.0
+offset_left = 404.0
+offset_top = 173.0
+offset_right = 632.0
+offset_bottom = 309.0
 theme_override_styles/focus = SubResource("StyleBoxTexture_odp8w")
 theme_override_styles/hover = SubResource("StyleBoxTexture_yf2r2")
 theme_override_styles/normal = SubResource("StyleBoxTexture_1fkia")
 
 [node name="discobtn" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 904.0
-offset_top = 209.0
-offset_right = 1144.0
-offset_bottom = 344.0
+offset_left = 891.0
+offset_top = 175.0
+offset_right = 1131.0
+offset_bottom = 310.0
 theme_override_styles/focus = SubResource("StyleBoxTexture_jgaw6")
 theme_override_styles/hover = SubResource("StyleBoxTexture_15l6g")
 theme_override_styles/normal = SubResource("StyleBoxTexture_7drtu")
 
 [node name="maizalbtn" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 673.0
-offset_top = 209.0
-offset_right = 890.0
-offset_bottom = 341.0
+offset_left = 660.0
+offset_top = 175.0
+offset_right = 877.0
+offset_bottom = 307.0
 theme_override_styles/focus = SubResource("StyleBoxTexture_35qp5")
 theme_override_styles/hover = SubResource("StyleBoxTexture_q5otr")
 theme_override_styles/normal = SubResource("StyleBoxTexture_v42b2")
 
 [node name="Panel4" type="Panel" parent="Panel"]
 layout_mode = 0
-offset_left = 535.0
-offset_top = 388.0
-offset_right = 783.0
-offset_bottom = 554.0
+offset_left = 427.0
+offset_top = 321.0
+offset_right = 669.0
+offset_bottom = 487.0
+scale = Vector2(1.79093, 1.4453)
 theme_override_styles/panel = SubResource("StyleBoxTexture_q53a3")
 
 [node name="Panel6" type="Panel" parent="Panel"]

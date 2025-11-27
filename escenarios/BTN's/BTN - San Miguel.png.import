@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dam28ejgjq3o2"
-path="res://.godot/imported/salir_boton.png-cd757944c5b41edc917baea2ec87b659.ctex"
+uid="uid://dnokg1psk0s0j"
+path="res://.godot/imported/BTN - San Miguel.png-43fd49c9ad12cb80d406f69a9d229e3d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://escenarios/BTN's/salir_boton.png"
-dest_files=["res://.godot/imported/salir_boton.png-cd757944c5b41edc917baea2ec87b659.ctex"]
+source_file="res://escenarios/BTN's/BTN - San Miguel.png"
+dest_files=["res://.godot/imported/BTN - San Miguel.png-43fd49c9ad12cb80d406f69a9d229e3d.ctex"]
 
 [params]
 
