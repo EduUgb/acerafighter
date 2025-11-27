@@ -9,6 +9,7 @@ var cooldown := 10
 var ruta: String
 	
 @onready var audio = get_node("/root/Node2D/final/final")
+@onready var especialAudio = $"../../CanvasLayer/especial"
 
 	
 @onready var efecto: AnimatedSprite2D = $"../../CanvasLayer/videos"
@@ -74,8 +75,9 @@ func secuencia_especial_completa():
 	# 1. PAUSAR Y MOSTRAR EFECTO
 	get_tree().paused = true
 	efecto.visible = true
+	especialAudio.play()
 	efecto.play("4") # Asumiendo que tu animacion se llama 'default'
-	
+
 	# 2. ESPERAR A QUE TERMINE EL EFECTO (Sin crear otra función)
 	await efecto.animation_finished
 	

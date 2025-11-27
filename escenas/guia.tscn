@@ -1,0 +1,66 @@
+[gd_scene load_steps=13 format=3 uid="uid://bcy0ardanvp68"]
+
+[ext_resource type="Script" uid="uid://c4npsi570lghm" path="res://scripts/guia.gd" id="1_cbybd"]
+[ext_resource type="Texture2D" uid="uid://byodnqjt111ov" path="res://escenarios/GUIA/FONDO.png" id="2_2irjy"]
+[ext_resource type="Texture2D" uid="uid://dk44hng4voehf" path="res://escenarios/GUIA/TECLADO.png" id="3_jeuw1"]
+[ext_resource type="Texture2D" uid="uid://bxy2x11bbn6bo" path="res://escenarios/GUIA/MANDO.png" id="4_2lv0n"]
+[ext_resource type="Texture2D" uid="uid://bjm2sql1ea2w1" path="res://escenarios/BTN's/volver.png" id="5_l8l3l"]
+[ext_resource type="AudioStream" uid="uid://dnwagaau8qexm" path="res://extras/Negro 2.mp3" id="6_2irjy"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l8iec"]
+texture = ExtResource("2_2irjy")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j2uws"]
+texture = ExtResource("3_jeuw1")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h87cn"]
+texture = ExtResource("4_2lv0n")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pfv03"]
+texture = ExtResource("5_l8l3l")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lsfag"]
+texture = ExtResource("5_l8l3l")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_upnnt"]
+texture = ExtResource("5_l8l3l")
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_cbybd")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1282.0
+offset_bottom = 722.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_l8iec")
+
+[node name="guia1" type="Panel" parent="Panel"]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 35.0
+offset_right = 625.0
+offset_bottom = 643.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_j2uws")
+
+[node name="guia2" type="Panel" parent="Panel"]
+layout_mode = 0
+offset_left = 667.0
+offset_top = 31.0
+offset_right = 1230.0
+offset_bottom = 642.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_h87cn")
+
+[node name="volverGuia" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 564.0
+offset_top = 633.0
+offset_right = 735.0
+offset_bottom = 708.0
+theme_override_styles/focus = SubResource("StyleBoxTexture_pfv03")
+theme_override_styles/hover = SubResource("StyleBoxTexture_lsfag")
+theme_override_styles/normal = SubResource("StyleBoxTexture_upnnt")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_2irjy")
+autoplay = true
+
+[connection signal="pressed" from="Panel/volverGuia" to="." method="_on_volver_guia_pressed"]

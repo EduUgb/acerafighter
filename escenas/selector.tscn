@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=3 uid="uid://bb7cyoj542i1q"]
+[gd_scene load_steps=62 format=3 uid="uid://bb7cyoj542i1q"]
 
 [ext_resource type="Texture2D" uid="uid://db4rkykwy8mqe" path="res://escenarios/BTN's/Selector de personajes.png" id="2_1fkia"]
 [ext_resource type="StyleBox" uid="uid://xqy351qfsq8n" path="res://extras/select2.tres" id="3_a0cmh"]
@@ -17,26 +17,27 @@
 [ext_resource type="AudioStream" uid="uid://dnwagaau8qexm" path="res://extras/Negro 2.mp3" id="13_odp8w"]
 [ext_resource type="Texture2D" uid="uid://8r7yhi68i4vf" path="res://escenarios/BTN's/BTN - Cuscatlan P2.png" id="14_48gwk"]
 [ext_resource type="Texture2D" uid="uid://d2nhgyoskuvp" path="res://escenarios/BTN's/BTN - Ninja P2.png" id="14_51k4k"]
+[ext_resource type="FontFile" uid="uid://qy6pxxwhk8yd" path="res://extras/BoldPixels1.4.ttf" id="17_jgaw6"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b5lv3"]
 texture = ExtResource("2_1fkia")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gqyfb"]
 texture = ExtResource("4_70oy3")
-expand_margin_left = 15.0
-expand_margin_top = 15.0
-expand_margin_right = 15.0
-expand_margin_bottom = 15.0
+texture_margin_left = 15.0
+texture_margin_top = 15.0
+texture_margin_right = 15.0
+texture_margin_bottom = 15.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yx235"]
 texture = ExtResource("5_y5bsp")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wdak6"]
 texture = ExtResource("5_y5bsp")
-expand_margin_left = 10.0
-expand_margin_top = 10.0
-expand_margin_right = 10.0
-expand_margin_bottom = 10.0
+texture_margin_left = 15.0
+texture_margin_top = 15.0
+texture_margin_right = 15.0
+texture_margin_bottom = 15.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l6yw3"]
 texture = ExtResource("5_y5bsp")
@@ -65,10 +66,10 @@ texture = ExtResource("10_jgaw6")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yf2r2"]
 texture = ExtResource("10_jgaw6")
-expand_margin_left = 10.0
-expand_margin_top = 10.0
-expand_margin_right = 10.0
-expand_margin_bottom = 10.0
+texture_margin_left = 15.0
+texture_margin_top = 15.0
+texture_margin_right = 15.0
+texture_margin_bottom = 15.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1fkia"]
 texture = ExtResource("10_jgaw6")
@@ -78,10 +79,10 @@ texture = ExtResource("10_15l6g")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_15l6g"]
 texture = ExtResource("10_15l6g")
-expand_margin_left = 10.0
-expand_margin_top = 10.0
-expand_margin_right = 10.0
-expand_margin_bottom = 10.0
+texture_margin_left = 15.0
+texture_margin_top = 15.0
+texture_margin_right = 15.0
+texture_margin_bottom = 15.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7drtu"]
 texture = ExtResource("10_15l6g")
@@ -91,10 +92,6 @@ texture = ExtResource("11_15l6g")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_51k4k"]
 texture = ExtResource("11_15l6g")
-expand_margin_left = 10.0
-expand_margin_top = 10.0
-expand_margin_right = 10.0
-expand_margin_bottom = 10.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0koh7"]
 texture = ExtResource("11_15l6g")
@@ -104,10 +101,10 @@ texture = ExtResource("12_7drtu")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oc42n"]
 texture = ExtResource("12_7drtu")
-expand_margin_left = 10.0
-expand_margin_top = 10.0
-expand_margin_right = 10.0
-expand_margin_bottom = 10.0
+texture_margin_left = 15.0
+texture_margin_top = 15.0
+texture_margin_right = 15.0
+texture_margin_bottom = 15.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8uvbs"]
 texture = ExtResource("12_7drtu")
@@ -117,10 +114,6 @@ texture = ExtResource("11_15l6g")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j1cqc"]
 texture = ExtResource("11_15l6g")
-expand_margin_left = 10.0
-expand_margin_top = 10.0
-expand_margin_right = 10.0
-expand_margin_bottom = 10.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lmpm5"]
 texture = ExtResource("11_15l6g")
@@ -138,10 +131,10 @@ texture = ExtResource("14_48gwk")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c5ig1"]
 texture = ExtResource("14_48gwk")
-expand_margin_left = 10.0
-expand_margin_top = 10.0
-expand_margin_right = 10.0
-expand_margin_bottom = 10.0
+texture_margin_left = 15.0
+texture_margin_top = 15.0
+texture_margin_right = 15.0
+texture_margin_bottom = 15.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_at1mc"]
 texture = ExtResource("14_48gwk")
@@ -151,10 +144,10 @@ texture = ExtResource("13_48gwk")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h2dxe"]
 texture = ExtResource("13_48gwk")
-expand_margin_left = 10.0
-expand_margin_top = 10.0
-expand_margin_right = 10.0
-expand_margin_bottom = 10.0
+texture_margin_left = 15.0
+texture_margin_top = 15.0
+texture_margin_right = 15.0
+texture_margin_bottom = 15.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mimxb"]
 texture = ExtResource("13_48gwk")
@@ -164,10 +157,10 @@ texture = ExtResource("14_51k4k")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4s3d1"]
 texture = ExtResource("14_51k4k")
-expand_margin_left = 10.0
-expand_margin_top = 10.0
-expand_margin_right = 10.0
-expand_margin_bottom = 10.0
+texture_margin_left = 15.0
+texture_margin_top = 15.0
+texture_margin_right = 15.0
+texture_margin_bottom = 15.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nheci"]
 texture = ExtResource("14_51k4k")
@@ -177,10 +170,10 @@ texture = ExtResource("13_7drtu")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b34ua"]
 texture = ExtResource("13_7drtu")
-expand_margin_left = 10.0
-expand_margin_top = 10.0
-expand_margin_right = 10.0
-expand_margin_bottom = 10.0
+texture_margin_left = 15.0
+texture_margin_top = 15.0
+texture_margin_right = 15.0
+texture_margin_bottom = 15.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8vh4d"]
 texture = ExtResource("13_7drtu")
@@ -248,18 +241,18 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_2gdvb")
 
 [node name="p1Cusca" type="Panel" parent="Panel"]
 layout_mode = 0
-offset_left = 75.0
-offset_top = 243.0
-offset_right = 346.0
-offset_bottom = 504.0
+offset_left = 77.0
+offset_top = 239.0
+offset_right = 353.0
+offset_bottom = 500.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_unsvt")
 
 [node name="p1Union" type="Panel" parent="Panel"]
 layout_mode = 0
-offset_left = 75.0
-offset_top = 242.0
-offset_right = 346.0
-offset_bottom = 504.0
+offset_left = 77.0
+offset_top = 241.0
+offset_right = 352.0
+offset_bottom = 503.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_70oy3")
 
 [node name="Button3" type="Button" parent="Panel"]
@@ -355,41 +348,19 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_lmpm5")
 
 [node name="p2Sanmi" type="Panel" parent="Panel"]
 layout_mode = 0
-offset_left = 955.0
-offset_top = 244.0
-offset_right = 1227.0
-offset_bottom = 507.0
+offset_left = 959.0
+offset_top = 241.0
+offset_right = 1231.0
+offset_bottom = 504.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_q53a3")
 
 [node name="p1Ninja" type="Panel" parent="Panel"]
 layout_mode = 0
-offset_left = 74.0
-offset_top = 242.0
-offset_right = 346.0
-offset_bottom = 504.0
+offset_left = 76.0
+offset_top = 240.0
+offset_right = 348.0
+offset_bottom = 502.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_d26rn")
-
-[node name="Label" type="Label" parent="Panel"]
-visible = false
-layout_mode = 0
-offset_left = 709.0
-offset_top = 90.0
-offset_right = 802.0
-offset_bottom = 113.0
-theme_override_colors/font_color = Color(1, 0.8, 0.0196078, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-text = "CUSCATLÁN"
-
-[node name="Label2" type="Label" parent="Panel"]
-visible = false
-layout_mode = 0
-offset_left = 829.0
-offset_top = 91.0
-offset_right = 922.0
-offset_bottom = 115.0
-theme_override_colors/font_color = Color(1, 0.8, 0.0196078, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-text = "LA UNIÓN"
 
 [node name="btnP2Cusca" type="Button" parent="Panel"]
 layout_mode = 0
@@ -433,35 +404,73 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_8vh4d")
 
 [node name="p2Cusca" type="Panel" parent="Panel"]
 layout_mode = 0
-offset_left = 955.0
-offset_top = 244.0
-offset_right = 1227.0
-offset_bottom = 507.0
+offset_left = 954.0
+offset_top = 238.0
+offset_right = 1226.0
+offset_bottom = 501.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_yod17")
 
 [node name="p2Union" type="Panel" parent="Panel"]
 layout_mode = 0
-offset_left = 955.0
-offset_top = 245.0
-offset_right = 1227.0
-offset_bottom = 506.0
+offset_left = 952.0
+offset_top = 244.0
+offset_right = 1224.0
+offset_bottom = 505.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_c37rw")
 
 [node name="p2Ninja" type="Panel" parent="Panel"]
 layout_mode = 0
-offset_left = 955.0
-offset_top = 244.0
-offset_right = 1227.0
-offset_bottom = 508.0
+offset_left = 952.0
+offset_top = 242.0
+offset_right = 1228.0
+offset_bottom = 506.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_ponmr")
 
 [node name="p1Sanmi" type="Panel" parent="Panel"]
 layout_mode = 0
-offset_left = 74.0
-offset_top = 242.0
-offset_right = 346.0
-offset_bottom = 504.0
+offset_left = 80.0
+offset_top = 240.0
+offset_right = 352.0
+offset_bottom = 502.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_ccc0g")
+
+[node name="jugador1" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 156.0
+offset_right = 378.0
+offset_bottom = 219.0
+theme_override_fonts/font = ExtResource("17_jgaw6")
+theme_override_font_sizes/font_size = 71
+text = "JUGADOR 1"
+
+[node name="jugador2" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 927.0
+offset_top = 162.0
+offset_right = 1269.0
+offset_bottom = 225.0
+theme_override_fonts/font = ExtResource("17_jgaw6")
+theme_override_font_sizes/font_size = 71
+text = "JUGADOR 2"
+
+[node name="jugador1txt" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 511.0
+offset_right = 314.0
+offset_bottom = 556.0
+theme_override_fonts/font = ExtResource("17_jgaw6")
+theme_override_font_sizes/font_size = 40
+
+[node name="jugador2txt" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 1005.0
+offset_top = 505.0
+offset_right = 1177.0
+offset_bottom = 561.0
+theme_override_fonts/font = ExtResource("17_jgaw6")
+theme_override_font_sizes/font_size = 40
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("13_odp8w")

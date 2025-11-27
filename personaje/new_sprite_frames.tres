@@ -1260,6 +1260,11 @@ animations = [{
 "name": &"golpes",
 "speed": 8.0
 }, {
+"frames": [],
+"loop": true,
+"name": &"idleCusca",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_hrna7")

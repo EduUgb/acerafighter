@@ -4,7 +4,6 @@ extends CanvasLayer
 @onready var againbtn = $Panel/againbtn
 @onready var numeros = $"../cvtime"
 @onready var salirbtn2: Button = $Panel/salirbtn
-@onready var guiabtn2: Button = $Panel/guiabtn
 @onready var vida1: ProgressBar = $"../CanvasLayer/vidaBar"
 @onready var vida2: ProgressBar = $"../CanvasLayer/vidaBar2"
 @onready var lbl_ganador: Label = $Panel/lbl_ganador

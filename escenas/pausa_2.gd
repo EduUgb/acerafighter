@@ -8,7 +8,7 @@ extends CanvasLayer
 @onready var salirbtn2: Button = $Panel/salirbtn2
 @onready var guiabtn2: Button = $Panel/guiabtn2
 @onready var audio2 = $"../final/final"
-
+@onready var guia = $"../guia"
 var escena_actual = null
 
 
@@ -18,8 +18,7 @@ func _ready():
 	#print(againbtn2)  # debug: verificar que no sea null
 	againbtn2.pressed.connect(_alpresionar)
 	salirbtn2.pressed.connect(_on_pausabtn)
-
-
+	guiabtn2.pressed.connect(_on_guia)
 	
 func mostrar():
 	panel2.visible = true
@@ -42,3 +41,8 @@ func _alpresionar():
 func _on_pausabtn() -> void:
 	ocultar()
 	get_tree().change_scene_to_file("res://escenas/menu.tscn")
+	
+
+func _on_guia() -> void:
+	ocultar()
+	guia.mostrar()
