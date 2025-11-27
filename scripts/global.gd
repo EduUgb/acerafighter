@@ -3,13 +3,11 @@ extends Node
 var escenaEspecial1 := ""
 
 
-
-var player_data = {
-	"gravity": 2500,
+var player1_data = {
 	"idleAnima": "",
-	"caminarAnima":  "",
+	"caminarAnima": "",
 	"saltoAnima": "",
-	"caidaAnima":  "",
+	"caidaAnima": "",
 	"agacharseAnima": "",
 	"golpeAnima": "",
 	"walkagaAnima": "",
@@ -17,7 +15,22 @@ var player_data = {
 	"golpeAbajoAnima": "",
 	"golpeArribaAnima": "",
 	"blockAnima": "",
-	"especialAnima3" :""
+	"especialAnima3": ""
+}
+
+var player2_data = {
+	"idleAnima": "",
+	"caminarAnima": "",
+	"saltoAnima": "",
+	"caidaAnima": "",
+	"agacharseAnima": "",
+	"golpeAnima": "",
+	"walkagaAnima": "",
+	"hitAnima": "",
+	"golpeAbajoAnima": "",
+	"golpeArribaAnima": "",
+	"blockAnima": "",
+	"especialAnima3": ""
 }
 
 var background_texture: Texture = null

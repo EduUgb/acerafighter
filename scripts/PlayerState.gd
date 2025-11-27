@@ -70,12 +70,16 @@ var block: String = "bloqueo"
 
 func _ready() -> void:
 
+	if player.playerId == 1:
+		for key in Global.player1_data.keys():
+			if key in self:
+				set(key, Global.player1_data[key])
+	else:
+		for key in Global.player2_data.keys():
+			if key in self:
+				set(key, Global.player2_data[key])
 
-	for key in Global.player_data.keys():
-		if key in self:
-			set(key, Global.player_data[key])
 
-	print("Valores cargados:", idleAnima)	
 	
 func process_physics(delta: float) -> estados: # Retorna PlayerState, no "estados"
 	# Solo aplica la gravedad si no está en el suelo.

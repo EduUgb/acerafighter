@@ -1,41 +1,48 @@
 extends Button
 
-@onready var  p1Sanmi =$"../p1Ninja"
-@onready var  p1Cusca = $"../p1Cusca"
-@onready var  p1Union =$"../p1Union"
-@onready var  p1Ninja = $"../p1Ninja"
-@onready var  selector = $"../selector"
-@onready var  selector2 = $"../selector2"
+@onready var p1Sanmi = $"../p1Ninja"
+@onready var p1Cusca = $"../p1Cusca"
+@onready var p1Union = $"../p1Union"
+@onready var p1Ninja = $"../p1Ninja"
+
+@onready var p2Sanmi = $"../p2Ninja"
+@onready var p2Cusca = $"../p2Cusca"
+@onready var p2Union = $"../p2Union"
+@onready var p2Ninja = $"../p2Ninja"
+
+# NUEVO (solo guarda qué eligió cada jugador)
+var seleccion_p1 := ""
+var seleccion_p2 := ""
 
 var animaciones_por_panel = {
 	"p1Cusca": {
-		"idleAnima": "saco2",
-		"caminarAnima": "caminar2",
-		"saltoAnima": "salto2",
-		"caidaAnima": "caida2",
-		"agacharseAnima": "agacharse2",
-		"golpeAnima": "golpe2",
-		"walkagaAnima": "walkaga2",
-		"hitAnima": "danio2",
-		"golpeAbajoAnima": "golpeAbajo2",
-		"golpeArribaAnima": "golpeArriba2",
-		"blockAnima": "bloqueo222",
-		"especialAnima3": "especial32"
+		"idleAnima": "idle",
+		"caminarAnima": "caminar",
+		"saltoAnima": "salto",
+		"caidaAnima": "caida",
+		"agacharseAnima": "agacharse",
+		"golpeAnima": "golpes",
+		"walkagaAnima": "walkaga",
+		"hitAnima": "danio",
+		"golpeAbajoAnima": "golpeAbajo",
+		"golpeArribaAnima": "golpeArriba",
+		"blockAnima": "bloqueo22",
+		"especialAnima3": "especial3"
 	},
-		"p1Sanmi": {
-		"idleAnima": "saco2",
-		"caminarAnima": "caminar2",
-		"saltoAnima": "salto2",
-		"caidaAnima": "caida2",
-		"agacharseAnima": "agacharse2",
-		"golpeAnima": "golpe2",
-		"walkagaAnima": "walkaga2",
-		"hitAnima": "danio2",
-		"golpeAbajoAnima": "golpeAbajo2",
-		"golpeArribaAnima": "golpeArriba2",
-		"blockAnima": "bloqueo222",
-		"especialAnima3": "especial32"
-		},
+	"p1Sanmi": {
+		"idleAnima": "idleSanmi",
+		"caminarAnima": "sanmiWalk",
+		"saltoAnima": "sanmiSalto",
+		"caidaAnima": "sanmiFall",
+		"agacharseAnima": "sanmiAgachado",
+		"golpeAnima": "sanmiAtaque",
+		"walkagaAnima": "sanmiWalkaga",
+		"hitAnima": "sanmiHit",
+		"golpeAbajoAnima": "sanmiAtaqueAbajo",
+		"golpeArribaAnima": "sanmiAtaqueArriba",
+		"blockAnima": "sanmiEscudo",
+		"especialAnima3": "sanmiEspecial"
+	},
 	"p1Union": {
 		"idleAnima": "idleUnion",
 		"caminarAnima": "walkUnion",
@@ -50,7 +57,6 @@ var animaciones_por_panel = {
 		"blockAnima": "bloqueoUnion",
 		"especialAnima3": "especialUnion"
 	},
-	
 	"p1Ninja": {
 		"idleAnima": "idle",
 		"caminarAnima": "caminar",
@@ -67,76 +73,95 @@ var animaciones_por_panel = {
 	}
 }
 
-
-
-func _ready() -> void:
-	ocultado()
-	
-
-func _on_pressed():
-	var panel_activo = ""
-			
-	if p1Sanmi.visible:
-		panel_activo = "p1Sanmi"
-	elif p1Union.visible:
-		panel_activo = "p1Union"
-	elif p1Cusca.visible:
-		panel_activo = "p1Cusca"
-	elif p1Ninja.visible:
-		panel_activo = "p1Ninja"
-	
-	if panel_activo != "":
-		for key in animaciones_por_panel[panel_activo].keys():
-			Global.player_data[key] = animaciones_por_panel[panel_activo][key]
-		print("Animaciones aplicadas desde:", panel_activo)
-		
-		get_tree().change_scene_to_file("res://escenas/selector2.tscn")
-	
-
-
-
-func _on_button_3_pressed() -> void:
-	get_tree().change_scene_to_file("res://escenas/menu_2.tscn")
-
-
-
-func _on_button_5_pressed() -> void:
-	pass # Replace with function body.
-	
-
-
-func _on_btn_p_1_cusca_pressed() -> void:
-	ocultado()
-	if not p1Cusca.visible:
-		p1Cusca.visible = true
-		
-
-func _on_btn_p_1_union_pressed() -> void:
-	ocultado()
-	if not p1Union.visible:
-		p1Union.visible = true
-
-
-func _on_btn_p_1_sanmi_pressed() -> void:
-	ocultado()
-	if not p1Sanmi.visible:
-		p1Sanmi.visible = true
-
-
-func _on_btn_p_1_ninja_pressed() -> void:
-	ocultado()
-	if not p1Ninja.visible:
-		p1Ninja.visible = true
-
-
 func ocultado():
 	p1Sanmi.visible = false
 	p1Cusca.visible = false
 	p1Union.visible = false
 	p1Ninja.visible = false
-	
-func mostrado():
-	p1Sanmi.visible = true
+
+func ocultado2():
+	p2Sanmi.visible = false
+	p2Cusca.visible = false
+	p2Union.visible = false
+	p2Ninja.visible = false
+
+# ---------------------------
+# BOTONES PLAYER 1
+# ---------------------------
+
+func _on_btn_p_1_cusca_pressed():
+	ocultado()
 	p1Cusca.visible = true
+	seleccion_p1 = "p1Cusca"
+	guardar_p1()
+
+func _on_btn_p_1_union_pressed():
+	ocultado()
 	p1Union.visible = true
-	p1Ninja.visible = true	
+	seleccion_p1 = "p1Union"
+	guardar_p1()
+
+func _on_btn_p_1_sanmi_pressed():
+	ocultado()
+	p1Sanmi.visible = true
+	seleccion_p1 = "p1Sanmi"
+	guardar_p1()
+
+func _on_btn_p_1_ninja_pressed():
+	ocultado()
+	p1Ninja.visible = true
+	seleccion_p1 = "p1Ninja"
+	guardar_p1()
+
+# ---------------------------
+# BOTONES PLAYER 2
+# ---------------------------
+
+func _on_btn_p_2_cusca_pressed():
+	ocultado2()
+	p2Cusca.visible = true
+	seleccion_p2 = "p1Cusca"
+	guardar_p2()
+
+func _on_btn_p_2_union_pressed():
+	ocultado2()
+	p2Union.visible = true
+	seleccion_p2 = "p1Union"
+	guardar_p2()
+
+func _on_btn_p_2_sanmi_pressed():
+	ocultado2()
+	p2Sanmi.visible = true
+	seleccion_p2 = "p1Sanmi"
+	guardar_p2()
+
+func _on_btn_p_2_ninja_2_pressed():
+	ocultado2()
+	p2Ninja.visible = true
+	seleccion_p2 = "p1Ninja"
+	guardar_p2()
+
+# ---------------------------------------
+# FUNCIONES PARA GUARDAR LA ELECCIÓN
+# ---------------------------------------
+
+func guardar_p1():
+	if seleccion_p1 == "":
+		return
+	for key in animaciones_por_panel[seleccion_p1].keys():
+		Global.player1_data[key] = animaciones_por_panel[seleccion_p1][key]
+
+func guardar_p2():
+	if seleccion_p2 == "":
+		return
+	for key in animaciones_por_panel[seleccion_p2].keys():
+		Global.player2_data[key] = animaciones_por_panel[seleccion_p2][key]
+
+
+func _on_pressed() -> void:
+	get_tree().change_scene_to_file("res://escenas/selector2.tscn")
+	
+
+
+func _on_button_3_pressed() -> void:
+	get_tree().change_scene_to_file("res://escenas/menu_2.tscn")

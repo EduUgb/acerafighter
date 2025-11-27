@@ -1,6 +1,5 @@
-[gd_scene load_steps=55 format=3 uid="uid://bb7cyoj542i1q"]
+[gd_scene load_steps=54 format=3 uid="uid://bb7cyoj542i1q"]
 
-[ext_resource type="Script" uid="uid://b6n570t1bryhm" path="res://scripts/selector2.gd" id="1_3dwmn"]
 [ext_resource type="Texture2D" uid="uid://boiswbqtxgdps" path="res://escenarios/BTN's/Selector de personajes.png" id="2_1fkia"]
 [ext_resource type="StyleBox" uid="uid://xqy351qfsq8n" path="res://extras/select2.tres" id="3_a0cmh"]
 [ext_resource type="Texture2D" uid="uid://bcgydquqdb050" path="res://escenarios/BTN's/SELECCIONAR_boton.png" id="4_70oy3"]
@@ -168,7 +167,6 @@ texture = ExtResource("14_51k4k")
 texture = ExtResource("14_51k4k")
 
 [node name="Node2D" type="Node2D"]
-script = ExtResource("1_3dwmn")
 
 [node name="Panel" type="Panel" parent="."]
 offset_left = -10.0
@@ -415,12 +413,24 @@ offset_top = 394.0
 offset_right = 845.0
 offset_bottom = 523.0
 
+[node name="p1Sanmi" type="Panel" parent="Panel"]
+layout_mode = 0
+offset_left = 472.0
+offset_top = 248.0
+offset_right = 630.0
+offset_bottom = 357.0
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("13_odp8w")
 autoplay = true
 
 [connection signal="pressed" from="Panel/Button" to="Panel/Button" method="_on_pressed"]
 [connection signal="pressed" from="Panel/btnP1Cusca" to="Panel/Button" method="_on_btn_p_1_cusca_pressed"]
+[connection signal="pressed" from="Panel/Button3" to="Panel/Button" method="_on_button_3_pressed"]
 [connection signal="pressed" from="Panel/btnP1Union" to="Panel/Button" method="_on_btn_p_1_union_pressed"]
 [connection signal="pressed" from="Panel/btnP1Sanmi" to="Panel/Button" method="_on_btn_p_1_sanmi_pressed"]
 [connection signal="pressed" from="Panel/btnP1Ninja" to="Panel/Button" method="_on_btn_p_1_ninja_pressed"]
+[connection signal="pressed" from="Panel/btnP2Cusca" to="Panel/Button" method="_on_btn_p_2_cusca_pressed"]
+[connection signal="pressed" from="Panel/btnP2Union" to="Panel/Button" method="_on_btn_p_2_union_pressed"]
+[connection signal="pressed" from="Panel/btnP2Ninja2" to="Panel/Button" method="_on_btn_p_2_ninja_2_pressed"]
+[connection signal="pressed" from="Panel/btnP2Sanmi" to="Panel/Button" method="_on_btn_p_2_sanmi_pressed"]
